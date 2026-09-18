@@ -1,0 +1,11 @@
+# Material del curso (derechos del profesor / UNAL) — cada quien pone el suyo
+*.pdf
+*.doc
+*.docx
+
+# Progreso personal — usa progreso/progreso.template.md como punto de partida
+progreso/progreso.md
+
+# Estado local de Claude Code
+.claude/settings.local.json
+.claude/plans/
