@@ -179,7 +179,7 @@ y densidad de estados (medio continuo isotrópico, 3D, incluyendo 3 polarizacion
 
 `g(ω) = 3V/(2π)² · ω²/v_s³`  [p. 84]
 
-*(Nota: esta es la misma expresión de la sección de "Ondas elásticas", escrita aquí con la constante 3V/(2π)² en vez de 3V/(2π²); ambas notaciones aparecen en las diapositivas y son equivalentes tras simplificar: g(ω)=3Vω²/(2π²v_s³).)*
+*(Nota: la diapositiva [p. 84] imprime `(2π)²`, pero eso es una **errata**: `(2π)² = 4π²` y NO equivale a `2π²`. La expresión correcta es `g(ω) = 3V·ω²/(2π²·v_s³)`, la misma de la sección de "Ondas elásticas" [p. 65-66] (sale de `4π/(2π)³ = 1/(2π²)`). Con `4π²` se perdería un factor 2 y ω_D no saldría como `v_s(6π²n)^(1/3)`. Usar siempre `2π²`.)*
 
 La energía interna vibracional total de la red es la integral sobre todos los modos normales:
 
@@ -203,7 +203,7 @@ El criterio para fijar ω_D es que el número TOTAL de modos normales debe ser i
 
 ### Cálculo de ω_D
 
-`∫_0^(ω_D) [3V/(2π)²]·(ω²/v_s³) dω = 3N`
+`∫_0^(ω_D) [3V/(2π²)]·(ω²/v_s³) dω = 3N`  (la diapositiva escribe `(2π)²`: errata, ver nota arriba)
 
 Resolviendo la integral:
 
@@ -422,3 +422,101 @@ Esta es la **distribución de Bose-Einstein** para el número de ocupación de u
 - Puede escribir la distribución `N(ω)dω = g(ω)dω/(e^(ℏω/k_BT)-1)` (número de fonones en dω) y derivar de ahí `dE=ℏω·N(ω)dω`.
 - Puede definir el número medio de ocupación de un modo `n̄=1/(e^(ℏω/k_BT)-1)` (distribución de Bose-Einstein), distinguirlo de la energía media `ε̄=n̄ℏω`, y calcular sus límites: `n̄→0` a T baja, `n̄≈k_BT/ℏω` a T alta.
 - Puede verificar que `E=9Nℏ/ω_D³ ∫₀^(ω_D) ω³dω/(e^(ℏω/k_BT)-1)` es algebraicamente equivalente a la forma `E=3Vℏ/(2π²v_s³)∫ω³dω/(e^(ℏω/k_BT)-1)` de la sección de Debye, usando `ω_D³=6π²(N/V)v_s³`.
+
+## 8. Modelo de Debye en dimensión general D: C_V ∝ T^D a T baja
+
+> **Nota de origen:** esta sección no proviene del PDF principal — completa un vacío que preguntan varios exámenes viejos sobre Debye en 1D y 2D (Taller SS2020 #1 y #6, Taller I 2025-II #5). [fuente: examen — Taller SS2020 #1, #6; Taller 2025-II #5]
+
+La derivación de la sección 4 (`g(ω)=3Vω²/(2π²v_s³)`, `C_V∝T³`) es el caso particular D=3 de un argumento válido en cualquier dimensión D. Contando puntos en el espacio `q` dentro de una esfera/círculo/segmento de radio q (volumen `∝q^D`) y usando `ω=v_s q`:
+
+`g(ω) ∝ ω^(D-1)`  (D=1: constante; D=2: lineal en ω; D=3: cuadrática en ω — coincide con lo ya visto)
+
+El mismo argumento cualitativo de la "esfera térmica" de la sección 4 (número de modos excitados `∝T^D`, cada uno con `ε̄≈k_BT`) da directamente:
+
+`E ∝ T^(D+1) ⟹ C_V = dE/dT ∝ T^D`
+
+**Caso D=1 (cadena lineal):** con `g(ω)=L/(πv_s)` (constante, ya derivada en `notas/01_ondas_elasticas_y_densidad_estados.md`), a T≪Θ_D se extiende la integral a infinito (el corte en ω_D no importa porque el integrando decae exponencialmente antes de llegar ahí):
+
+`E ≈ (L/πv_s)·(k_BT)²/ℏ · ∫₀^∞ x/(e^x-1)dx = (L/πv_s)·(k_BT)²/ℏ · (π²/6)`
+
+`⟹ C_V(1D, T≪Θ_D) = (πLk_B²/3ℏv_s)·T`  (**lineal en T**, no cúbica)
+
+**Caso D=2 (lámina/red cuadrada):** con una polarización y área A, `g(ω)=Aω/(2πv_s²)` (lineal en ω, por el mismo conteo que en 3D pero con círculo en vez de esfera):
+
+`E ≈ (A/2πv_s²)·(k_BT)³/ℏ² · ∫₀^∞ x²/(e^x-1)dx = (A/2πv_s²)·(k_BT)³/ℏ² · 2ζ(3)`
+
+`⟹ C_V(2D, T≪Θ_D) = (3Aζ(3)k_B³/πv_s²ℏ²)·T²`  (**cuadrática en T**), con `ζ(3)≈1.202`.
+
+### Puntos clave para dominar este tema (calor.8)
+- Sabe que `g(ω)∝ω^(D-1)` en dimensión D (bajo `ω=v_sq`), generalizando el conteo de estados de la sección 1 de `01_ondas_elasticas_y_densidad_estados.md`.
+- Puede reproducir el argumento de la "esfera/círculo térmica" en D dimensiones: número de modos excitados `∝T^D`, cada uno aporta `~k_BT`, dando `E∝T^(D+1)` y `C_V∝T^D`.
+- Puede derivar explícitamente `C_V(1D)∝T` (lineal) y `C_V(2D)∝T²` (cuadrática) a T baja, usando las integrales `∫₀^∞x/(e^x-1)dx=π²/6` y `∫₀^∞x²/(e^x-1)dx=2ζ(3)`.
+- Entiende que el caso D=3 ya visto (`C_V∝T³`) es solo uno de los tres casos de esta familia, no un resultado aislado.
+
+## 9. Energía de punto cero en el modelo de Debye
+
+> **Nota de origen:** esta sección no proviene del PDF principal — cierra un vacío sobre energía de punto cero que preguntan varios talleres viejos (Taller 01-2025 #2, #3). [fuente: examen — Taller 01-2025 #2, #3]
+
+Cada modo normal, incluso a T=0, conserva su energía de punto cero `ℏω/2` (el término que se ignoró por conveniencia al definir `ε_n=nℏω` en la sección 3). Sumando esa contribución sobre todos los modos de Debye (`g(ω)=9Nω²/ω_D³`, normalizada a `∫g(ω)dω=3N`):
+
+`E₀ = ∫₀^(ω_D) g(ω)·(ℏω/2)dω = (9Nℏ/2ω_D³)∫₀^(ω_D)ω³dω = (9Nℏ/2ω_D³)·(ω_D⁴/4)`
+
+`⟹ E₀ = (9/8)Nℏω_D = (9/8)Nk_BΘ_D`  (usando `k_BΘ_D=ℏω_D`)
+
+Esta es la energía de punto cero **total** del cristal de Debye — no se anula ni siquiera en el límite T→0, a diferencia de la energía térmica clásica.
+
+**Desplazamiento cuadrático medio por átomo (incluyendo punto cero):** sumando la contribución de cada modo al desplazamiento cuadrático medio de un átomo, ponderada por `(n̄(ω)+1/2)` (número de ocupación térmico más el punto cero):
+
+`⟨u²⟩ = (9ℏ/Mω_D³) ∫₀^(ω_D) [n̄(ω)+1/2]·ω dω`
+
+**Límite T→0** (`n̄(ω)→0` para todo ω): `⟨u²⟩₀ = (9ℏ/Mω_D³)·∫₀^(ω_D)(ω/2)dω = 9ℏ/(4Mω_D) = 9ℏ²/(4Mk_BΘ_D)` — el desplazamiento cuadrático medio **no se anula en T=0**: es puramente cuántico (punto cero), y es mayor cuanto menor es la masa M o Θ_D (por eso el efecto es más notorio en sólidos ligeros y "blandos" como Li o He sólido).
+
+### Puntos clave para dominar este tema (calor.9)
+- Sabe derivar `E₀=(9/8)Nk_BΘ_D` para la energía de punto cero total de un cristal de Debye, integrando `ℏω/2` sobre `g(ω)=9Nω²/ω_D³`.
+- Puede escribir `⟨u²⟩=(9ℏ/Mω_D³)∫₀^(ω_D)[n̄(ω)+1/2]ω dω` y evaluar su límite T→0: `⟨u²⟩₀=9ℏ²/(4Mk_BΘ_D)`.
+- Entiende que el punto cero es un efecto puramente cuántico que no depende de T, y por qué es más grande en sólidos ligeros (M pequeña) o "blandos" (Θ_D pequeño, ej. He sólido, Li).
+
+## 10. Dispersión inelástica de fotones/neutrones por fonones
+
+> **Nota de origen:** esta sección no proviene del PDF principal — cubre una técnica experimental que preguntan varios talleres viejos (Taller SS2020 #5, Taller 2025-II #6), y que es la forma real en que se mide `ω(q)` experimentalmente (mencionada de pasada en `notas/05_vibraciones_red_3D.md` como "dispersión inelástica de rayos X o neutrones"). [fuente: examen — Taller SS2020 #5, Taller 2025-II #6]
+
+Un fotón o neutrón incidente (vector de onda $\vec k_i$, frecuencia/energía $E_i$) puede **crear o absorber un fonón** ($\vec q$, $\Omega$) al dispersarse hacia $\vec k_f$, $E_f$. Se conservan **energía** y **momento cristalino**:
+
+$$E_i = E_f \mp \hbar\Omega \qquad \vec k_i = \vec k_f \mp \vec q \pmod{\vec G}$$
+
+(signo $-$: el fonón es creado, "Stokes"; signo $+$: el fonón es absorbido, "anti-Stokes").
+
+**Para un fotón** (dispersión Brillouin), $E=\hbar c k/n$ (n = índice de refracción del medio) — como $\Omega\ll\omega_i$, $|\vec k_i|\approx|\vec k_f|=k$, y la ley de cosenos en el triángulo de momento da directamente el módulo del vector de onda del fonón:
+
+$$q^2 = k_i^2+k_f^2-2k_ik_f\cos\theta \approx 2k^2(1-\cos\theta) = 4k^2\sin^2(\theta/2)$$
+
+y con la relación de dispersión del fonón (lineal, $\Omega=v_sq$, válida porque $q$ es muy pequeño frente a $\pi/a$ en dispersión de luz visible) se obtiene $\Omega$ directamente de $q$.
+
+**Para un neutrón** (dispersión de neutrones, más común en la práctica porque $\lambda_{neutrón}\sim a$, sensible a toda la zona de Brillouin), $E=\hbar^2k^2/2m_n$ — aquí $k_i\neq k_f$ en general (el neutrón sí cambia apreciablemente de energía), así que se resuelven **simultáneamente** la ley de cosenos (geometría) y la conservación de energía (dinámica) para obtener $\vec q$ y $\Omega$ del fonón involucrado.
+
+**Ejemplo de aplicación** (Taller SS2020 #5): dados $\lambda_{incidente}$ y $\lambda_{dispersada}$ (o el ángulo de dispersión) y $v_s$ del medio, se despeja primero $q$ de la geometría (ley de cosenos) y luego $\Omega=v_sq$ (fotón) o se itera con la conservación de energía (neutrón) para hallar la frecuencia del fonón responsable de la dispersión.
+
+### Puntos clave para dominar este tema (calor.10)
+- Puede plantear conservación de energía ($E_i=E_f\mp\hbar\Omega$) y de momento cristalino ($\vec k_i=\vec k_f\mp\vec q$) para la dispersión inelástica de un fotón o neutrón por un fonón.
+- Sabe usar la ley de cosenos en el triángulo de vectores de onda ($q^2=k_i^2+k_f^2-2k_ik_f\cos\theta$) para hallar $q$ a partir de $\lambda_i$, $\lambda_f$ (o el ángulo) y, con $\Omega=v_sq$, obtener la frecuencia del fonón.
+- Distingue el caso fotón (aproximación $k_i\approx k_f$, geometría casi elástica) del caso neutrón (energía del neutrón cambia apreciablemente, hay que resolver energía y momento a la vez).
+
+## 11. Momento total real del cristal vs. momento cristalino ℏq del fonón
+
+> **Nota de origen:** esta sección no proviene del PDF principal — aclara una confusión conceptual que aparece repetida en el material de examen (Taller 2025-II #1, Taller SS2020 #8, Parcial SS2020, último ítem). [fuente: examen — Taller 2025-II #1, Taller SS2020 #8]
+
+La sección 6 define el momento del fonón como $P=\hbar q$, por analogía con el fotón. Pero **¿cuál es el momento mecánico real** (la suma de $M\dot u_n$ sobre todos los átomos) de un cristal con un solo modo normal $q\neq0$ excitado?
+
+Para el modo $u_n(t)=Ae^{i(qna-\omega t)}$, el momento mecánico total de la cadena de N átomos es:
+
+$$P_{mec} = M\sum_{n=0}^{N-1}\dot u_n = M(-i\omega)A\,e^{-i\omega t}\sum_{n=0}^{N-1}e^{iqna}$$
+
+La suma geométrica $\sum_{n=0}^{N-1}e^{iqna}$ es una suma de N raíces de la unidad igualmente espaciadas en el círculo unitario; para cualquier $q$ permitido dentro de la 1ª ZB con $q\neq0$ (es decir, $q=2\pi m/(Na)$ con $m\neq0\pmod N$), esta suma **se anula exactamente** (los términos se cancelan por simetría, igual que la suma de todas las raíces N-ésimas de la unidad es cero salvo la raíz trivial):
+
+$$\boxed{P_{mec} = 0 \quad \text{para todo } q\neq0 \text{ en la 1ª ZB}}$$
+
+**Conclusión:** el momento mecánico real del cristal con un fonón $q\neq0$ excitado es **exactamente cero** — el "momento del fonón" $\hbar q$ **no es** el momento lineal real de nada; es el **momento cristalino** (o "cuasi-momento"), una cantidad definida solo módulo un vector de la red recíproca $\vec G$, útil como regla de selección en procesos de colisión (conservación de $\vec q$ salvo $\vec G$, ver Umklapp en `06_temas_adicionales.md`) pero que **no** obedece la tercera ley de Newton como un momento mecánico ordinario.
+
+### Puntos clave para dominar este tema (calor.11)
+- Puede derivar que el momento mecánico total $P_{mec}=M\sum_n\dot u_n$ de un cristal con un modo normal $q\neq0$ excitado es exactamente cero, usando que $\sum_{n=0}^{N-1}e^{iqna}=0$ para $q\neq0$ en la 1ª ZB.
+- Entiende que $\hbar q$ (momento cristalino/cuasi-momento del fonón) **no es** un momento mecánico real: es una cantidad definida módulo $\hbar\vec G$, relevante para reglas de selección en colisiones (normal vs. Umklapp), no para la dinámica de Newton del cristal como un todo.

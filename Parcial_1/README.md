@@ -66,6 +66,7 @@ notas/                         # contenido del curso extraído, por subtema
   03_densidad_estados_calor_especifico.md
   05_vibraciones_red_3D.md
   06_temas_adicionales.md
+  07_resumen_arquitectura_materia.md   # resumen visual (21 diap.) verificado vs. las notas
 progreso/
   progreso.template.md         # punto de partida en blanco (35 subtemas)
   progreso.md                  # tu avance personal (ignorado por git)

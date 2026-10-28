@@ -147,12 +147,49 @@ Con $a=L/(N-1)$: los modos permitidos son $k=\pi/L,\,2\pi/L,\dots,(N-1)\pi/L \Ri
 
 $$\Rightarrow \#\text{modos normales} = N-2 \approx N \quad (\text{para } N\gg1)$$ [p. 141]
 
+## Cadena monoatómica con acoplamiento a segundos vecinos (monoat.2)
+
+> **Nota de origen:** esta sección no proviene del PDF principal — se agrega a partir de un ejercicio de examen viejo (Parcial SS2020 #2, repetido en la imagen "Parcial 1 - 2025-01") que extiende la cadena monoatómica más allá de primeros vecinos. [fuente: examen — Parcial SS2020 #2]
+
+Se añade una segunda constante de fuerza $\alpha_2$ que acopla cada átomo con sus **segundos vecinos** (a distancia $2a$), además de la constante $\alpha_1$ a primeros vecinos:
+
+$$M\ddot u_n = -\alpha_1(2u_n-u_{n+1}-u_{n-1}) - \alpha_2(2u_n-u_{n+2}-u_{n-2})$$
+
+Sustituyendo $u_n=Ae^{i(qna-\omega t)}$ (mismo procedimiento que con solo primeros vecinos, aplicado dos veces):
+
+$$\boxed{M\omega^2 = 2\alpha_1(1-\cos qa) + 2\alpha_2(1-\cos 2qa)}$$
+
+que es la forma $\omega^2=(2\alpha/M)[A(1-\cos qa)+B(1-\cos 2qa)]$ del enunciado, con $A,B$ proporcionales a $\alpha_1,\alpha_2$.
+
+**Velocidad de grupo generalizada:** derivando implícitamente,
+
+$$v_g = \frac{d\omega}{dq} = \frac{a\left[\alpha_1\sin(qa) + 2\alpha_2\sin(2qa)\right]}{M\omega}$$
+
+En $q=\pi/a$, tanto $\sin(qa)$ como $\sin(2qa)$ se anulan y $\omega\neq0$ $\Rightarrow v_g=0$, **igual que en la cadena a solo primeros vecinos** (reflexión de Bragg con $\lambda=2a$, onda estacionaria): el segundo vecino no cambia dónde ocurre esa onda estacionaria, solo cambia la forma de $\omega(q)$ entre los extremos.
+
+En $q=0$ el numerador y $\omega$ se anulan a la vez (límite $0/0$) y $v_g\to v_s$, **no** cero: con $\omega\approx v_sq$, $v_g=d\omega/dq=v_s$, igual que en la cadena de primeros vecinos donde $v_g=v_s|\cos(qa/2)|\to v_s$ [p. 124]. (Corrección 2026-10-01: la versión anterior de esta nota decía que $v_g=0$ en $q=0$, lo cual es incorrecto.)
+
+**Velocidad del sonido (límite $q\to0$):** expandiendo $1-\cos\theta\approx\theta^2/2$ a orden más bajo,
+
+$$M\omega^2 \approx \alpha_1(qa)^2 + 4\alpha_2(qa)^2 = (qa)^2(\alpha_1+4\alpha_2) \;\Rightarrow\; \boxed{v_s = a\sqrt{\frac{\alpha_1+4\alpha_2}{M}}}$$
+
+El segundo vecino contribuye **4 veces más** que uno de primeros vecinos igual de fuerte (por el factor $(2a)^2/a^2=4$ al derivar dos veces respecto a $q$), reflejando que está al doble de distancia.
+
+**Densidad de estados y vector de Debye generalizados:** la definición $g(\omega)\,d\omega=g(q)\,dq=\frac{Na}{2\pi}\frac{dq}{v_g}$ sigue siendo válida con el $v_g(q)$ generalizado de arriba (ya no tiene forma cerrada simple como $N/(\pi\sqrt{\omega_m^2-\omega^2})$, pero se evalúa numéricamente punto a punto). El conteo total de modos en la 1ª zona de Brillouin **no cambia**: sigue siendo exactamente $N$ (un valor de $q$ por átomo, independiente de cuántos vecinos se acoplen), así que el "vector de Debye" de esta cadena 1D — definido igualando $\int_0^{q_D} g(q)\,dq=N$ — coincide, como en el caso de un solo vecino, con el propio borde de zona $q_D=\pi/a$: en 1D, a diferencia de Debye en 3D, el modelo de Debye lineal cortado en $q_D$ reproduce exactamente el número real de modos solo si $q_D$ se toma igual al borde de zona verdadero (la aproximación lineal $\omega=v_sq$ subestima $\omega$ cerca del borde, pero el conteo de modos permitidos por las condiciones de frontera no depende de la forma de $\omega(q)$).
+
+### Puntos clave para dominar este tema (monoat.2)
+
+- Puede derivar $M\omega^2=2\alpha_1(1-\cos qa)+2\alpha_2(1-\cos 2qa)$ para una cadena monoatómica con acoplamiento a primeros y segundos vecinos, identificando la forma $A(1-\cos qa)+B(1-\cos 2qa)$ típica de examen.
+- Sabe obtener $v_g=a[\alpha_1\sin qa+2\alpha_2\sin 2qa]/(M\omega)$ y mostrar que sigue anulándose en $q=0$ y $q=\pi/a$ (mismas condiciones de onda estacionaria que con un solo vecino).
+- Puede derivar $v_s=a\sqrt{(\alpha_1+4\alpha_2)/M}$ en el límite $q\to0$ y explicar el factor 4 del segundo vecino.
+- Entiende que el número total de modos en la 1ª ZB (y por tanto el "vector de Debye" $q_D=\pi/a$ de esta cadena) no depende de cuántos vecinos se incluyan en el acoplamiento — solo la forma de $\omega(q)$ cambia.
+
 ### Puntos clave para dominar este tema
 
 - Puede reproducir la derivación completa desde $M\ddot u_n = -\alpha(2u_n-u_{n+1}-u_{n-1})$ hasta $\omega=\omega_m|\sin(qa/2)|$ usando la sustitución $u_n=Ae^{i(qna-\omega t)}$ y las identidades trigonométricas $e^{iy}+e^{-iy}=2\cos y$, $1-\cos\theta=2\sin^2(\theta/2)$.
 - Sabe justificar por qué la red actúa como **filtro pasa-bajos mecánico** (solo se transmiten $0<\omega<\omega_m$) y calcular $v_s=\omega_m a/2=a\sqrt{\alpha/M}$ comparando con el límite continuo $\omega=v_sq$.
 - Puede derivar $\alpha=aY$ a partir de $v_s^2=Y/\rho$ y $\rho=M/a^3$, y hacer la estimación numérica $\omega_m\sim10^{13}\,\text{s}^{-1}$ para $\alpha\sim10^3$ dinas/cm y $M\sim10^{-24}$ g.
-- Puede explicar físicamente por qué $v_g=0$ en $q=0$ (cuerpo rígido, $F=0$) y por qué $v_g=0$ también en $q=\pi/a$ (onda estacionaria por reflexión de Bragg, $2d\sin\theta=n\lambda$ con $\lambda=2a$), distinguiendo ambos ceros de $v_g$.
+- Puede explicar físicamente por qué $\omega=0$ en $q=0$ (cuerpo rígido, $F=0$) mientras que $v_g\to v_s\neq0$ ahí, y por qué $v_g=0$ en $q=\pi/a$ (onda estacionaria por reflexión de Bragg, $2d\sin\theta=n\lambda$ con $\lambda=2a$), distinguiendo $\omega=0$ en $q=0$ del cero de $v_g$ en el borde de zona.
 - Puede derivar la envolvente de dos trenes de onda ($u_1+u_2=2A\cos(kx-\omega t)\cos(\tfrac12 td\omega-\tfrac12 xdk)$) y de ahí obtener $v_g=d\omega/dk$, explicando que la energía viaja con $v_g$ y no con $v_p$.
 - Entiende por qué en una red discreta un conjunto de desplazamientos atómicos no determina $\lambda$ de forma única ($q'=q+n\cdot2\pi/a$ da ondas físicamente idénticas), y por qué esto obliga a restringir la representación a la primera zona de Brillouin $-\pi/a<q<\pi/a$.
 - Puede derivar la densidad de estados exacta 1D $g(\omega)=\dfrac{N}{\pi\sqrt{\omega_m^2-\omega^2}}$ y explicar el origen físico de la divergencia (singularidad de van Hove) en $\omega=\omega_m$ como consecuencia de $v_g\to0$.

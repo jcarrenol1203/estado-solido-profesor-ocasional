@@ -5,6 +5,7 @@
 
 # Progreso personal — usa progreso/progreso.template.md como punto de partida
 progreso/progreso.md
+Parcial_*/progreso/progreso.md
 
 # Estado local de Claude Code
 .claude/settings.local.json

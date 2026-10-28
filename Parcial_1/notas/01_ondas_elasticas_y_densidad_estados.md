@@ -12,6 +12,12 @@ En un sólido, los átomos están fuertemente acoplados por fuerzas interatómic
 
 Es decir, en los cristales la energía térmica se transporta mediante ondas [p. 45].
 
+**Cómo leer la diapositiva 45 (releída directamente del PDF):**
+- Título: "ondas de sonido, relaciones de dispersión **∧** vibraciones de red" — la "∧" es un "y" (lógico). El tema es que las ondas de sonido en un sólido *son* las vibraciones de red.
+- "ondas de sonido, espectro auditivo" está **tachado con una X roja**: significa "no hablamos del sonido audible". Sigue `ω >> ω_audible` (audible ≲ 2·10⁴ Hz; vibraciones de red hasta ~10¹³ Hz, ω_m = 2v_s/a ≈ 2·5000/3·10⁻¹⁰ ≈ 3·10¹³ rad/s).
+- Cadena de "=" (en rojo): **no son igualdades matemáticas**, son "se manifiesta como": energía cinética térmica del átomo → energía vibracional (movimiento + acople con vecinos) → propagación como onda ⟹ la energía térmica viaja por ondas. Formalmente E_térmica = E_cinética + E_potencial (≈ mitad y mitad en el oscilador armónico); la diapositiva es informal.
+- Texto cortado en el borde: "(F. interató)" = fuerzas interatómicas.
+
 Fuentes externas (ej. luz) pueden excitar ondas acústicas en las redes cristalinas; estas ondas acústicas son importantes para las propiedades físicas de los cristales. El objetivo de esta sección es entender cómo se propagan las ondas de sonido en un sólido [p. 46].
 
 ### Puntos clave para dominar este tema

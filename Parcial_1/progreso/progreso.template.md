@@ -31,11 +31,13 @@ Estados posibles: `no visto` | `en progreso` | `dominado`.
 | enlace.6 | Enlace de Van der Waals | 00b_enlaces_fuerzas_interatomicas.md | no visto | — |
 | enlace.7 | Alotropía | 00b_enlaces_fuerzas_interatomicas.md | no visto | — |
 | enlace.8 | Energía de cohesión y constante de Madelung | 00b_enlaces_fuerzas_interatomicas.md | no visto | — |
+| enlace.9 | Modelo de jellium (ion en mar de electrones) | 00b_enlaces_fuerzas_interatomicas.md | no visto | — |
 | ondas.1 | Motivación: ondas de sonido y vibraciones de red | 01_ondas_elasticas_y_densidad_estados.md | no visto | — |
 | ondas.2 | Ecuación de onda elástica (medio continuo 1D) | 01_ondas_elasticas_y_densidad_estados.md | no visto | — |
 | ondas.3 | Densidad de estados g(ω) en 1D (continuo) | 01_ondas_elasticas_y_densidad_estados.md | no visto | — |
 | ondas.4 | Densidad de estados g(ω) en 3D (continuo) | 01_ondas_elasticas_y_densidad_estados.md | no visto | — |
 | monoat.1 | Cadena monoatómica discreta: ecuación de movimiento, ω(q), velocidades y g(ω) | 01b_cadena_monoatomica_discreta.md | no visto | — |
+| monoat.2 | Cadena monoatómica con acoplamiento a segundos vecinos | 01b_cadena_monoatomica_discreta.md | no visto | — |
 | calor.1 | Ley de Dulong-Petit | 03_densidad_estados_calor_especifico.md | no visto | — |
 | calor.2 | Teoría clásica (equipartición) | 03_densidad_estados_calor_especifico.md | no visto | — |
 | calor.3 | Modelo de Einstein | 03_densidad_estados_calor_especifico.md | no visto | — |
@@ -43,6 +45,10 @@ Estados posibles: `no visto` | `en progreso` | `dominado`.
 | calor.5 | Limitaciones del modelo de Debye | 03_densidad_estados_calor_especifico.md | no visto | — |
 | calor.6 | El fonón (concepto, energía y momento) | 03_densidad_estados_calor_especifico.md | no visto | — |
 | calor.7 | Estadística de fonones (Bose-Einstein, número de ocupación) | 03_densidad_estados_calor_especifico.md | no visto | — |
+| calor.8 | Modelo de Debye en dimensión general D (1D/2D/3D) | 03_densidad_estados_calor_especifico.md | no visto | — |
+| calor.9 | Energía de punto cero en Debye | 03_densidad_estados_calor_especifico.md | no visto | — |
+| calor.10 | Dispersión inelástica de fotones/neutrones por fonones | 03_densidad_estados_calor_especifico.md | no visto | — |
+| calor.11 | Momento total real del cristal vs. momento cristalino ℏq | 03_densidad_estados_calor_especifico.md | no visto | — |
 | diatom.1 | Cadena diatómica: ramas acústica/óptica, gap, modos | 02_cadena_diatomica.md | no visto | — |
 | extra.1 | Anarmonicidad y expansión térmica | 06_temas_adicionales.md | no visto | — |
 | red3d.1 | Vibraciones en redes 3D (ramas, simetría, g(ω), C_V exacto) | 05_vibraciones_red_3D.md | no visto | — |
@@ -50,9 +56,26 @@ Estados posibles: `no visto` | `en progreso` | `dominado`.
 | extra.3 | Mecanismos de dispersión de fonones (Umklapp) | 06_temas_adicionales.md | no visto | — |
 | extra.4 | Aplicaciones de ondas acústicas (ultrasonido, microondas) | 06_temas_adicionales.md | no visto | — |
 
-*(Nota de orden: `extra.1` va después de `calor.7` y antes de `monoat.1`/`diatom.1`/`red3d.1` en el temario real del PDF — el documento intercala anarmonicidad entre el cierre de la sección de fonones/calor específico y la cadena discreta. `extra.2-4` van al final, tras `red3d.1`. La tabla de arriba está en orden alfabético de ID por simplicidad de lectura; el orden de estudio recomendado es el de la sección "Checklist detallado" más abajo.)*
+*(Nota de orden: `extra.1` va después de `calor.7-11` y antes de `monoat.1`/`monoat.2`/`diatom.1`/`red3d.1` en el temario real del PDF — el documento intercala anarmonicidad entre el cierre de la sección de fonones/calor específico y la cadena discreta. `extra.2-4` van al final, tras `red3d.1`. La tabla de arriba está en orden alfabético de ID por simplicidad de lectura; el orden de estudio recomendado es el de la sección "Checklist detallado" más abajo. `monoat.2`, `calor.8-11` y `enlace.9` no vienen del PDF — vienen de vacíos detectados en `Parciales y Talleres/`, ver `examenes/analisis_temas.md`.)*
 
 **Debilidades vigentes:** ninguna todavía (no se ha hecho ninguna evaluación).
+
+## Parciales y talleres (banco de examenes viejos)
+
+| ID | Tipo | Estado | Nota | Fecha |
+|---|---|---|---|---|
+| P-2026-1S | Parcial (18 selección múltiple) | no intentado | — | — |
+| P-2025-01 | Parcial (abierto, 2 imágenes) | no intentado | — | — |
+| P-SS2020 | Parcial (abierto, 4 preguntas) | no intentado | — | — |
+| T-SS2020 | Taller (abierto, 8 preguntas) | no intentado | — | — |
+| T-2025-II | Taller (abierto, 7 preguntas) | no intentado | — | — |
+| T-2025-01 | Taller (abierto, 4 preguntas) | no intentado | — | — |
+| QS1 | Question set conceptual (10 preguntas) | no intentado | — | — |
+| QS2 | Question set conceptual (10 preguntas) | no intentado | — | — |
+| QS3 | Question set conceptual (10 preguntas) | no intentado | — | — |
+| QS4 | Question set conceptual (10 preguntas) | no intentado | — | — |
+| QS5 | Question set conceptual (10 preguntas) | no intentado | — | — |
+| QS6 | Question set conceptual (11 preguntas) | no intentado | — | — |
 
 ## Log de evaluaciones
 

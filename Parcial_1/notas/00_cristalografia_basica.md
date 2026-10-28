@@ -49,10 +49,13 @@ La regularidad y simetría de la estructura hace que el cristal sea **homogéneo
 - **Red no-Bravais ≡ red con base**. La *base* son los átomos ubicados cerca de cada sitio de la red de Bravais (en el ejemplo, la base son los átomos A y A') [p. 14].
 - Equivalentemente: una red no-Bravais ≡ **dos (o más) redes de Bravais interpenetrantes con orientaciones fijas entre sí** [p. 14].
 
+**Contraejemplo clásico — el grafeno:** una capa de grafeno (red hexagonal/panal de abeja de átomos de C idénticos) *parece* Bravais porque todos los átomos son químicamente iguales, pero **no lo es**: los dos sitios de la celda (a menudo llamados A y B) tienen entornos locales inequivalentes (sus enlaces a primeros vecinos apuntan en direcciones opuestas), así que ningún conjunto de traslaciones primitivas lleva todo átomo a otro átomo con el mismo entorno. El grafeno es en realidad una **red triangular de Bravais con una base de 2 átomos** (A y B) [fuente: examen — QS1 #3]. Este es el contraejemplo estándar para la falacia "todo arreglo periódico de átomos idénticos es una red de Bravais".
+
 ### Puntos clave para dominar este tema
 - Puede distinguir una red de Bravais de una red no-Bravais dando un criterio operativo: ¿todos los puntos son trasladables entre sí por vectores de la red?
 - Sabe explicar el concepto de "base" y por qué una red no-Bravais equivale a redes de Bravais interpenetrantes.
 - Puede dar un ejemplo físico de red no-Bravais (ej. estructura tipo diamante, NaCl con base de 2 átomos).
+- Reconoce el grafeno como contraejemplo de "toda red periódica de átomos idénticos es Bravais": es una red triangular con base de 2 átomos, no una red Bravais hexagonal simple.
 
 ## 4. Vectores base y vectores de red
 
@@ -178,7 +181,20 @@ Y por tanto:
 
 De aquí: `a·[b×c] = b·[c×a] = c·[a×b] = V_c` [p. 30].
 
-### Productos escalares entre vectores directos y recíprocos (forma sin 2π)
+### Estándar de convención en estas notas
+
+| | **Convención A — cristalográfica (sin 2π)** | **Convención B — física de estado sólido (con 2π)** |
+|---|---|---|
+| Vectores base | `a* = (b×c)/V_c` | `a* = 2π(b×c)/V_c` |
+| Producto con la red directa | `a·a* = 1` | `a·a* = 2π` |
+| Volumen recíproco | `V* = 1/V_c` | `V* = (2π)³/V_c` |
+| Red 1D / SC | `a* = 1/a` | `a* = 2π/a` |
+| 1ZB 1D | `[-1/2a, 1/2a]` | `[-π/a, π/a]` |
+| Dónde se usa | derivación con planos (hkl), DRX [p. 23-31] | q, G, 1ZB, fonones, todo desde `01` en adelante [p. 32+] |
+
+**Regla de estas notas: desde la sección de fonones (`01`-`06`) se usa siempre la convención B.** La A solo aparece en la derivación de d_hkl y en el resumen visual (`07_...`), que define a\* con A pero luego usa π/a y G=2π/a (B). Cada fórmula de abajo va etiquetada **[A]** o **[B]**.
+
+### Productos escalares entre vectores directos y recíprocos [A] (sin 2π)
 
 `(a·a*) = (b·b*) = (c·c*) = 1`
 `(b·c*) = (b*·c) = (c·a*) = (c*·a) = (a·b*) = (a*·b) = 0`  [p. 30]
@@ -191,9 +207,11 @@ Demostrando que `(a·a*)=1`:
 
 `(a·a*) = ([b*×c*]/V*)·([b×c]/V_c) = 1`, y usando `[b*×c*]·[b×c] = det[[b*·b, b*·c],[c*·b, c*·c]] = det[[1,0],[0,1]] = 1` [p. 31]
 
-Se concluye: `V* = 1/V_c` [p. 31]. **Red directa y recíproca son mutuamente conjugadas.**
+Se concluye **[A]**: `V* = 1/V_c` [p. 31]. **Red directa y recíproca son mutuamente conjugadas.**
 
-### Convención con factor 2π (la más usada en física del estado sólido)
+**Interpretación geométrica** (resumen visual, diapositiva 7): `|b×c|` es el área de la cara de la celda unitaria perpendicular a **a\*** — de ahí que **a\*** sea perpendicular al plano (b, c) — y `V_c = a·(b×c)` es el volumen real. La regla fundamental es `a·a* = 1`, `a·b* = 0`.
+
+### Convención B — con factor 2π (la más usada en física del estado sólido)
 
 `a* = (2π/Ω_c)(b×c)`, `b* = (2π/Ω_c)(c×a)`, `c* = (2π/Ω_c)(a×b)`, con `Ω_c = a·(b×c)` = volumen de la celda unitaria [p. 32].
 
@@ -209,9 +227,9 @@ Con esta convención, los productos escalares son:
 Verificación: `a*·a = (2π/Ω_c)(b×c)·a = (2π/Ω_c)·Ω_c = 2π` [p. 33].
 
 ### Ejemplos
-- **1D**: red con vector base a; recíproca con `a* = 1/a` (nota: sin el factor 2π en esta ilustración específica de la diapositiva, pero conceptualmente `a*=2π/a` en la convención con 2π) [p. 33].
+- **1D**: red con vector base a; recíproca con `a* = 2π/a` **[B]** (la diapositiva ilustra `a* = 1/a` **[A]**) [p. 33].
 - **2D**: red cuadrada con base **a**, **b** ⟹ recíproca también cuadrada con **a\***, **b\*** perpendiculares.
-- **3D (SC — cúbica simple)**: la red recíproca de una red cúbica simple es también cúbica simple, con constante de red recíproca `2π/a` [p. 33].
+- **3D (SC — cúbica simple)**: la recíproca de una SC es SC con constante `2π/a` **[B]** (`1/a` en [A]) [p. 33].
 
 ### Propiedades generales de la red recíproca [p. 34]
 - La red directa y la recíproca son **mutuamente conjugadas**.
@@ -223,14 +241,15 @@ Verificación: `a*·a = (2π/Ω_c)(b×c)·a = (2π/Ω_c)·Ω_c = 2π` [p. 33].
 - Puede derivar (al menos esquemáticamente) la relación 1/d_hkl = h·a*+k·b*+l·c* a partir del teorema del vector de superficie cerrada aplicado al tetraedro de planos (hkl),(100),(010),(001).
 - Sabe escribir de memoria las fórmulas a*=(2π/Ω_c)(b×c) (y las cíclicas para b*, c*) y calcular Ω_c=a·(b×c).
 - Puede verificar/derivar que a*·a=2π y a*·b=a*·c=0 (ortogonalidad cruzada entre vectores base directos y recíprocos distintos).
-- Sabe que V*=1/V_c (con la convención sin 2π) y explicar el concepto de redes "mutuamente conjugadas".
+- Sabe que V*=1/V_c en [A] y V*=(2π)³/V_c en [B] (sin mezclarlas), y explicar el concepto de redes "mutuamente conjugadas".
 - Entiende por qué la celda de la red directa usada para construir la recíproca debe ser primitiva, y que la red recíproca de una red de Bravais es también una red de Bravais.
-- Puede identificar la red recíproca de una red cúbica simple (SC): es SC con parámetro 2π/a.
+- Puede identificar la red recíproca de una red cúbica simple (SC): es SC con parámetro 2π/a [B] (1/a en [A]).
 
 ## 9. Primera zona de Brillouin
 
 La **primera zona de Brillouin (1ZB)** se define análogamente a la celda de Wigner-Seitz pero en el espacio recíproco: es la celda primitiva (de volumen mínimo) de la red recíproca construida por mediatrices/planos bisectores respecto al nodo origen [p. 35].
 
+- Equivalentemente: la 1ZB es la **celda unitaria primitiva del espacio recíproco** (resumen visual, diap. 12); contiene todos los q físicamente distintos, y cualquier q fuera de ella es redundante por periodicidad.
 - `(1 ZB) + G_n ⟹` cubre todo el espacio recíproco (las traslaciones de la 1ZB por los vectores de la red recíproca llenan todo el espacio) [p. 35].
 - En 3D, la 1ZB ≡ el volumen más pequeño posible de celda primitiva recíproca.
 - **Ejemplo, red SC**: la 1ZB es un cubo de lado `2π/a` centrado en el origen [p. 35].

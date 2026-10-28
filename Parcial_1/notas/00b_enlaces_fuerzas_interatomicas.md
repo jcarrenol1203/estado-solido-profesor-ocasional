@@ -175,6 +175,29 @@ Reescribiendo:
 
 Para r >> (grande), ambas contribuciones (1/r y 1/r^b) tienden a cero. Existe un mínimo de energía en `r = a` (posición de equilibrio interatómico), con valor `U_i(a)` (el pozo de potencial) [p. 54].
 
+## 9. Modelo de jellium: oscilación de un ion en un mar de electrones de conducción
+
+> **Nota de origen:** esta sección no proviene del PDF principal — extiende la sección 5 (enlace metálico) con un modelo cuantitativo simple del enlace metálico, tomado de un taller viejo (Taller SS2020 #4, repetido en la imagen "Parcial 1(2) - 2025-01"). [fuente: examen — Taller SS2020 #4]
+
+En un metal, cada ion positivo de carga $e$ está rodeado, en promedio, por una nube uniforme de electrones de conducción de densidad $n$ (el "mar de electrones" de la sección 5). Se modela cada ion como si estuviera en el centro de una esfera de radio $R$ que contiene exactamente la carga electrónica necesaria para neutralizarlo: $\frac{4}{3}\pi R^3 n e = e \Rightarrow R^3=\dfrac{3}{4\pi n}$ (esfera de Wigner-Seitz).
+
+**Fuerza restauradora (ley de Gauss):** si el ion se desplaza una distancia $x\ll R$ del centro de su esfera, por simetría esférica el campo eléctrico que siente en $x$ es el de una esfera uniforme de densidad de carga $-ne$ de radio $x$ (el resto de la carga, a radio mayor que $x$, no contribuye — teorema de Gauss para una distribución esférica):
+
+$$E(x) = \frac{\text{carga encerrada en radio }x}{4\pi\varepsilon_0 x^2} = \frac{-ne\cdot\frac{4}{3}\pi x^3}{4\pi\varepsilon_0 x^2} = -\frac{nex}{3\varepsilon_0}$$
+
+La fuerza sobre el ion (carga $+e$) es $F=eE(x)=-\dfrac{ne^2}{3\varepsilon_0}x$: una fuerza restauradora **lineal en $x$** (oscilador armónico):
+
+$$M\ddot x = -\frac{ne^2}{3\varepsilon_0}x \;\Rightarrow\; \boxed{\omega^2 = \frac{ne^2}{3\varepsilon_0 M} = \frac{e^2}{4\pi\varepsilon_0 MR^3}}$$
+
+(el factor numérico exacto dentro de la raíz depende de la convención usada para definir $R$ — distintas versiones del enunciado usan $\frac{4}{3}\pi R^3n=1$ o variantes cercanas — pero la dependencia funcional $\omega\propto\sqrt{ne^2/(\varepsilon_0M)}$ es la misma en todas ellas).
+
+**Orden de magnitud y velocidad del sonido:** con valores típicos de un metal ($n\sim10^{22}$-$10^{23}\text{cm}^{-3}$, $M\sim10^{-22}$ g), esta $\omega$ resulta del mismo orden que las frecuencias de vibración de red ya vistas ($\sim10^{13}$-$10^{14}\text{ s}^{-1}$). Multiplicando por una longitud característica del orden del espaciamiento interatómico ($R\sim a$) se obtiene una estimación de orden de magnitud de la velocidad del sonido en el metal, $v_s\sim\omega R$, consistente con los valores típicos $v_s\sim10^5$-$10^6$ cm/s vistos en las secciones de ondas elásticas — es decir, este modelo simple de "ion en un mar de electrones" ya captura, sin necesidad de la teoría completa del electrón libre (fuera de alcance de este bloque), el orden de magnitud correcto de la rigidez efectiva que determina el sonido en un metal.
+
+### Puntos clave para dominar este tema (enlace.9)
+- Puede plantear el modelo de jellium (ion +e en el centro de una esfera de electrones de conducción de densidad n, radio R fijado por neutralidad de carga) y derivar, vía ley de Gauss, que el campo dentro de la esfera crece linealmente con el desplazamiento.
+- Sabe derivar $\omega^2=ne^2/(3\varepsilon_0M)$ (equivalentemente $e^2/4\pi\varepsilon_0MR^3$) como frecuencia de oscilación armónica del ion desplazado.
+- Puede estimar el orden de magnitud de $\omega$ y de la velocidad del sonido en un metal a partir de este modelo simple, sin invocar la teoría del electrón libre.
+
 ### Puntos clave para dominar este tema
 - Puede escribir el potencial de par de Madelung-Born: U_ij = ±q²/(4πε₀r_ij) + A/r_ij^b, identificando el término atractivo de Coulomb y el repulsivo de corto alcance.
 - Sabe derivar (o al menos reproducir el argumento de) la constante de Madelung en 1D usando la serie ln(1+x), obteniendo α=2ln2=1.3863.
