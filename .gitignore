@@ -2,6 +2,9 @@
 *.pdf
 *.doc
 *.docx
+# Excepción (decisión del usuario): PDF del Parcial 2 que sí se versionan
+!Parcial_2/Diapositivas/Metales 2021.pdf
+!Parcial_2/Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_compress.pdf
 
 # Progreso personal — usa progreso/progreso.template.md como punto de partida
 progreso/progreso.md
