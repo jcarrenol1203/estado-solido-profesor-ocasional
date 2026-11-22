@@ -23,7 +23,7 @@ Fuera de alcance pero en el libro: conductividad térmica y Wiedemann-Franz en �
 
 ## Cuidado con el libro (verificado)
 
-- El ejemplo numérico del texto (p. 204, pdf 92) sale ilegible por OCR: parece dar $E_F(0)\approx5$ eV, pero con $n=10^{28}$ m⁻³ la fórmula da **1.7 eV** (con $n\approx5\times10^{28}$ sale ≈5 eV). No uses ese número del libro; usa los de las notas.
+- **Ejemplo numérico de la p. 204 (pdf 92), leído en imagen a 200 dpi:** el libro dice $n=10^{29}$ m⁻³ y $E_F(0)\approx8\times10^{-19}$ J $=5$ eV (el exponente sale borroso). Esos dos datos **no son coherentes entre sí**: $n=10^{29}$ da $1.26\times10^{-18}$ J $=7.9$ eV, y $5$ eV corresponde a $n\approx5\times10^{28}$ m⁻³ (para $n=10^{28}$ saldría 1.7 eV). Es una errata o redondeo del libro, no del OCR. Usa los números de las notas.
 - Pavlov escribe $n$ en m⁻³ y $E_F$ en J; la numeración de ecuaciones (6.xx) es la del libro, no la de las diapositivas.
 - Notación: Pavlov usa $E_F$ para la energía de Fermi y $T_F\approx5\times10^4$ K como temperatura de degeneración.
 
