@@ -60,6 +60,9 @@ Alternativa: de $\ln N=\tfrac32\ln\varepsilon+\text{cte}$ → $\frac{dN}{N}=\fra
 
 ## 12. Superficie de Fermi (`fermi3d.3`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 Espacio de velocidades (ejes $v_x,v_y,v_z$) con $E=\tfrac12m^*v^2$: a $T=0$ los e⁻ ocupan una **esfera de Fermi** de radio $v_F$; la superficie $E_F=\tfrac12m^*v_F^2$ es la **superficie de Fermi (SF)**. [p. 72-73]
 - A $T>0$ la SF **no se afecta apreciablemente** (pocos e⁻ excitados): es una identidad **permanente**, característica física real del metal, $v_F=(2E_F/m^*)^{1/2}\sim10^6$ m/s, independiente de $T$.
 - $E_F=\frac{\hbar^2}{2m^*}(3\pi^2N/V)^{2/3}=f(N)$. Para $N\sim10^{23}$ cm⁻³, $E_F\sim5$ eV.

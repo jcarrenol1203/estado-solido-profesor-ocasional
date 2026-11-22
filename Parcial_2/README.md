@@ -31,3 +31,23 @@ cp progreso/progreso.template.md progreso/juan.md   # o isa.md
 ## Adaptarlo a otro bloque
 
 Extraer el PDF una sola vez a `notas/*.md` con citas de página, volcar los exámenes viejos a `examenes/`, regenerar la tabla del template con IDs nuevos y ajustar `CLAUDE.md`.
+
+## Alcance (diapositivas 1-70) y mapa a Pavlov
+
+El parcial llega hasta la **p. 70** de `Metales 2021.pdf`. Mapa diapositivas → subtema:
+
+| Págs. | Subtema | En alcance |
+|---|---|---|
+| 1-13 | metal.1 | sí |
+| 13-18 | gas1d.1 | sí |
+| 19-23 | interac.1 | sí |
+| 24-50 | drude.1-3 (24-30, 31-37, 38-50) | sí |
+| 51-61 | cal.1 (51-53), cal.2 (53-61) | sí |
+| 62-67 | fermi3d.1 | sí |
+| 68-70 | fermi3d.2 | sí |
+| 70-71, 106-109 | cal.3 | no |
+| 72-73 | fermi3d.3 | no |
+| 74-91 | trans.1-4 | no |
+| 92-105 | term.1, falla.1 | no |
+
+Pavlov (recomendado): `Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_compress.pdf`. Mapa completo en `notas/08_mapa_pavlov.md`. Resumen: gas de Fermi, FD, $E_F$, $D(E)$ y $C_e$ → **§6.1** (pp. 200-206); modelos de Drude/Sommerfeld e interacciones → **§7.1** (pp. 235-236); $\sigma(T)$ de metales → **§7.13** (pp. 286-287). El libro no cubre 1D, la deducción de Drude ni el §2.6 (falta en la copia).

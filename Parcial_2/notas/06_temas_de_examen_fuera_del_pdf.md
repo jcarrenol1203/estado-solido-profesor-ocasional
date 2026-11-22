@@ -4,6 +4,9 @@
 
 ## 19. Electrones casi libres: bandas, gaps y la clasificación metal / semiconductor / aislante (`extra.1`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 - **Idea:** al incluir un potencial periódico débil $U(\mathbf r)=U(\mathbf r+\mathbf R)$ sobre el gas libre, los estados con $\mathbf k$ cerca de un plano de Bragg se mezclan: $\mathbf k$ y $\mathbf k-\mathbf G$ con $|\mathbf k|=|\mathbf k-\mathbf G|$, es decir $k=\pm\pi/a$ en 1D (frontera de la zona de Brillouin). Se forma una **brecha** (gap) $E_g=2|U_G|$ en esos valores de $k$; lejos de ellos $\varepsilon(\mathbf k)\approx\hbar^2k^2/2m$ (el modelo libre sigue valiendo).
 - **Cuál electrón se afecta más:** el de $\mathbf k$ más cercano a una frontera de zona (donde el libre y el desplazado son degenerados). Ej. $\mathbf k=(\pi,\pi/3,0)$ Å⁻¹ con $a=1$ Å está **sobre** el plano $k_x=\pi/a$ → es el más afectado; $\mathbf k=(10^{-2},0,0)$ está en el centro (el menos afectado). (`P-2025-2S #4f`)
 - **Conteo de estados:** cada banda tiene $N$ celdas primitivas → $2N$ estados (con espín). Un cristal con **número par de e⁻ de valencia por celda primitiva** puede llenar bandas completas (aislante o semiconductor) **solo si no hay solapamiento** de bandas; si hay solapamiento (ej. Be, Mg, Zn, Ca: divalentes) es **metal** o semimetal. Por tanto la respuesta a "¿par ⇒ aislante siempre?" es **no**. (`P-2025-2S #4e`)
@@ -22,6 +25,9 @@
 ---
 
 ## 20. Condición análoga al efecto Zener con campo magnético (`extra.2`)
+
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
 
 Efecto Zener: un campo eléctrico fuerte excita e⁻ a través del gap si $eEaE_F/E_g^2>1$. Análogo magnético (ruptura magnética): se sustituye $eE\to e v_FB$ (fuerza de Lorentz) y $ak_F\sim1$:
 

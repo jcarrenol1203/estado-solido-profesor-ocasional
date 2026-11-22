@@ -6,6 +6,9 @@ Notación: $C$ constante de fuerza entre primeros vecinos, $a$ parámetro de red
 
 ## 22. Velocidad de fase, velocidad de grupo y medios dispersivos (`vib.1`)
 
+> ⛔ **Fuera de alcance del parcial** (vibraciones: no entra en las diapositivas 1-70).
+
+
 - $v_f=\omega/q$ (fase) y $v_g=d\omega/dq$ (grupo, velocidad de la energía). **Medio dispersivo** ⇔ $\omega(q)$ no es lineal ⇔ $v_f\ne v_g$. En un medio no dispersivo ($\omega=v_sq$) coinciden.
 - En un sólido $\omega(q)$ es **periódica** en $q$ con periodo $G=2\pi/a$ → $v_g(q)$ también es periódica y con la misma periodicidad (`P-2026-1S #1`).
 - A $q$ pequeño $v_g\to v_s$ (velocidad del sonido, no cero). La velocidad del sonido sale de la **primera** derivada de $\omega(q)$ a $q\to0$ (pendiente inicial), no de la segunda.
@@ -18,6 +21,9 @@ Notación: $C$ constante de fuerza entre primeros vecinos, $a$ parámetro de red
 ---
 
 ## 23. Cadena monoatómica: zona de Brillouin, equivalencia de ondas y $\lambda_{min}=2a$ (`vib.2`)
+
+> ⛔ **Fuera de alcance del parcial** (vibraciones: no entra en las diapositivas 1-70).
+
 
 - Los desplazamientos solo se evalúan en los nodos $x_n=na$: $u_n=Ae^{i(qna-\omega t)}$. Dos $q$ que difieren en $G=2\pi/a$ dan **el mismo** $u_n$ para todo $n$ (aliasing). Por eso basta la primera ZB.
 - $\lambda=6a$ ⇒ $q_1=2\pi/6a=\pi/3a$; $\lambda=6a/7$ ⇒ $q_2=7\pi/3a=q_1+2\pi/a$. Representan **el mismo movimiento atómico** (mismas oscilaciones, en fase) (`#2`).
@@ -32,6 +38,9 @@ Notación: $C$ constante de fuerza entre primeros vecinos, $a$ parámetro de red
 
 ## 24. Modos normales, condiciones de frontera y mecánica de las ramas (`vib.3`)
 
+> ⛔ **Fuera de alcance del parcial** (vibraciones: no entra en las diapositivas 1-70).
+
+
 - **Cuántos modos** hay en un sólido finito: se cuentan imponiendo condiciones de frontera (fijas o periódicas) a las soluciones de la ecuación de onda; la analogía con la **cuerda vibrante** vale porque la ecuación diferencial y las condiciones de frontera admiten el mismo conjunto de soluciones independientes (ondas estacionarias), no porque las velocidades sean parecidas (`#6`). Con $N$ átomos hay $N$ valores de $q$ por rama ($3N$ modos en 3D).
 - **Condición de Bragg y ondas elásticas:** la red es **periódica** y el campo acústico tiene **naturaleza ondulatoria**; ambas cosas juntas dan reflexión de Bragg/difracción $2a\sin\theta=n\lambda$, aquí en la frontera de zona $q=\pi/a$ (`#9`). No requiere que fonón y fotón tengan energías comparables ni que el campo acústico sea electromagnético.
 - **3 ramas acústicas en 3D** (1 longitudinal, 2 transversales): $\omega_L>\omega_T$ porque las fuerzas restauradoras de compresión (longitudinal) son mayores que las de cizalladura (transversal): se explica con las **leyes de Newton** (fuerzas elásticas) (`#10`).
@@ -44,6 +53,9 @@ Notación: $C$ constante de fuerza entre primeros vecinos, $a$ parámetro de red
 ---
 
 ## 25. Cadena diatómica: ramas, gap y borde de zona (`vib.4`)
+
+> ⛔ **Fuera de alcance del parcial** (vibraciones: no entra en las diapositivas 1-70).
+
 
 Masas $M>m$, constante $C$, parámetro $a$ (distancia entre vecinos):
 
@@ -68,6 +80,9 @@ $$\omega^2=C\left(\frac1M+\frac1m\right)\pm C\sqrt{\left(\frac1M+\frac1m\right)^
 ---
 
 ## 26. Procesos Umklapp y conductividad térmica de fonones (`vib.5`)
+
+> ⛔ **Fuera de alcance del parcial** (vibraciones: no entra en las diapositivas 1-70).
+
 
 - **Proceso normal (N):** $\mathbf q_1+\mathbf q_2=\mathbf q_3$, conserva el momento cristalino y **no** da resistencia térmica. **Proceso Umklapp (U):** $\mathbf q_1+\mathbf q_2=\mathbf q_3+\mathbf G$ con $\mathbf G\ne0$; el momento cristalino cambia en un vector de red recíproca, el flujo de fonones se reorienta (puede invertirse) (`#16`).
 - Para que ocurra un U hacen falta fonones con $|\mathbf q|\gtrsim|\mathbf G|/2$ (de orden $\pi/a$), es decir con energía de orden $k_B\Theta_D/2$: están poblados solo a $T$ moderada/alta; a $T\to0$ los U se **congelan** ($\propto e^{-\Theta/2T}$) (`#18`, `#17`).

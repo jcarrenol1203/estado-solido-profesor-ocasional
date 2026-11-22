@@ -4,6 +4,9 @@
 
 ## 17. Emisión termoiónica y ecuación de Richardson-Dushman (`term.1`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 **Idea:** los e⁻ están ligados al metal por la **función trabajo** $\phi=E_{vacío}-E_F$ (altura de la barrera superficial; el pozo infinito cuadrado es muy simple, se usa un pozo de altura finita). [p. 92-93, 97]
 
 Funciones trabajo ($\phi$ en eV): W 4.5; Ta 4.2; Ni 4.6; Ag 4.8; Cs 1.8; Pt 5.3. [p. 93]
@@ -34,6 +37,9 @@ $$\boxed{J_s=\frac{4\pi m e}{h^3}(k_BT)^2e^{-\phi/k_BT}=A\,T^2e^{-\phi/k_BT}},\q
 ---
 
 ## 18. Fallas del modelo del e⁻ libre (`falla.1`)
+
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
 
 1. $\sigma=Ne^2\tau_F/m^*\sim N$: predice $\sigma$ proporcional a la concentración, pero los divalentes/trivalentes y los semimetales no lo cumplen. [p. 105]
 2. $R_H>0$ en Be, Zn, Cd: portadores positivos (huecos) que no existen en el modelo.

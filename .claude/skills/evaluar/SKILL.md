@@ -82,3 +82,9 @@ Argumento: el tema o alcance a evaluar, ej. `/evaluar cadena diatómica`,
   hay conflicto, `BASE/examenes/guia_teoria_por_examen.md`.
 - No toques ni actualices `BASE/progreso/<otra-persona>.md` ni el progreso del
   otro parcial — cada evaluación pertenece a un único perfil y parcial activos.
+
+## Alcance Parcial 2
+
+En `Parcial_2/` solo se evalúan subtemas en alcance (diapositivas 1-70). Si el usuario pide uno `fuera de alcance` o "todo", limita a los de alcance y avísalo. Al adaptar preguntas del banco, descarta las secciones marcadas ⛔.
+
+Al armar preguntas de `Parcial_2`, puedes usar también las "estilo Pavlov" del final de `examenes/banco_preguntas.md` y citar `notas/08_mapa_pavlov.md` (sección y página del libro) al corregir.

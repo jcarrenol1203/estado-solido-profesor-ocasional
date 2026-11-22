@@ -64,3 +64,9 @@ Argumento: la pregunta del usuario (texto libre), ej. `/duda por qué la rama
 - No regeneres el dashboard automáticamente desde aquí.
 - No toques `BASE/progreso/<otra-persona>.md` — solo el perfil activo de la
   sesión, ni el progreso del otro parcial.
+
+## Alcance Parcial 2
+
+En `Parcial_2/` el parcial llega solo hasta la p. 70. Si la duda es de un subtema `fuera de alcance` (ver `progreso/<persona>.md`), respóndela pero avisa que no entra en el parcial y no cambies su estado.
+
+En `Parcial_2`, además de `[p. N]` de las diapositivas, cita la sección del Pavlov (`notas/08_mapa_pavlov.md`) cuando el subtema aparezca en el libro; no releas el libro.

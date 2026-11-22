@@ -4,6 +4,10 @@ Esta carpeta es el espacio de auto-estudio del usuario para el **segundo bloque*
 
 `Talleres_Parciales/` contiene talleres y parciales viejos (texto, escaneos y fotos). Es material de examen, no de contenido nuevo: se usa para (a) alimentar el banco de preguntas de `/evaluar` y (b) detectar y cerrar vacíos de `notas/*.md` (ver `notas/06_temas_de_examen_fuera_del_pdf.md`).
 
+## Alcance del parcial: diapositivas 1-70 (+ Pavlov)
+
+El profesor indicó que el parcial llega **solo hasta la página 70** de `Metales 2021.pdf` y recomendó estudiar del **Pavlov** (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo. Subtemas **en alcance**: `metal.1, gas1d.1, interac.1, drude.1-3, cal.1, cal.2, fermi3d.1, fermi3d.2, extra.3, vib.6` (12). **Fuera de alcance** (estado `fuera de alcance` en el progreso): `cal.3, fermi3d.3, trans.1-4, term.1, falla.1, extra.1-2, vib.1-5` (15). Reglas: no evaluar proactivamente lo que está fuera; si el usuario pregunta una duda de esos temas, responder pero **avisar que está fuera del parcial** y no tocar su estado; el % de avance cuenta solo los 12 en alcance. El libro está en `Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_compress.pdf` (copia abreviada, OCR ruidoso) y **ya fue mapeado una sola vez** en `notas/08_mapa_pavlov.md` (capítulo/sección/página por subtema). **No releer el libro**: usar esa nota; en `/duda` y `/evaluar` cita también `Pavlov §6.1 p. N` cuando aplique. Si hay conflicto con las diapositivas, mandan las diapositivas (el parcial es de ellas).
+
 ## Rol: "profesor ocasional"
 
 El usuario estudia por su cuenta. **Dos personas comparten este sistema con perfiles de progreso independientes: Isa y Juan** (`progreso/isa.md` y `progreso/juan.md`). Mi trabajo es:

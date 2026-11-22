@@ -4,6 +4,9 @@
 
 ## 13. Conductividad eléctrica en el modelo cuántico (`trans.1`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 Para un e⁻ libre $m\mathbf v=\hbar\mathbf k$. Con $\mathbf E$ y $\mathbf B$: [p. 74]
 
 $$\mathbf F=m\frac{d\mathbf v}{dt}=\hbar\frac{d\mathbf k}{dt}=-e(\mathbf E+\mathbf v\times\mathbf B)$$
@@ -37,6 +40,9 @@ $$\mathbf J=-eN\frac{v_d}{v_F}v_F=-Ne\,v_d\ \Rightarrow\ \sigma=\frac{Ne^2\tau_F
 
 ## 14. Conductividad térmica y ley de Wiedemann-Franz (`trans.2`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 Experimento: $J_Q=-K\,dT/dx$. En metales $K=K_e+K_{ph}$, con $K_{ph}\sim10^{-2}K_e$ (los e⁻ dominan). Los e⁻ del lado caliente ($T_2>T_1$) llevan más energía que los del frío, mientras la corriente de partículas neta es cero ($J_{neta}=0$). [p. 80]
 
 **Evaluación de $K$** (teoría cinética): [p. 81-82]
@@ -66,6 +72,9 @@ $L=\frac{\pi^2}3(k_B/e)^2$ = **número de Lorenz** ($L\approx5.8\times10^{-9}$ c
 
 ## 15. Resonancia ciclotrónica (`trans.3`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 Electrón en $\mathbf B$ ($\mathbf E=0$): $F=-e(\mathbf v\times\mathbf B)=m_ac=mv^2/r$ → órbita circular con frecuencia angular **ciclotrónica** [p. 84]
 
 $$\omega_c=\frac{eB}{m^*},\qquad \nu_c=\frac{\omega_c}{2\pi}\approx2.8\,B\ \text{GHz}\ (B\text{ en kG},\ m^*\approx m_e)$$
@@ -88,6 +97,9 @@ Para $B=1$ kG: $\nu_c=2.8$ GHz (microondas). [p. 84-85]
 ---
 
 ## 16. Efecto Hall (`trans.4`)
+
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
 
 Muestra con corriente $J_x$ y campo $B_z$: la fuerza de Lorentz $F_L=-e\,v_xB$ desvía los e⁻ hacia $-y$; se acumulan cargas en las caras y aparece un campo transversal $E_H$ (fuerza $F_H=-eE_H$ hacia $+y$). **Estado estacionario:** $F_H=F_L$. [p. 88-89]
 

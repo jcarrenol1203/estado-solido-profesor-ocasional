@@ -48,3 +48,7 @@ Argumentos opcionales: el perfil y el parcial (`/dashboard juan p2`,
 - No publiques ni modifiques el dashboard de la otra persona ni el del otro
   parcial sin que se pida explícitamente — cada (parcial, perfil) tiene su
   propio artifact y su propia URL, y no se tocan entre sí.
+
+## Alcance Parcial 2
+
+En `Parcial_2/` el % global = dominados / subtemas **en alcance** (12). Los `fuera de alcance` se muestran aparte, en gris atenuado con etiqueta "fuera del parcial (p. >70)", y no cuentan en el %. Indica en el título/subtítulo "Alcance: diapositivas 1-70".

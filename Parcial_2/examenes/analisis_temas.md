@@ -45,3 +45,7 @@
 ## Nota de alcance
 
 `P-2026-1S` (las 4 fotos) es el **Parcial II de 2026-1S** y trata sobre todo vibraciones de red y fonones (cadena monoatómica/diatómica, Umklapp, conductividad térmica de fonones), con una pregunta de metales (#11). Por eso este parcial cubre los bloques 0-5 (metales) **y** el bloque 7 (`vib.1-6`, resumen en `notas/07_vibraciones_para_parcial_2026_1S.md`, teoría completa en `Parcial_1/notas/`). Orden de frecuencia: vib.4 (cadena diatómica, 6 preguntas) > vib.5 (Umklapp/κ, 5) > vib.2 y vib.3 (3 cada una) > vib.1 (2) > vib.6 (1).
+
+## Alcance actualizado (diapositivas 1-70)
+
+El profesor limitó el parcial a las **diapositivas 1-70** de `Metales 2021.pdf`. En alcance: metal.1, gas1d.1, interac.1, drude.1-3, cal.1, cal.2, fermi3d.1, fermi3d.2 (p. 68-70), extra.3 (aplicación de $k_F$/$E_F$) y vib.6. **Fuera** (p. >70 o ajenos): cal.3, fermi3d.3, trans.1-4, term.1, falla.1, extra.1-2, vib.1-5. Por tanto de los "calientes" solo importan los puntos 1, 2, 3, 8 y 9 del ranking; WF, Hall, termoiónica y bandas quedan fuera. Los exámenes viejos son orientativos: solo se usan sus preguntas de subtemas en alcance.

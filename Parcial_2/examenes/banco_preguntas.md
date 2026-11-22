@@ -1,5 +1,7 @@
 # Banco de preguntas — parciales y talleres viejos (Parcial 2)
 
+> **Alcance actual: diapositivas 1-70.** Las secciones marcadas ⛔ no se usan en `/evaluar` salvo petición explícita.
+
 > Extracción única de `Parcial_2/Talleres_Parciales/` (regla dura: no releer esos archivos crudos — ver `analisis_temas.md` y `CLAUDE.md`). Cada pregunta cita su fuente corta entre corchetes y su tipo (numérica / deducción / conceptual). Usado por `/evaluar` para adaptar preguntas reales de examen.
 
 ## metal.1 — Metales, cristal metálico y $N$
@@ -29,7 +31,7 @@
 ## cal.1 — Calor específico electrónico: fracaso clásico
 - Sin pregunta real propia; aparece implícita en `P-2025-01 #4b` y `T-2025-II #8` (valor clásico $\tfrac32R$ vs. experimento). Para `/evaluar`, basarse en los puntos clave de la nota.
 
-## cal.3 — Energía interna del gas de Fermi
+## ⛔ cal.3 (FUERA DE ALCANCE, p.>70) — Energía interna del gas de Fermi
 - Sin pregunta real propia; el contenido (energía de e⁻ excitados y huecos) respalda `P-2025-01 #3a`. Para `/evaluar`, pedir la deducción de $U=\int(\varepsilon-E_F)Df+\int(E_F-\varepsilon)(1-f)D$.
 
 ## cal.2 — Fermi-Dirac, $T_F$ y calor específico
@@ -53,40 +55,40 @@
 - Presión del gas de e⁻ a 0 K: $P=\tfrac25nE_F$. **[T-2025-II #7]** — deducción.
 - Energía interna promedio $E=\tfrac35E_F$ a $T=0$ y por qué contradice el gas clásico. **[P-2025-01 #3a]** — conceptual.
 
-## fermi3d.3 — Superficie de Fermi
+## ⛔ fermi3d.3 (FUERA DE ALCANCE, p.>70) — Superficie de Fermi
 - Sin pregunta real propia; relacionada con `P-2025-2S #4f` (el e⁻ más afectado por el potencial periódico es el más cercano a la frontera de zona). Para `/evaluar`, usar los puntos clave de la nota.
 
-## trans.1 — Conductividad eléctrica cuántica
+## ⛔ trans.1 (FUERA DE ALCANCE, p.>70) — Conductividad eléctrica cuántica
 - Sin pregunta real propia; las conceptuales `P-2025-01 #4f` (e⁻-e⁻ no cambian $v_d$) y `T-2025-II #6` ($v_d/v_F$) la tocan.
 
-## trans.2 — Wiedemann-Franz
+## ⛔ trans.2 (FUERA DE ALCANCE, p.>70) — Wiedemann-Franz
 - Por qué existen materiales (alúmina) con alta conductividad térmica y $\sigma\approx0$ vista desde W-F (la conducción térmica la llevan fonones, no e⁻). **[P-2025-01 #4d]** — conceptual.
 
-## trans.3 — Resonancia ciclotrónica
+## ⛔ trans.3 (FUERA DE ALCANCE, p.>70) — Resonancia ciclotrónica
 - Ver `T-2025-II #4` bajo `drude.2` (órbita ciclotrónica completa).
 
-## trans.4 — Efecto Hall
+## ⛔ trans.4 (FUERA DE ALCANCE, p.>70) — Efecto Hall
 - Si en cobre se invierte el sentido de $B$: ¿cambia el signo del voltaje Hall? ¿el de la magnetorresistencia? Explicación física en ambos. **[P-2025-01 #4a]** — conceptual.
 
-## term.1 — Termoiónica
+## ⛔ term.1 (FUERA DE ALCANCE, p.>70) — Termoiónica
 - Mecanismo fundamental del efecto termoiónico. **[P-2025-01 #4e]** — conceptual.
 
-## falla.1 — Fallas del modelo del e⁻ libre
+## ⛔ falla.1 (FUERA DE ALCANCE, p.>70) — Fallas del modelo del e⁻ libre
 - Sin pregunta real propia; `P-2025-2S #4b, #4d` y `P-2025-01 #4a` (Hall) evalúan su consecuencia (aislantes, $R_H>0$, alcalinos vs. Al/Bi).
 
 ## extra.3 — Astrofísica y límite relativista
 - Preguntas reales ya listadas bajo `fermi3d.1`: **[P-2025-2S #2]** y **[T-2025-II #3]** (enana blanca, pulsar, $E_F\approx\hbar c(N/V)^{1/3}$).
 
-## extra.1 — Electrones casi libres y bandas
+## ⛔ extra.1 (FUERA DE ALCANCE, p.>70) — Electrones casi libres y bandas
 - Grafito conduce y diamante no (ambos C, $1s^22s^22p^2$): interpretar desde bandas. **[P-2025-2S #4c]** — conceptual.
 - Por qué los alcalinos se ajustan al e⁻ libre y Al, Bi no. **[P-2025-2S #4d]** — conceptual.
 - ¿Un cristal con número par de e⁻ de valencia por celda primitiva siempre es aislante? **[P-2025-2S #4e]** — conceptual.
 - Cúbico simple $a=1$ Å, $\mathbf k_1=(10^{-2},0,0)$, $\mathbf k_2=(1,1,0)$, $\mathbf k_3=(\pi,\pi/3,0)$ Å⁻¹: ¿cuál es el más afectado por el potencial periódico? (**$\mathbf k_3$**, está en $k_x=\pi/a$). **[P-2025-2S #4f]** — conceptual/numérica.
 
-## extra.2 — Zener magnético
+## ⛔ extra.2 (FUERA DE ALCANCE, p.>70) — Zener magnético
 - Condición análoga con campo magnético a $eEaE_F/E_g^2>1$ (con $ak_F\sim1$). **[T-SS2020 #1]** — deducción.
 
-## vib.1 a vib.6 — P-2026-1S (Parcial II 2026-1S, 20 selección múltiple; 19 de vibraciones + 1 de metales)
+## vib.6 EN ALCANCE; vib.1-5 ⛔ FUERA DE ALCANCE — P-2026-1S (Parcial II 2026-1S, 20 selección múltiple; 19 de vibraciones + 1 de metales)
 Transcripción completa en `guia_teoria_por_examen.md` §P-2026-1S (enunciado y las 5 opciones de cada pregunta, clave y justificación). Aquí, el índice por subtema, con la clave entre paréntesis:
 
 - **vib.1 — Velocidad de fase/grupo y medios dispersivos:** **[P-2026-1S #1]** velocidad de grupo en un sólido (**b**, periodicidad como ω(q)) — conceptual; **[P-2026-1S #8]** medio dispersivo (**e**, $v_f\ne v_g$) — conceptual.
@@ -97,3 +99,13 @@ Transcripción completa en `guia_teoria_por_examen.md` §P-2026-1S (enunciado y 
 - **vib.6 — Definición de $E_F$ (metales):** **[P-2026-1S #11]** (**b**, energía del estado ocupado más alto a $T=0$) — conceptual. Ver también `fermi3d.1`.
 
 *(La clave se dedujo por física. El estudiante original sacó 11/20 = 2.7; los 11 aciertos que cuadran con esa nota son #1, 3, 8, 9, 10, 11, 12, 14, 15, 18 y 20. En #5 la clave es **a** porque su respuesta marcada, la c, no suma entre esos 11; ambas opciones describen el mismo fenómeno.)*
+
+
+## Preguntas adicionales estilo Pavlov (sin solución oficial; para `/evaluar`, en alcance)
+
+Referencia: `notas/08_mapa_pavlov.md`. Ninguna sale de un examen viejo; son del enfoque del libro (§6.1).
+
+- **cal.1/cal.2 (Pavlov §6.1 p. 200, 206):** (a) ¿Por qué con Maxwell-Boltzmann el gas de e⁻ daría $C_e=\tfrac32 k_B$ por e⁻ y por qué no se observa? (b) Demuestra que $C_e/C_{clás}=\tfrac{\pi^2}{3}k_BT/E_F$ y evalúalo a 300 K para $E_F=7$ eV (≈ $1.2\times10^{-2}$; ojo: $3.7\times10^{-3}$ es solo $k_BT/E_F$).
+- **cal.2 (p. 202-204):** El gas de e⁻ del metal está degenerado hasta la fusión porque $T_F\sim5\times10^4$ K. Explica qué electrones aportan a $C_e$ y por qué $C_e\propto T$.
+- **fermi3d.1/fermi3d.2 (p. 203-204):** Deduce $D(E)\propto E^{1/2}$ con celdas de volumen $(2\pi\hbar)^3/V$ en el espacio de impulsos y, con $N=\int 2D\,dE$ hasta $E_F$, obtén $E_F(0)=\tfrac{\hbar^2}{2m}(3\pi^2n)^{2/3}$.
+- **interac.1 (p. 235-236):** Enumera las dos aproximaciones del modelo de e⁻ libres (e⁻ libres de los iones; e⁻ independientes) y di qué preguntas del §7.1 no puede responder (rango de $\sigma$, aislantes, superconductividad).

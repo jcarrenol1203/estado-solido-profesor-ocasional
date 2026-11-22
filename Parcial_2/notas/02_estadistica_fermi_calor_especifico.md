@@ -60,6 +60,9 @@ $$C_e\approx2R\frac{T}{T_F}\qquad\left(\text{cálculo exacto: } C_e=\frac{\pi^2}
 
 ## 9. Energía interna del gas de Fermi: derivación de $U(T)$ (`cal.3`)
 
+> ⛔ **Fuera de alcance del parcial** (el profesor limitó el parcial a las diapositivas 1-70). Se conserva como referencia; no se evalúa.
+
+
 Con $D(\varepsilon)$ densidad de orbitales y $f(\varepsilon,T)$: $D(\varepsilon)f$ es la densidad de orbitales llenos. Incremento de energía: [p. 70-71, 106]
 
 $$U=\int_0^\infty\varepsilon D f\,d\varepsilon-\int_0^{E_F}\varepsilon D\,d\varepsilon\quad(*)$$

@@ -2,13 +2,17 @@
 
 Fuente de verdad del avance del usuario en este bloque del curso. La leen y actualizan los skills `/duda`, `/evaluar` y `/dashboard` (con `BASE=Parcial_2/`). Nunca se llena "a mano" desde el PDF — todo sale de `notas/*.md`.
 
-Estados posibles: `no visto` | `en progreso` | `dominado`.
+Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
+
+**Alcance del parcial: diapositivas 1-70 de `Metales 2021.pdf`** (según el profesor). Los subtemas `fuera de alcance` (p. >70, o temas de exámenes viejos que dependen de ellas) **no cuentan** en el % de avance ni se evalúan salvo que se pida. Subtemas en alcance: metal.1, gas1d.1, interac.1, drude.1-3, cal.1, cal.2, fermi3d.1, fermi3d.2, extra.3, vib.6.
+
+**Lectura recomendada por el profesor:** Pavlov (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo para estos temas; el mapeo capítulo↔diapositivas está en `notas/08_mapa_pavlov.md` (cada subtema del checklist lleva su referencia "Pavlov: §… p. …").
 
 **Dashboard URL:** https://claude.ai/artifact/LLC4kbKYAmUL7bLB8DeWyt
 
 ---
 
-## Resumen rápido (27 subtemas)
+## Resumen rápido (27 subtemas; **12 en alcance**, 15 fuera)
 
 | ID | Subtema | Archivo | Estado | Última evaluación |
 |---|---|---|---|---|
@@ -20,24 +24,24 @@ Estados posibles: `no visto` | `en progreso` | `dominado`.
 | drude.3 | Origen de $\tau$: ondas de materia, Matthiessen, $\rho(T)$ | 01_modelo_de_drude.md | no visto | — |
 | cal.1 | Calor específico electrónico: fracaso clásico | 02_estadistica_fermi_calor_especifico.md | no visto | — |
 | cal.2 | Fermi-Dirac, potencial químico, $T_F$ y $C_e\propto T$ | 02_estadistica_fermi_calor_especifico.md | no visto | — |
-| cal.3 | Energía interna del gas de Fermi, $U(T)$ | 02_estadistica_fermi_calor_especifico.md | no visto | — |
+| cal.3 | Energía interna del gas de Fermi, $U(T)$ | 02_estadistica_fermi_calor_especifico.md | fuera de alcance | — |
 | fermi3d.1 | Gas 3D: ondas planas, $k_F$, $E_F$, $v_F$ | 03_gas_de_fermi_3D.md | no visto | — |
 | fermi3d.2 | Densidad de estados $D(\varepsilon)$, $E_0$, presión y módulo de rigidez | 03_gas_de_fermi_3D.md | no visto | — |
-| fermi3d.3 | Superficie de Fermi | 03_gas_de_fermi_3D.md | no visto | — |
-| trans.1 | Conductividad eléctrica cuántica (esfera desplazada) | 04_transporte.md | no visto | — |
-| trans.2 | Conductividad térmica y Wiedemann-Franz | 04_transporte.md | no visto | — |
-| trans.3 | Resonancia ciclotrónica | 04_transporte.md | no visto | — |
-| trans.4 | Efecto Hall | 04_transporte.md | no visto | — |
-| term.1 | Emisión termoiónica y Richardson-Dushman | 05_emision_termoionica_y_fallas.md | no visto | — |
-| falla.1 | Fallas del modelo del e⁻ libre | 05_emision_termoionica_y_fallas.md | no visto | — |
-| extra.1 | Electrones casi libres: bandas, gaps, aislante/semiconductor/metal | 06_temas_de_examen_fuera_del_pdf.md | no visto | — |
-| extra.2 | Zener magnético | 06_temas_de_examen_fuera_del_pdf.md | no visto | — |
+| fermi3d.3 | Superficie de Fermi | 03_gas_de_fermi_3D.md | fuera de alcance | — |
+| trans.1 | Conductividad eléctrica cuántica (esfera desplazada) | 04_transporte.md | fuera de alcance | — |
+| trans.2 | Conductividad térmica y Wiedemann-Franz | 04_transporte.md | fuera de alcance | — |
+| trans.3 | Resonancia ciclotrónica | 04_transporte.md | fuera de alcance | — |
+| trans.4 | Efecto Hall | 04_transporte.md | fuera de alcance | — |
+| term.1 | Emisión termoiónica y Richardson-Dushman | 05_emision_termoionica_y_fallas.md | fuera de alcance | — |
+| falla.1 | Fallas del modelo del e⁻ libre | 05_emision_termoionica_y_fallas.md | fuera de alcance | — |
+| extra.1 | Electrones casi libres: bandas, gaps, aislante/semiconductor/metal | 06_temas_de_examen_fuera_del_pdf.md | fuera de alcance | — |
+| extra.2 | Zener magnético | 06_temas_de_examen_fuera_del_pdf.md | fuera de alcance | — |
 | extra.3 | Escalas relativistas y astrofísicas del gas de Fermi | 06_temas_de_examen_fuera_del_pdf.md | no visto | — |
-| vib.1 | Velocidad de fase/grupo y medios dispersivos | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
-| vib.2 | Cadena monoatómica: aliasing, $\lambda=2a$, $g(\omega)$ en $\pi/a$ | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
-| vib.3 | Modos normales, Bragg y ramas acústicas ($\omega_L>\omega_T$) | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
-| vib.4 | Cadena diatómica: ramas, gap, $M\to m$, borde de zona | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
-| vib.5 | Umklapp y conductividad térmica de fonones | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
+| vib.1 | Velocidad de fase/grupo y medios dispersivos | 07_vibraciones_para_parcial_2026_1S.md | fuera de alcance | — |
+| vib.2 | Cadena monoatómica: aliasing, $\lambda=2a$, $g(\omega)$ en $\pi/a$ | 07_vibraciones_para_parcial_2026_1S.md | fuera de alcance | — |
+| vib.3 | Modos normales, Bragg y ramas acústicas ($\omega_L>\omega_T$) | 07_vibraciones_para_parcial_2026_1S.md | fuera de alcance | — |
+| vib.4 | Cadena diatómica: ramas, gap, $M\to m$, borde de zona | 07_vibraciones_para_parcial_2026_1S.md | fuera de alcance | — |
+| vib.5 | Umklapp y conductividad térmica de fonones | 07_vibraciones_para_parcial_2026_1S.md | fuera de alcance | — |
 | vib.6 | Definición de $E_F$ a $T=0$ (pregunta de metales del parcial) | 07_vibraciones_para_parcial_2026_1S.md | no visto | — |
 
 *(Nota de orden: el orden de estudio recomendado es el de la sección "Checklist detallado" más abajo, que sigue el temario de las diapositivas. `extra.1-3` no vienen del PDF — salen de vacíos detectados en `Talleres_Parciales/`, ver `examenes/analisis_temas.md`.)*
@@ -66,53 +70,53 @@ Orden de estudio recomendado (sigue el orden de las diapositivas). Cada subtema 
 
 ### Bloque 0 — Metales y gas de e⁻ [p. 1-23]
 
-**metal.1 — Metales, cristal metálico y $N$** [p. 1-13]
+**metal.1 — Metales, cristal metálico y $N$** [p. 1-13] · Pavlov: §6.1 p. 200
 - Describir pozos $U$ + gas de e⁻ libres; e⁻ de valencia → conducción (Na 3s, ~15 % del volumen son iones).
 - Calcular $N=Z_vN_A\rho/M$; monovalentes vs. divalentes.
 - Éxitos (Ohm, W-F) y fracasos (calor específico, $\ell$ largo) de la teoría clásica; las dos razones de la "transparencia".
 
-**gas1d.1 — Gas de Fermi 1D** [p. 13-19]
+**gas1d.1 — Gas de Fermi 1D** [p. 13-19] · Pavlov: (no está en Pavlov)
 - $\varepsilon_n=\hbar^2\pi^2n^2/2mL^2$ desde $\psi(0)=\psi(L)=0$; estado exacto vs. aproximado.
 - Pauli: 2 e⁻ por nivel; $2n_F=N$; $\varepsilon_F$ en 1D.
 
-**interac.1 — Interacciones** [p. 19-23]
+**interac.1 — Interacciones** [p. 19-23] · Pavlov: §7.1 pp. 235-236
 - Por qué e⁻-ion (seudopotencial, apantallamiento) y e⁻-e⁻ (Pauli, energía mínima, hueco de Fermi) son débiles.
 - Gas de e⁻ vs. gas ordinario: FD vs. MB, densidad, plasma.
 
 ### Bloque 1 — Drude [p. 24-50]
 
-**drude.1 — Ohm y Drude** [p. 24-30]
+**drude.1 — Ohm y Drude** [p. 24-30] · Pavlov: §7.1 pp. 235-236 (solo mención)
 - $m^*\dot v=-eE-m^*v/\tau$, $v_d=-e\tau E/m^*$, $J=-Nev_d$, $\sigma=Ne^2\tau/m^*$; $v_r\gg v_d$.
 
-**drude.2 — $\tau$, $\ell$, $\mu$** [p. 31-37]
+**drude.2 — $\tau$, $\ell$, $\mu$** [p. 31-37] · Pavlov: §7.1 pp. 235-236 (solo mención)
 - $e^{-t/\tau}$, $\ell=v\tau$, $\mu=e\tau/m^*$, $\sigma=Ne\mu$; órdenes de magnitud; $\sigma_m/\sigma_i\sim10^{23}$; Joule $=I^2R$.
 
-**drude.3 — Origen de $\tau$** [p. 38-50]
+**drude.3 — Origen de $\tau$** [p. 38-50] · Pavlov: §7.13 pp. 286-287
 - e⁻-e⁻ conservan $J$; red perfecta no dispersa; fonones e impurezas; Matthiessen; $\rho_{ph}\propto T$ ($T\gg\theta$) y $T^5$ ($T\ll\theta$); Kondo.
 
-### Bloque 2 — Estadística de Fermi y calor específico [p. 51-61, 106-109]
+### Bloque 2 — Estadística de Fermi y calor específico [p. 51-61 en alcance; cal.3 (p. 70-71, 106-109) fuera]
 
-**cal.1 — Fracaso clásico** [p. 51-53]
+**cal.1 — Fracaso clásico** [p. 51-53] · Pavlov: §6.1 p. 200
 - $C_e=\tfrac32R$, $C_{total}=4.5R$ vs. experimento $\approx3R$.
 
-**cal.2 — FD y $C_e$** [p. 53-61]
+**cal.2 — FD y $C_e$** [p. 53-61] · Pavlov: §6.1 pp. 201-206
 - $f(E)$, $f(\mu)=\tfrac12$, $\mu(0)=E_F$, cola MB; $C_e\approx2R\,T/T_F$ ($\tfrac{\pi^2}{2}R\,T/T_F$); $C=\gamma T+\beta T^3$; anchura 90→10 % $=4.4k_BT$.
 
-**cal.3 — $U(T)$** [p. 70-71, 106-109]
+**cal.3 — $U(T)$** [p. 70-71, 106-109] — ⛔ fuera de alcance (p. >70)
 - Truco de sumar la identidad de $N$; integrales de e⁻ excitados y huecos.
 
-### Bloque 3 — Gas de Fermi 3D [p. 62-73]
+### Bloque 3 — Gas de Fermi 3D [p. 62-70 en alcance; SF p. 72-73 fuera]
 
-**fermi3d.1 — $k_F$, $E_F$, $v_F$** [p. 62-67]
+**fermi3d.1 — $k_F$, $E_F$, $v_F$** [p. 62-67] · Pavlov: §6.1 pp. 202-204
 - Condiciones periódicas → $e^{i\mathbf k\cdot\mathbf r}$, $k_i=2\pi n_i/L$; derivar $k_F=(3\pi^2n)^{1/3}$; $E_F$, $T_F$, $v_F$; $\langle v\rangle=\tfrac34v_F$.
 
-**fermi3d.2 — $D(\varepsilon)$** [p. 68-71]
+**fermi3d.2 — $D(\varepsilon)$** [p. 68-70] · Pavlov: §6.1 pp. 203-206
 - $N(\varepsilon)\propto\varepsilon^{3/2}$, $D(E_F)=3N/2E_F$, $E_0=\tfrac35NE_F$, $P=\tfrac25nE_F$, $B=\tfrac23nE_F$.
 
-**fermi3d.3 — Superficie de Fermi** [p. 72-73]
+**fermi3d.3 — Superficie de Fermi** [p. 72-73] — ⛔ fuera de alcance
 - Esfera en $\mathbf k$/$\mathbf v$; casi independiente de $T$; propiedad característica del metal.
 
-### Bloque 4 — Transporte [p. 74-91]
+### Bloque 4 — Transporte [p. 74-91] — ⛔ fuera de alcance (todo p. >70)
 
 **trans.1 — $\sigma$ cuántica** [p. 74-79]
 - Esfera desplazada $\delta k=-eE\tau/\hbar$; solo e⁻ de la SF; $\sigma=Ne^2\tau_F/m^*$.
@@ -126,7 +130,7 @@ Orden de estudio recomendado (sigue el orden de las diapositivas). Cada subtema 
 **trans.4 — Hall** [p. 88-91]
 - $R_H=-1/Ne$; $R_H>0$ ⇒ huecos; qué cambia al invertir $B$.
 
-### Bloque 5 — Termoiónica y fallas [p. 92-105]
+### Bloque 5 — Termoiónica y fallas [p. 92-105] — ⛔ fuera de alcance
 
 **term.1 — Termoiónica** [p. 92-104]
 - $\phi=E_{vac}-E_F$; $J=AT^2e^{-\phi/k_BT}$, $A=120$ A/cm²K²; Schottky; gráfica de Richardson.
@@ -134,7 +138,7 @@ Orden de estudio recomendado (sigue el orden de las diapositivas). Cada subtema 
 **falla.1 — Fallas del modelo** [p. 105]
 - $\sigma\propto N$ falla, $R_H>0$, SF no esférica, sin aislantes → bandas.
 
-### Bloque 6 — Temas de examen fuera del PDF (sin páginas)
+### Bloque 6 — Temas de examen fuera del PDF (sin páginas) — extra.3 en alcance; extra.1-2 ⛔ fuera
 
 **extra.1 — Bandas casi libres**
 - Gaps en fronteras de zona; electrón más afectado; metal/semiconductor/aislante con paridad y solapamiento; grafito vs. diamante; alcalinos.
@@ -145,7 +149,7 @@ Orden de estudio recomendado (sigue el orden de las diapositivas). Cada subtema 
 **extra.3 — Astrofísica/relativista**
 - $N\approx M/m_p$; $E_F$ no relativista y relativista $\hbar c(3\pi^2n)^{1/3}$; $T_F$, $\langle v\rangle$.
 
-### Bloque 7 — Vibraciones de red del Parcial II 2026-1S (sin páginas de este PDF; teoría completa en `Parcial_1/notas/`)
+### Bloque 7 — Vibraciones de red del Parcial II 2026-1S (sin páginas de este PDF) — vib.6 en alcance; vib.1-5 ⛔ fuera (son del bloque de vibraciones, `Parcial_1/`)
 
 **vib.1 — Fase y grupo** (`P-2026-1S #1, #8`)
 - $v_f=\omega/q$, $v_g=d\omega/dq$; medio dispersivo ⇔ $v_f\ne v_g$; $v_g$ periódica como $\omega(q)$; $v_g\to v_s$ a $q\to0$.
