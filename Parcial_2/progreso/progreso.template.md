@@ -58,6 +58,7 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 | P-2025-01 | Parcial (abierto, 4 preguntas, #4 con 7 literales) | no intentado | — | — |
 | P-2026-1S | Parcial II (20 selección múltiple: 19 vibraciones de red + 1 metales) | no intentado | — | — |
 | T-2025-II | Taller (abierto, 8 problemas) | no intentado | — | — |
+| T-2026-II | Taller (abierto, 12 problemas; soluciones plegables) | no intentado | — | — |
 | T-SS2020 | Taller (abierto, 6 problemas) | no intentado | — | — |
 
 <!-- PENDIENTES:START -->

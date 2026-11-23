@@ -45,6 +45,23 @@ Fórmula maestra: $E_F=\dfrac{\hbar^2}{2m}(3\pi^2n)^{2/3}$, $k_F=(3\pi^2n)^{1/3}
 5. Potencia: $P=\mathbf J\cdot\mathbf E\cdot AL=\sigma E^2AL=\frac{V^2}{R}=I^2R$ (con $V=EL$, $R=L/\sigma A$). [p. 37]
 6. $E_F\propto V^{-2/3}\propto\ell^{-2}$ ⇒ $\Delta E_F/E_F=-2\alpha\Delta T=-2(1.5\times10^{-6})(300)=-9\times10^{-4}=-0.09\,\%$. [p. 66]
 
+## T-2026-II — Taller II (S 02 2026)
+
+Resuelto completo en `examenes_resueltos/T-2026-II.md` (12 problemas, soluciones plegables, con diap. y Pavlov). Resumen:
+
+1. $v_d=I/neA=7.4\times10^{-4}$ m/s; $v_d/v_F=4.7\times10^{-10}$. [p. 30, 36-37, 66-67]
+2. He³ ($\rho=0.081$ g/cm³): $E_F=4.2\times10^{-4}$ eV, $T_F=4.9$ K (masa del átomo). [p. 66-67]
+3. $T_F$: Cu $8.2\times10^4$ K (0.0037), Na ($m^*=1.2$) $3.1\times10^4$ K (0.0096), Ag $6.4\times10^4$ K (0.0047). [p. 66-67]
+4. Fracción excitada $\sim T/T_F$: Cu 0.0037, Na 0.0096. [p. 57-58]
+5. Gas 2D: $n=4.2\times10^{-6}\,a_0^{-2}$, $E_F=\pi\hbar^2n/m=\pi n=1.3\times10^{-5}$ Ha $=0.36$ meV. **Fuera de las diap. 1-70.**
+6. $f(\mu+\Delta)=1-f(\mu-\Delta)$. [p. 55-56]
+7. Au: $T_F=6.3\times10^4$ K, $A_{teo}=\pi^2R/2T_F=0.65$ mJ/mol·K² vs. 0.73 (unidad del enunciado ilegible). [p. 57-59]
+8. Al ($n=1.81\times10^{29}$, $E_F=11.65$ eV): $C_e=0.033R$ por mol de átomos = 1.1 % de $3R$. [p. 58-59]
+9. Na ($n=2.6\times10^{28}$; el enunciado trae $10^{26}$, errata): $C_e=0.33$ J/mol·K $=0.040R$. [p. 58-59]
+10. Sol colapsado: $E_F=32.8$ eV, $T_F=3.8\times10^5$ K, $\langle v\rangle=\tfrac34v_F=2.55\times10^6$ m/s $=0.0085c$. [p. 66-67]
+11. $\rho\propto v/\ell\propto T^{1/2}\cdot T=T^{3/2}$. [p. 46-49]
+12. $\Delta E_F/E_F=-2\alpha\Delta T=-0.09\,\%$. [p. 66-67]
+
 ## P-2026-1S — Parcial II (S I 2026), 20 preguntas de selección múltiple (11/20 = 2.7)
 
 Transcripción de las 4 fotos ampliadas. **Clave deducida por física** (la hoja trae la respuesta marcada del estudiante, no una clave oficial): los 11 aciertos que cuadran con la nota son #1, 3, 8, 9, 10, 11, 12, 14, 15, 18 y 20. Teoría de apoyo: `notas/07_vibraciones_para_parcial_2026_1S.md` (vib.1-vib.5) y `Parcial_1/notas/`. "Est." = opción marcada por el estudiante.

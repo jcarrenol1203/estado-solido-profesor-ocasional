@@ -9,20 +9,21 @@
 | `P-2026-1S` | `Talleres_Parciales/Parcial 2026_1S/Foto1-4.jpeg` | Parcial II (20 preguntas de selección múltiple, 5 opciones) | 2026-1S | **19 de vibraciones de red/fonones + 1 de metales (#11, definición de $E_F$)**. Estudiante: 11/20 = 2.7. Transcripción completa (enunciados y opciones) en `guia_teoria_por_examen.md`; clave deducida por física. Distinto de `Parcial_1/…/Parcial_1-2026-1S.pdf` (18 preguntas, "Parcial 1"). |
 | `T-2025-II` | `Talleres_Parciales/Estado Solido (Taller II  2025 SII).pdf` | Taller (abierto, 8 problemas) | 2025-II | Texto limpio. |
 | `T-SS2020` | `Talleres_Parciales/Estado Solido(tallerII) SS2020.pdf` | Taller (abierto, 6 problemas) | Semestre especial 2020 | Texto limpio. |
+| `T-2026-II` | `Talleres_Parciales/Taller electron libre(S 2 2026).doc` | Taller (abierto, 12 problemas) | 2026-II | `.doc` convertido a texto. Resuelto completo en `examenes_resueltos/T-2026-II.md` (enunciados primero, soluciones plegables con diap. y Pavlov). Repite #6 de `T-2025-II` ($v_d/v_F$), #3-#4 de `T-SS2020`, #2 de `P-2025-2S`; nuevos: gas 2D, simetría de $f(E)$, $C_e$ del Au/Al/Na. |
 
 **Fuente de contenido:** `Diapositivas/Metales 2021.pdf` (109 págs), ya condensado en `notas/00-05`. El material de bandas que piden los parciales de 2025 **no está en esas diapositivas**: se cubrió en `notas/06_temas_de_examen_fuera_del_pdf.md` (`extra.1-3`).
 
 ## Ranking de subtemas "calientes" (frecuencia en el material viejo)
 
-1. **fermi3d.1 ($k_F$, $E_F$, $T_F$, $v_F$ desde $n$)** — aparece en los 4 exámenes de metales: `P-2025-01 #1, #2, #3b`, `P-2025-2S #2, #3`, `T-2025-II #3, #5, #6`, `T-SS2020 #2, #3, #4, #6`. Es lo más preguntado con diferencia.
-2. **cal.2 (FD, $T/T_F$, $C_e$)** — `P-2025-2S #3`, `P-2025-01 #3, #4b`, `T-2025-II #1, #8`, `T-SS2020 #4`.
+1. **fermi3d.1 ($k_F$, $E_F$, $T_F$, $v_F$ desde $n$)** — aparece en los 4 exámenes de metales: `P-2025-01 #1, #2, #3b`, `P-2025-2S #2, #3`, `T-2025-II #3, #5, #6`, `T-SS2020 #2, #3, #4, #6`, `T-2026-II #1, #2, #3, #5, #10, #12`. Es lo más preguntado con diferencia.
+2. **cal.2 (FD, $T/T_F$, $C_e$)** — `P-2025-2S #3`, `P-2025-01 #3, #4b`, `T-2025-II #1, #8`, `T-SS2020 #4`, `T-2026-II #3, #4, #6, #7, #8, #9`.
 3. **interac.1 / gas de Fermi vs. gas ordinario** — `P-2025-01 #4c` y `P-2025-2S #4a` (pregunta casi idéntica en dos parciales).
 4. **extra.1 (bandas casi libres, aislante/semiconductor/metal)** — `P-2025-2S #4b-f` (5 literales) y `P-2025-01 #4g`.
 5. **trans.2 (Wiedemann-Franz)** — `P-2025-01 #4d`.
 6. **trans.4 (Hall / magnetorresistencia)** — `P-2025-01 #4a`.
 7. **term.1 (termoiónica)** — `P-2025-01 #4e`.
-8. **drude.1-3 (Drude, camino libre, $v_d$, $\rho\propto T^{3/2}$)** — `P-2025-2S #1`, `P-2025-01 #4f`, `T-2025-II #2, #4, #6`, `T-SS2020 #5`.
-9. **extra.3 (astrofísica/relativista)** — `P-2025-2S #2`, `T-2025-II #3`.
+8. **drude.1-3 (Drude, camino libre, $v_d$, $\rho\propto T^{3/2}$)** — `P-2025-2S #1`, `P-2025-01 #4f`, `T-2025-II #2, #4, #6`, `T-SS2020 #5`, `T-2026-II #1, #11`.
+9. **extra.3 (astrofísica/relativista)** — `P-2025-2S #2`, `T-2025-II #3`, `T-2026-II #10`.
 
 ## Observaciones de corrección (P-2025-2S, solución manuscrita)
 

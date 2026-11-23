@@ -60,6 +60,6 @@ Pavlov (recomendado): `Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_
 | `teoria/` | Teoría por bloque con las diapositivas 1-70 y el Pavlov correspondiente (imágenes con capítulo/página) |
 | `practica/` | Ejercicios resueltos paso a paso, teóricos y numéricos |
 | `examen/` | Examen propuesto sin ayuda (teoría y ejercicios), para calificar con Claude |
-| `examenes_resueltos/` | Exámenes viejos (solo lo de alcance) resueltos paso a paso |
+| `examenes_resueltos/` | Exámenes viejos resueltos paso a paso. `T-2026-II.md` (taller nuevo) va completo: primero los 12 enunciados y después cada solución en un botón plegable, con página de diapositiva y de Pavlov |
 
 Dashboard: `python3 ../.claude/skills/dashboard/tools.py sync <persona>` y luego `/dashboard`.

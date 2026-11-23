@@ -20,16 +20,21 @@
 ## drude.1 — Drude, ley de Ohm, deriva
 - Alambre de Cu de 2 mm² con 20 A: $v_d/v_F$ ($v_d=I/neA\approx7\times10^{-4}$ m/s; $v_d/v_F\approx5\times10^{-10}$). **[T-2025-II #6]** — numérica. (Fórmula $v_d=I/(neA)$ anotada en `P-2025-01`.)
 - Modelo cinético de Drude: la energía no se conserva en colisiones; demostrar que la pérdida de potencia en un hilo ($L$, $A$) es $I^2R$. **[T-SS2020 #5]** — deducción.
+- Mismo problema del Cu/20 A en el taller nuevo. **[T-2026-II #1]** — numérica.
 
 ## drude.2 — Tiempo de relajación y camino libre
 - Camino libre medio en Cu con $\tau=10^{-9}$ s, fcc $a=3.61$ Å (con $v_F$: ≈ 1.6 mm). **[P-2025-2S #1]** — numérica (la solución usó $v$ térmico: error).
 - Muestra a 4 K con $\tau=3\times10^{-10}$ s: ¿qué $B$ hace que el e⁻ complete al menos una órbita ciclotrónica? ($\omega_c\tau\ge1$: $B\gtrsim0.019$ T; con $2\pi$: 0.12 T). **[T-2025-II #4]** — numérica.
 
 ## drude.3 — Origen de $\tau$, Matthiessen, $\rho(T)$
-- Con velocidad térmica de gas clásico, mostrar que $\rho\propto T^{3/2}$. **[T-2025-II #2]** — deducción.
+- Con velocidad térmica de gas clásico, mostrar que $\rho\propto T^{3/2}$. **[T-2025-II #2]**, **[T-2026-II #11]** — deducción.
 
 ## cal.1 — Calor específico electrónico: fracaso clásico
 - Sin pregunta real propia; aparece implícita en `P-2025-01 #4b` y `T-2025-II #8` (valor clásico $\tfrac32R$ vs. experimento). Para `/evaluar`, basarse en los puntos clave de la nota.
+
+- Simetría partícula-hueco: $f(\mu+\Delta)=1-f(\mu-\Delta)$. **[T-2026-II #6]** — deducción.
+- $C_e$ del Au (teoría $\pi^2R/2T_F$ vs. $A=0.73$ mJ/mol·K²), del Al a 300 K frente a $3R$ (por mol de átomos: ×3 e⁻) y del Na ($n=2.6\times10^{28}$) a 300 K. **[T-2026-II #7, #8, #9]** — numérica.
+- Fracción de e⁻ excitados para Cu y Na. **[T-2026-II #4]** — numérica.
 
 ## ⛔ cal.3 (FUERA DE ALCANCE, p.>70) — Energía interna del gas de Fermi
 - Sin pregunta real propia; el contenido (energía de e⁻ excitados y huecos) respalda `P-2025-01 #3a`. Para `/evaluar`, pedir la deducción de $U=\int(\varepsilon-E_F)Df+\int(E_F-\varepsilon)(1-f)D$.
@@ -47,6 +52,7 @@
 - Energía de Fermi del Cu con $n=8.45\times10^{28}$ m⁻³ (7.05 eV) y velocidad de un e⁻ con $E=E_F$ ($1.57\times10^6$ m/s). **[T-SS2020 #2]** — numérica.
 - He³ líquido (espín ½, fermión), $\rho=0.081$ g/cm³: $E_F=4.2\times10^{-4}$ eV, $T_F=4.9$ K (usar la masa del átomo de He³). **[T-SS2020 #3]** — numérica.
 - Metal con $4\times10^{28}$ m⁻³ estados, pozo finito: $E_F=4.27$ eV, $v_F=1.2\times10^6$ m/s. **[P-2025-01 #3b]** — numérica.
+- $T_F$ y $T/T_F$ de Cu, Na, Ag con masa efectiva; He³; Sol colapsado ($\langle v\rangle/c$); gas 2D en unidades atómicas ($E_F=\pi\hbar^2n/m$, fuera de las diapositivas); $\Delta E_F$ del Na por dilatación. **[T-2026-II #2, #3, #10, #5, #12]** — numérica/deducción.
 - Sodio con $\alpha=1.5\times10^{-6}$ K⁻¹ (0-300 K): $\Delta E_F/E_F=-2\alpha\Delta T=-0.09$ % ($E_F\propto V^{-2/3}\propto\ell^{-2}$). **[T-SS2020 #6]** — numérica/deducción.
 - Gas de Fermi estelar: número de e⁻ del Sol ($M=2\times10^{33}$ g → $N=1.2\times10^{57}$) y $E_F$ en una enana blanca ($R=2\times10^9$ cm); límite relativista $E_F\approx\hbar c(N/V)^{1/3}$; pulsar $R=10$ km → $\sim10^8$ eV. **[T-2025-II #3]** — numérica/deducción.
 

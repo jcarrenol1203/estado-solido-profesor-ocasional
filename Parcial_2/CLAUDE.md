@@ -49,7 +49,7 @@ Mezcla equilibrada: numéricos/cálculo (datos concretos de $n$, $E_F$, $T_F$…
 
 ## Material de estudio generado (2026-11-22)
 
-- `teoria/T01-T05_*.md` (12 subtemas en alcance, con figuras `teoria/img/slide_pNN.jpg` y `pavlov_pNNN.jpg` y su cita exacta), `practica/P01-P05_*.md` (ejercicios resueltos paso a paso), `examen/` (examen propuesto **sin clave en el repo**: se califica con `/evaluar`; al calificar, recalcular con las constantes de `examen/README.md`), `examenes_resueltos/*.md` (solo lo de alcance de los 5 exámenes viejos).
+- `teoria/T01-T05_*.md` (12 subtemas en alcance, con figuras `teoria/img/slide_pNN.jpg` y `pavlov_pNNN.jpg` y su cita exacta), `practica/P01-P05_*.md` (ejercicios resueltos paso a paso), `examen/` (examen propuesto **sin clave en el repo**: se califica con `/evaluar`; al calificar, recalcular con las constantes de `examen/README.md`), `examenes_resueltos/*.md` (solo lo de alcance de los 5 exámenes viejos; **`T-2026-II.md`**, el taller `Taller electron libre(S 2 2026).doc`, está resuelto completo —incluido lo fuera de las diap. 1-70, marcado con ⚠—, con los enunciados primero y cada solución en `<details>` plegable citando diapositiva y Pavlov).
 - Los ítems `- [ ] ID texto` de esos archivos alimentan el progreso (`progreso/<persona>.md`, sección "Seguimiento de checklists") y el dashboard (`.claude/skills/dashboard/tools.py`).
 - Al calificar el examen: estado `calificado` y nota `obtenido/máximo` en la fila del ítem, explicando dónde se perdieron puntos y citando diapositiva/Pavlov.
 
