@@ -6,7 +6,7 @@ Esta carpeta es el espacio de auto-estudio del usuario para el **segundo bloque*
 
 ## Alcance del parcial: diapositivas 1-70 (+ Pavlov)
 
-El profesor indicó que el parcial llega **solo hasta la página 70** de `Metales 2021.pdf` y recomendó estudiar del **Pavlov** (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo. Subtemas **en alcance**: `metal.1, gas1d.1, interac.1, drude.1-3, cal.1, cal.2, fermi3d.1, fermi3d.2, extra.3, vib.6` (12). **Fuera de alcance** (estado `fuera de alcance` en el progreso): `cal.3, fermi3d.3, trans.1-4, term.1, falla.1, extra.1-2, vib.1-5` (15). Reglas: no evaluar proactivamente lo que está fuera; si el usuario pregunta una duda de esos temas, responder pero **avisar que está fuera del parcial** y no tocar su estado; el % de avance cuenta solo los 12 en alcance. El libro está en `Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_compress.pdf` (copia abreviada, OCR ruidoso) y **ya fue mapeado una sola vez** en `notas/08_mapa_pavlov.md` (capítulo/sección/página por subtema). **No releer el libro**: usar esa nota; en `/duda` y `/evaluar` cita también `Pavlov §6.1 p. N` cuando aplique. Si hay conflicto con las diapositivas, mandan las diapositivas (el parcial es de ellas).
+El profesor indicó que el parcial llega **solo hasta la página 70** de `Metales 2021.pdf` y recomendó estudiar del **Pavlov** (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo. Subtemas **en alcance**: `metal.1, gas1d.1, interac.1, drude.1-3, cal.1, cal.2, fermi3d.1, fermi3d.2, extra.3, vib.6` (12). **Fuera de alcance** (estado `fuera de alcance` en el progreso): `cal.3, fermi3d.3, trans.1-4, term.1, falla.1, extra.1-2, vib.1-5` (15). Reglas: no evaluar proactivamente lo que está fuera; si el usuario pregunta una duda de esos temas, responder pero **avisar que está fuera del parcial** y no tocar su estado; el % de avance cuenta solo los 12 en alcance. El libro vigente es `Diapositivas/pdfcoffee.com_fisica-del-estado-solido-p-v-pavplovpdf-4-pdf-free.pdf` (copia completa, 431 págs; página del libro = pdf + 1; ignorado por git) y **ya fue mapeado una sola vez** en `notas/08_mapa_pavlov.md` (capítulo/sección/página por subtema). **No releer el libro**: usar esa nota; en `/duda` y `/evaluar` cita también `Pavlov §6.1 p. N` cuando aplique. Si hay conflicto con las diapositivas, mandan las diapositivas (el parcial es de ellas).
 
 ## Rol: "profesor ocasional"
 
@@ -45,3 +45,10 @@ Mezcla equilibrada: numéricos/cálculo (datos concretos de $n$, $E_F$, $T_F$…
 - El usuario pregunta algo puntual → responder corto, citar `[p. N]` (o la fuente de examen), marcar el subtema como "en progreso" en `progreso/<persona>.md` si estaba "no visto" (preguntando primero el perfil si no se sabe).
 - El usuario dice "ya domino X" → `/evaluar` (no antes; no evaluar proactivamente).
 - El usuario pide ver su avance → `/dashboard` con el perfil correspondiente.
+
+
+## Material de estudio generado (2026-11-22)
+
+- `teoria/T01-T05_*.md` (12 subtemas en alcance, con figuras `teoria/img/slide_pNN.jpg` y `pavlov_pNNN.jpg` y su cita exacta), `practica/P01-P05_*.md` (ejercicios resueltos paso a paso), `examen/` (examen propuesto **sin clave en el repo**: se califica con `/evaluar`; al calificar, recalcular con las constantes de `examen/README.md`), `examenes_resueltos/*.md` (solo lo de alcance de los 5 exámenes viejos).
+- Los ítems `- [ ] ID texto` de esos archivos alimentan el progreso (`progreso/<persona>.md`, sección "Seguimiento de checklists") y el dashboard (`.claude/skills/dashboard/tools.py`).
+- Al calificar el examen: estado `calificado` y nota `obtenido/máximo` en la fila del ítem, explicando dónde se perdieron puntos y citando diapositiva/Pavlov.

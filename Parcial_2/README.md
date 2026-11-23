@@ -51,3 +51,15 @@ El parcial llega hasta la **p. 70** de `Metales 2021.pdf`. Mapa diapositivas →
 | 92-105 | term.1, falla.1 | no |
 
 Pavlov (recomendado): `Diapositivas/pdf-fisica-del-estado-solido-p-v-pavplovpdf_compress.pdf`. Mapa completo en `notas/08_mapa_pavlov.md`. Resumen: gas de Fermi, FD, $E_F$, $D(E)$ y $C_e$ → **§6.1** (pp. 200-206); modelos de Drude/Sommerfeld e interacciones → **§7.1** (pp. 235-236); $\sigma(T)$ de metales → **§7.13** (pp. 286-287). El libro no cubre 1D, la deducción de Drude ni el §2.6 (falta en la copia).
+
+
+## Material de estudio (teoría, práctica, examen, exámenes viejos)
+
+| Carpeta | Contenido |
+|---|---|
+| `teoria/` | Teoría por bloque con las diapositivas 1-70 y el Pavlov correspondiente (imágenes con capítulo/página) |
+| `practica/` | Ejercicios resueltos paso a paso, teóricos y numéricos |
+| `examen/` | Examen propuesto sin ayuda (teoría y ejercicios), para calificar con Claude |
+| `examenes_resueltos/` | Exámenes viejos (solo lo de alcance) resueltos paso a paso |
+
+Dashboard: `python3 ../.claude/skills/dashboard/tools.py sync <persona>` y luego `/dashboard`.

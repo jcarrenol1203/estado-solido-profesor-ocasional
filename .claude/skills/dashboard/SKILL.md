@@ -52,3 +52,13 @@ Argumentos opcionales: el perfil y el parcial (`/dashboard juan p2`,
 ## Alcance Parcial 2
 
 En `Parcial_2/` el % global = dominados / subtemas **en alcance** (12). Los `fuera de alcance` se muestran aparte, en gris atenuado con etiqueta "fuera del parcial (p. >70)", y no cuentan en el %. Indica en el título/subtítulo "Alcance: diapositivas 1-70".
+
+
+## Parcial 2: 4 checklists (teoría, práctica, examen, exámenes viejos)
+
+Desde 2026-11-22 el tablero de `Parcial_2/` tiene cuatro checklists. El contenido vive en `Parcial_2/{teoria,practica,examen,examenes_resueltos}/*.md` (ítems `- [ ] ID texto`) y el estado de cada persona en la sección `Seguimiento de checklists` de `progreso/<persona>.md`.
+
+1. `python3 .claude/skills/dashboard/tools.py sync <persona>`: refresca las tablas del progreso (conserva estados).
+2. Lee `progreso/<persona>.md` y `python3 .claude/skills/dashboard/tools.py html <persona> <ruta.html>`: genera el HTML (pestañas Teoría / Práctica / Examen / Exámenes viejos / Subtemas y parciales, % por sección, nota acumulada del examen).
+3. Publica con Artifact sobre la URL guardada en `progreso/<persona>.md` (primero `action: "read"`), con `title` estable "Progreso P2 de <Nombre>".
+4. Cuando el usuario avance un ítem (hecho, entregado, calificado + nota `obtenido/máximo`), edita solo las columnas Estado/Nota de esa fila.
