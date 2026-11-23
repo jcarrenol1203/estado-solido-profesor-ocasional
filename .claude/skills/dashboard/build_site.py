@@ -11,7 +11,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")
 BASE = os.path.join(ROOT, "Parcial_2")
 out = sys.argv[1]; os.makedirs(out, exist_ok=True)
 SECT = [("teoria", "Teoría", "teoria", "teoria/"), ("practica", "Práctica", "practica", ""),
-        ("viejos", "Exámenes viejos", "examenes_resueltos", "")]
+        ("viejos", "Exámenes y talleres resueltos", "examenes_resueltos", "")]
 files = []
 tabs = []
 for k, label, d, base in SECT:

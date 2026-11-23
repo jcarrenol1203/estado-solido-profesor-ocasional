@@ -31,9 +31,9 @@ Siempre dile quién eres ("Juan" o "Isa"): Claude no mezcla los perfiles.
 
 ## 3. Tu tablero (artifact)
 
-Pestañas: **Resumen · Teoría · Práctica · Examen · Exámenes viejos · Pendientes**. Todo el contenido está dentro del tablero.
+Pestañas: **Resumen · Teoría · Práctica · Examen · Exámenes y talleres resueltos · Pendientes**. Todo el contenido está dentro del tablero.
 
-- **Avance:** `/duda` lo mueve solo hacia adelante (pendiente → en progreso). En Teoría, Práctica y Exámenes viejos toca el botón de cada ítem (pendiente → en progreso → hecho), o usa "Marcar todo hecho" del bloque. También por comando:
+- **Avance:** `/duda` lo mueve solo hacia adelante (pendiente → en progreso). En Teoría, Práctica y Exámenes y talleres resueltos toca el botón de cada ítem (pendiente → en progreso → hecho), o usa "Marcar todo hecho" del bloque. También por comando:
   - `/dashboard juan marcar T.drude.1.1 hecho` (un ítem)
   - `/dashboard juan marcar T.cal hecho` (por prefijo: `T.` teoría, `P.` práctica, `V.` exámenes viejos)
   - `/dashboard juan marcar teoria "en progreso"` (sección completa)

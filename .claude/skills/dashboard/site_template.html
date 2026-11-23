@@ -122,7 +122,7 @@ function summary(){
     t.ids.forEach(function(id){var p=id.split('.');var s=p[1]+'.'+p[2];(sub[s]=sub[s]||{n:0,d:0,w:0});sub[s].n++;var st=stateOf(id);if(st==='hecho')sub[s].d++;else if(st==='en progreso')sub[s].w++;});});
   h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.1rem;margin:22px 0 8px">Avance por subtema (teoría + práctica)</h2><div class="rows">';
   Object.keys(sub).forEach(function(s){var x=sub[s];h+='<div><span>'+s+'</span><span class="bar"><i style="width:'+(100*x.d/x.n)+'%"></i><i class="w2" style="width:'+(100*x.w/x.n)+'%"></i></span><span>'+Math.round(100*x.d/x.n)+'%</span></div>'});
-  h+='</div><div class="how" style="margin-top:16px"><b>Cómo avanzar.</b> En Teoría, Práctica y Exámenes viejos toca el botón de cada ítem: <i>pendiente → en progreso → hecho</i>. En Examen escribe tu respuesta en la caja de cada literal (se guarda sola); cuando termines, pídele a Claude que califique y verás la nota y la retroalimentación aquí mismo. Todo se guarda en este tablero.</div>';
+  h+='</div><div class="how" style="margin-top:16px"><b>Cómo avanzar.</b> En Teoría, Práctica y Exámenes y talleres resueltos toca el botón de cada ítem: <i>pendiente → en progreso → hecho</i>. En Examen escribe tu respuesta en la caja de cada literal (se guarda sola); cuando termines, pídele a Claude que califique y verás la nota y la retroalimentación aquí mismo. Todo se guarda en este tablero.</div>';
   return h;
 }
 function pendHtml(){
@@ -134,7 +134,7 @@ function pendHtml(){
   return h;
 }
 function exam(){
-  var h='<div class="how"><b>Examen sin ayuda.</b> Elige una opción (a-e) por pregunta; hay 50 preguntas de 0.1 puntos, teóricas y numéricas (usa calculadora). Se guarda solo. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Cuando termines escríbele a Claude: <i>«califica examen»</i> y verás aquí la nota y la retroalimentación. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
+  var h='<div class="how"><b>Examen sin ayuda.</b> Elige una opción (a-e) por pregunta; hay 50 preguntas de 0.1 puntos, teóricas y numéricas (usa calculadora). Se guarda solo. No abras Teoría, Práctica ni Exámenes y talleres resueltos hasta entregar. Cuando termines escríbele a Claude: <i>«califica examen»</i> y verás aquí la nota y la retroalimentación. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
   var part='';
   EXAM.forEach(function(q){
     if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+'Opción múltiple (50 preguntas · 5.0)'+'</h2>'}
