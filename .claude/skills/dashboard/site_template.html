@@ -63,6 +63,7 @@ function md(src,base){
   var maths=[];
   src=src.replace(/\$\$[\s\S]+?\$\$|\$[^$\n]+?\$/g,function(m){maths.push(m);return '@@M'+(maths.length-1)+'@@'});
   if(base){src=src.replace(/\]\(img\//g,'](' +base+ 'img/')}
+  src=src.split('../teoria/img/').join('teoria/img/');
   var h=marked.parse(src,{mangle:false,headerIds:false});
   return h.replace(/@@M(\d+)@@/g,function(_,i){return esc(maths[+i])});
 }
