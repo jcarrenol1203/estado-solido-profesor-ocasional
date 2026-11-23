@@ -38,11 +38,15 @@ Argumento: la pregunta del usuario (texto libre), ej. `/duda por qué la rama
    herramientas.** La interfaz del usuario colapsa en una línea resumen el
    texto que se escribe antes de una llamada a herramienta, así que una
    explicación puesta ahí no se ve. Orden obligatorio: (a) leer notas,
-   (b) anotar un pendiente si corresponde (paso 7), (c) escribir como
+   (b) actualizar el avance y/o anotar un pendiente (paso 7 y sección Pendientes), (c) escribir como
    último mensaje, sin herramientas después, la explicación completa de los
    pasos 3-4. Nunca escribas la explicación antes de una herramienta.
-7. **No modifiques estados de progreso.** `/duda` no cambia ningún estado de subtema ni de checklist: el avance lo marca el usuario en el tablero (clic) o con `/dashboard <persona> marcar ...`. Lo único que `/duda` puede escribir en `BASE/progreso/<persona>.md` es una fila en "Pendientes y por mejorar" (ver abajo), y solo si la duda deja algo abierto; para eso, si no sabes el perfil, pregunta "¿Isa o Juan?".
-8. El mensaje final termina, solo si escribiste un pendiente, con una línea que lo diga (o "sin cambios en el progreso").
+7. **Avance automático (solo Parcial 2, solo hacia adelante).** El avance de checklists vive en la `db` del tablero de la persona (URL en `BASE/progreso/<persona>.md`, línea `Dashboard URL`). Si no sabes el perfil, no lo adivines: termina la explicación con "¿Isa o Juan?" y aplica el cambio en el turno siguiente. Pasos:
+   a. Identifica los ítems de **teoría** (`T.<subtema>.<n>`, en `Parcial_2/teoria/*.md`) que la duda toca de verdad; no todo el subtema. Si ninguno encaja claramente, no cambies nada.
+   b. Lee la colección `items` con `ArtifactData` (`list`); doc id = ID con `.`→`_`; campo `s` ∈ `pendiente | en progreso | hecho`.
+   c. Regla: si el ítem está `pendiente` (o no existe) pásalo a `en progreso`; si ya está `en progreso` o `hecho`, **déjalo igual** (nunca bajes un estado). Escribe `{"id":"<ID>","s":"en progreso","ts":<ms>}` con `set` (si existe, pasa `if_version` del doc leído para no pisar un clic simultáneo; si falla por versión, relee y reevalúa).
+   d. El usuario puede seguir cambiando el estado a mano en el tablero o con `/dashboard <persona> marcar ...`; ambas vías escriben en la misma base y se ven al instante. `/duda` nunca marca `hecho`.
+8. El mensaje final termina con una línea: qué ítems pasó a `en progreso` (o "sin cambios en el progreso").
 
 ## Pendientes (Parcial 2)
 
@@ -55,8 +59,7 @@ Si la duda deja algo abierto (el usuario sigue sin entender, hay que repasar un 
   progreso.
 - No generes un resumen completo del tema si no te lo piden — responde la
   pregunta puntual.
-- No marques un tema como `dominado` desde `/duda` — eso solo lo hace
-  `/evaluar`.
+- No marques `hecho` ni bajes un estado desde `/duda`: solo `pendiente`→`en progreso`.
 - No regeneres el dashboard automáticamente desde aquí.
 - No toques `BASE/progreso/<otra-persona>.md` — solo el perfil activo de la
   sesión, ni el progreso del otro parcial.

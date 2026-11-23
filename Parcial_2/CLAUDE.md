@@ -42,7 +42,7 @@ Mezcla equilibrada: numéricos/cálculo (datos concretos de $n$, $E_F$, $T_F$…
 
 ## Flujo esperado
 
-- El usuario pregunta algo puntual → responder corto, citar `[p. N]` (o la fuente de examen), marcar el subtema como "en progreso" en `progreso/<persona>.md` si estaba "no visto" (preguntando primero el perfil si no se sabe).
+- El usuario pregunta algo puntual → responder corto, citar `[p. N]` (o la fuente de examen), pasar a `en progreso` en el tablero (colección `items`) los ítems de teoría que la duda toca, solo si estaban pendientes y nunca bajando un estado (preguntando primero el perfil si no se sabe); ver `.claude/skills/duda/SKILL.md` paso 7.
 - El usuario dice "ya domino X" → `/evaluar` (no antes; no evaluar proactivamente).
 - El usuario pide ver su avance → `/dashboard` con el perfil correspondiente.
 

@@ -23,7 +23,7 @@ COMO_USAR.md       esta guía
 
 | Comando | Para qué | Qué escribe |
 |---|---|---|
-| `/duda <pregunta>` | Resolver una duda puntual, con página fuente | No cambia tu progreso; solo, si queda algo abierto, una fila en **Pendientes** |
+| `/duda <pregunta>` | Resolver una duda puntual, con página fuente | Pasa a "en progreso" los ítems de teoría que toca (si estaban pendientes; nunca baja un estado) y, si queda algo abierto, anota una fila en **Pendientes** |
 | `/evaluar <tema>` | Checklist de preguntas sobre lo que dices dominar; corrige | Debilidades en **Pendientes** y log (el avance lo marcas tú en el tablero) |
 | `/dashboard <persona>` | Publicar/actualizar tu tablero | Nada (lo lee todo) |
 
@@ -33,7 +33,7 @@ Siempre dile quién eres ("Juan" o "Isa"): Claude no mezcla los perfiles.
 
 Pestañas: **Resumen · Teoría · Práctica · Examen · Exámenes viejos · Pendientes**. Todo el contenido está dentro del tablero.
 
-- **Avance:** en Teoría, Práctica y Exámenes viejos toca el botón de cada ítem (pendiente → en progreso → hecho), o usa "Marcar todo hecho" del bloque. También por comando:
+- **Avance:** `/duda` lo mueve solo hacia adelante (pendiente → en progreso). En Teoría, Práctica y Exámenes viejos toca el botón de cada ítem (pendiente → en progreso → hecho), o usa "Marcar todo hecho" del bloque. También por comando:
   - `/dashboard juan marcar T.drude.1.1 hecho` (un ítem)
   - `/dashboard juan marcar T.cal hecho` (por prefijo: `T.` teoría, `P.` práctica, `V.` exámenes viejos)
   - `/dashboard juan marcar teoria "en progreso"` (sección completa)
