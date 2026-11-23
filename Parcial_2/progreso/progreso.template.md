@@ -8,6 +8,8 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 
 **Lectura recomendada por el profesor:** Pavlov (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo para estos temas; el mapeo capítulo↔diapositivas está en `notas/08_mapa_pavlov.md` (cada subtema del checklist lleva su referencia "Pavlov: §… p. …").
 
+**Avance de checklists (teoría, práctica, examen, exámenes viejos):** vive en la base de datos del tablero (se marca con clic o con `/dashboard <persona> marcar ...`).
+
 **Dashboard URL:** *(ninguno todavía — se llena con `/dashboard`)*
 
 ---
@@ -46,7 +48,7 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 
 *(Nota de orden: el orden de estudio recomendado es el de la sección "Checklist detallado" más abajo, que sigue el temario de las diapositivas. `extra.1-3` no vienen del PDF — salen de vacíos detectados en `Talleres_Parciales/`, ver `examenes/analisis_temas.md`.)*
 
-**Debilidades vigentes:** ninguna todavía (no se ha hecho ninguna evaluación).
+**Debilidades vigentes:** ver la sección "Pendientes y por mejorar" (abajo).
 
 ## Parciales y talleres (banco de examenes viejos)
 
@@ -57,6 +59,16 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 | P-2026-1S | Parcial II (20 selección múltiple: 19 vibraciones de red + 1 metales) | no intentado | — | — |
 | T-2025-II | Taller (abierto, 8 problemas) | no intentado | — | — |
 | T-SS2020 | Taller (abierto, 6 problemas) | no intentado | — | — |
+
+<!-- PENDIENTES:START -->
+## Pendientes y por mejorar
+
+Lista viva de cosas abiertas: dudas sin resolver, temas por repasar, errores del material y mejoras. La leen `/duda`, `/evaluar` y `/dashboard` (pestaña "Pendientes"). Ver `COMO_USAR.md` en la raíz del repo.
+Tipos: `duda` | `repasar` | `error-material` | `mejora`. Estado: `abierto` | `resuelto`. No uses `|` dentro de la descripción.
+
+| # | Fecha | Subtema | Tipo | Descripción | Estado |
+|---|---|---|---|---|---|
+<!-- PENDIENTES:END -->
 
 ## Log de evaluaciones
 

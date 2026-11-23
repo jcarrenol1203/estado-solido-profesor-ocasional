@@ -113,3 +113,6 @@ solo tipo salvo que el usuario lo pida para una sesión puntual.
   proactivamente sin que él lo pida).
 - El usuario pide ver su avance visual → usar `/dashboard` (con el perfil
   correspondiente).
+
+
+**Cómo usar el sistema:** ver `../COMO_USAR.md`; si el usuario tiene dudas de uso, respóndele desde esa guía.

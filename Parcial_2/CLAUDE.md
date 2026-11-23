@@ -52,3 +52,8 @@ Mezcla equilibrada: numéricos/cálculo (datos concretos de $n$, $E_F$, $T_F$…
 - `teoria/T01-T05_*.md` (12 subtemas en alcance, con figuras `teoria/img/slide_pNN.jpg` y `pavlov_pNNN.jpg` y su cita exacta), `practica/P01-P05_*.md` (ejercicios resueltos paso a paso), `examen/` (examen propuesto **sin clave en el repo**: se califica con `/evaluar`; al calificar, recalcular con las constantes de `examen/README.md`), `examenes_resueltos/*.md` (solo lo de alcance de los 5 exámenes viejos).
 - Los ítems `- [ ] ID texto` de esos archivos alimentan el progreso (`progreso/<persona>.md`, sección "Seguimiento de checklists") y el dashboard (`.claude/skills/dashboard/tools.py`).
 - Al calificar el examen: estado `calificado` y nota `obtenido/máximo` en la fila del ítem, explicando dónde se perdieron puntos y citando diapositiva/Pavlov.
+
+## Pendientes y uso del sistema
+
+- **Pendientes y por mejorar:** cada perfil tiene una tabla en `progreso/<persona>.md` (`PENDIENTES:START/END`). `/duda` y `/evaluar` la actualizan; el usuario también puede pedir "anota un pendiente en X: ..." o "marca resuelto el pendiente N". Formato y tipos en `COMO_USAR.md` §4. El tablero la lee al publicarse (pestaña "Pendientes"): tras cambiarla, ofrecer `/dashboard <persona>`.
+- **Dudas de uso:** responder desde `../COMO_USAR.md` (ver `../CLAUDE.md`).

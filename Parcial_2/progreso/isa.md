@@ -8,6 +8,8 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 
 **Lectura recomendada por el profesor:** Pavlov (Pavlov & Khokhlov, *Física del estado sólido*) como texto de apoyo para estos temas; el mapeo capítulo↔diapositivas está en `notas/08_mapa_pavlov.md` (cada subtema del checklist lleva su referencia "Pavlov: §… p. …").
 
+**Avance de checklists (teoría, práctica, examen, exámenes viejos):** vive en la base de datos del tablero (se marca con clic o con `/dashboard <persona> marcar ...`).
+
 **Dashboard URL:** https://claude.ai/artifact/LLC4kbKYAmUL7bLB8DeWyt
 
 ---
@@ -46,158 +48,8 @@ Estados posibles: `no visto` | `en progreso` | `dominado` | `fuera de alcance`.
 
 *(Nota de orden: el orden de estudio recomendado es el de la sección "Checklist detallado" más abajo, que sigue el temario de las diapositivas. `extra.1-3` no vienen del PDF — salen de vacíos detectados en `Talleres_Parciales/`, ver `examenes/analisis_temas.md`.)*
 
-**Debilidades vigentes:** ninguna todavía (no se ha hecho ninguna evaluación).
+**Debilidades vigentes:** ver la sección "Pendientes y por mejorar" (abajo).
 
-<!-- CHECKLISTS:START -->
-## Seguimiento de checklists
-
-Generado por `.claude/skills/dashboard/tools.py sync`; cambia solo las columnas Estado y Nota (el texto sale de los `.md` de contenido).
-Estados: teoría/práctica/viejos `pendiente | en progreso | hecho`; examen `pendiente | entregado | calificado` (Nota = `obtenido/máximo`).
-
-### Teoría (43 ítems)
-
-| ID | Ítem | Estado | Nota |
-|---|---|---|---|
-| T.metal.1.1 | Describir el cristal metálico (pozos $U$ + gas de e⁻ libres) y cómo el e⁻ 3s del Na pasa a e⁻ de conducción | pendiente | — |
-| T.metal.1.2 | Calcular $N=Z_vN_A\rho/M$ y distinguir monovalentes de divalentes | pendiente | — |
-| T.metal.1.3 | Éxitos (Ohm, W-F) y fracasos (calor específico, camino libre largo) de la teoría clásica | pendiente | — |
-| T.metal.1.4 | Las dos razones de la "transparencia" del cristal (periodicidad y Pauli) | pendiente | — |
-| T.metal.1.5 | Pavlov §2.6: enlace metálico y modelo iónico de la energía de cohesión ($r_s/a_0=1.6$) | pendiente | — |
-| T.gas1d.1.1 | Deducir $\varepsilon_n=\hbar^2\pi^2n^2/2mL^2$ desde $\psi(0)=\psi(L)=0$ | pendiente | — |
-| T.gas1d.1.2 | Estado exacto vs. aproximado de $N$ e⁻ (exacto solo sin interacción) | pendiente | — |
-| T.gas1d.1.3 | Pauli en 1D: 2 e⁻ por nivel, condición $2n_F=N$ | pendiente | — |
-| T.gas1d.1.4 | Calcular $\varepsilon_F$ en 1D y construir el estado fundamental | pendiente | — |
-| T.interac.1.1 | Por qué e⁻-ion (seudopotencial, apantallamiento) y e⁻-e⁻ (Pauli + energía mínima) son débiles | pendiente | — |
-| T.interac.1.2 | Gas de e⁻ vs. gas ordinario (densidad, plasma, FD vs. MB, $E(T{=}0)\neq0$) y las dos aproximaciones de Pavlov §7.1 | pendiente | — |
-| T.drude.1.1 | Escribir $m^*\dot{\mathbf v}=-e\mathbf E-m^*\mathbf v/\tau$ y resolver el estacionario $v_d=-e\tau E/m^*$ | pendiente | — |
-| T.drude.1.2 | Deducir $\mathbf J=-Nev_d$ y $\sigma=Ne^2\tau/m^*$ (y compararlo con Pavlov 6.92-6.96) | pendiente | — |
-| T.drude.1.3 | Explicar $v_r\gg v_d$ y que la ley de Ohm es empírica con rango de validez | pendiente | — |
-| T.drude.1.4 | Usar $v_d=I/(neA)$ en un alambre | pendiente | — |
-| T.drude.2.1 | Interpretar $\tau$: $e^{-t/\tau}$, vida media de supervivencia, $1/\tau$ = frecuencia de colisión | pendiente | — |
-| T.drude.2.2 | Relacionar $\ell=v\tau$, $\sigma=Ne^2\ell/m^*v$ y la movilidad $\mu=e\tau/m^*$, $\sigma=Ne\mu$ | pendiente | — |
-| T.drude.2.3 | Órdenes de magnitud: $v_d\sim10^{-2}$ m/s, $v_r\sim10^6$ m/s, $\tau\sim10^{-14}$ s, $\ell\sim10^2$ Å | pendiente | — |
-| T.drude.2.4 | Explicar $\sigma_m/\sigma_i\sim10^{23}$ y demostrar $P=\sigma E^2\Rightarrow I^2R$ | pendiente | — |
-| T.drude.3.1 | Por qué e⁻-e⁻ no cambian $v_d$ ni $J$ y qué colisiones sí | pendiente | — |
-| T.drude.3.2 | Resolver la paradoja $\ell\sim100$ Å $\gg a$: red perfecta no dispersa (ondas de materia) | pendiente | — |
-| T.drude.3.3 | Enunciar y usar la regla de Matthiessen y la resistividad residual | pendiente | — |
-| T.drude.3.4 | Límites de $\rho_{ph}$: $\propto T$ ($T\gg\theta$), $\sim T^5$ (experimental, Debye) y por qué Einstein no basta | pendiente | — |
-| T.drude.3.5 | Efecto Kondo como violación de Matthiessen | pendiente | — |
-| T.drude.3.6 | Mostrar que con dispersión clásica $\rho\propto T^{3/2}$ y comparar con Pavlov §7.13 ($\rho\propto T$) | pendiente | — |
-| T.cal.1.1 | Calcular el valor clásico $C_e=\tfrac32R$ y $C_{total}=4.5R$ y compararlo con el experimental ($\approx3R$) | pendiente | — |
-| T.cal.1.2 | Explicar que falla la estadística (MB), no la idea de e⁻ libres (Pavlov p. 200) | pendiente | — |
-| T.cal.2.1 | Explicar por qué solo los e⁻ cercanos a $E_F$ (dentro de $k_BT$) absorben energía (Pauli) | pendiente | — |
-| T.cal.2.2 | Escribir $f(E)$; mostrar $f(\mu)=\tfrac12$, $\mu(0)=E_F$ y el límite MB en la cola | pendiente | — |
-| T.cal.2.3 | Reconstruir $C_e\approx2R\,T/T_F$ (exacto $\tfrac{\pi^2}{2}R\,T/T_F$) y calcular $T_F=E_F/k_B$ | pendiente | — |
-| T.cal.2.4 | Dar $C=\gamma T+\beta T^3$ y decir cuál domina a $T\ll\theta_D$ (Pavlov 6.66-6.67) | pendiente | — |
-| T.cal.2.5 | Comparar $C_{el}$ y $C_{red}$ y hallar la $T$ en que son del mismo orden | pendiente | — |
-| T.cal.2.6 | Anchura de $f(E)$: de 90 % a 10 % ⇒ $\Delta E=2\ln9\,k_BT\approx4.4k_BT$ | pendiente | — |
-| T.fermi3d.1.1 | Ventaja de las condiciones periódicas y ondas planas $e^{i\mathbf k\cdot\mathbf r}$ con $k_i=2\pi n_i/L$ ($n_i$ enteros ±) | pendiente | — |
-| T.fermi3d.1.2 | Derivar $k_F$ y $E_F$ contando estados en la esfera (factor 2 de espín; volumen por estado $(2\pi/L)^3$) | pendiente | — |
-| T.fermi3d.1.3 | Calcular $E_F$, $T_F$, $v_F$ desde $N/V$ (Na, Cu) y comparar con la diap. 67 | pendiente | — |
-| T.fermi3d.1.4 | $\langle v\rangle=\tfrac34v_F$ y $\langle E\rangle=\tfrac35E_F$ a $T=0$ | pendiente | — |
-| T.fermi3d.2.1 | Derivar $N(\varepsilon)\propto\varepsilon^{3/2}$, $D(\varepsilon)\propto\varepsilon^{1/2}$ y $D(E_F)=3N/2E_F$ | pendiente | — |
-| T.fermi3d.2.2 | Usar $N=\int Df$ y entender qué muestra $D\cdot f$ | pendiente | — |
-| T.fermi3d.2.3 | Obtener $E_0=\tfrac35NE_F$, $P=\tfrac25nE_F$ y $B=\tfrac23nE_F$ usando $E_F\propto V^{-2/3}$ | pendiente | — |
-| T.extra.3.1 | Estimar $N$ de una estrella ($N\approx M/m_p$) y calcular $E_F$ no relativista | pendiente | — |
-| T.extra.3.2 | Reconocer cuándo $E_F\gtrsim mc^2$ y usar $E_F\approx\hbar c(3\pi^2n)^{1/3}$; dar $T_F$, $v_F$ y $\langle v\rangle=\tfrac34v_F$ | pendiente | — |
-| T.vib.6.1 | Definir $E_F$ a $T=0$ como el nivel ocupado más alto y distinguirlo de $\mu(T)$, de $\tfrac35E_F$ y de la función trabajo | pendiente | — |
-
-### Práctica (35 ítems)
-
-| ID | Ítem | Estado | Nota |
-|---|---|---|---|
-| P.metal.1.1 | Concentración $N=Z_vN_A\rho/M$ de Cu, Al, Mg, Na | pendiente | — |
-| P.metal.1.2 | Fracción de volumen de los iones en Na (y la inconsistencia de la diap. 7) | pendiente | — |
-| P.metal.1.3 | Equilibrio del modelo iónico de Pavlov, $r_s/a_0=1.6$ | pendiente | — |
-| P.gas1d.1.1 | Deducir $\varepsilon_n$ desde las condiciones de frontera | pendiente | — |
-| P.gas1d.1.2 | $N=6$ e⁻ en 1 nm: $\varepsilon_F$ y excitación mínima | pendiente | — |
-| P.gas1d.1.3 | $N=10$ e⁻ en 2 nm, degeneración y caso $N$ impar | pendiente | — |
-| P.interac.1.1 | Coulomb desnudo vs. $E_F$ y por qué el modelo funciona | pendiente | — |
-| P.interac.1.2 | Gas de e⁻ vs. aire con números | pendiente | — |
-| P.drude.1.1 | Deducir $\sigma=Ne^2\tau/m^*$ desde la ecuación de Drude | pendiente | — |
-| P.drude.1.2 | $\tau$, $\ell$ y $\mu$ del Cu a partir de $\sigma$ | pendiente | — |
-| P.drude.1.3 | $v_d$ vs. $v_F$ en un alambre y en el Na | pendiente | — |
-| P.drude.2.1 | Deducir $n(t)=n_0e^{-t/\tau}$ y $t_{av}=\tau$ | pendiente | — |
-| P.drude.2.2 | Efecto Joule: $R$, $P=I^2R$ y verificación con $\sigma E^2$ | pendiente | — |
-| P.drude.2.3 | Estimar $\sigma_m/\sigma_{sc}$ con $N$ y $v_r$ | pendiente | — |
-| P.drude.3.1 | Paradoja del camino libre: choque clásico vs. experimento | pendiente | — |
-| P.drude.3.2 | Regla de Matthiessen con números | pendiente | — |
-| P.drude.3.3 | Deducir $\rho_{ph}\propto T$ (y $T^{3/2}$ clásico) | pendiente | — |
-| P.cal.1.1 | $C_e$ y $C_{total}$ clásicos vs. experimento | pendiente | — |
-| P.cal.2.1 | Tabla de $f(E)$ y límite de MB; $f$ a $E_F\pm0.1$ eV | pendiente | — |
-| P.cal.2.2 | $T_F$, $T/T_F$ y $C_e$ de Cu y Na a 300 K | pendiente | — |
-| P.cal.2.3 | Coeficiente $\gamma$ de Sommerfeld del Cu | pendiente | — |
-| P.cal.2.4 | Separar $\gamma$ y $\beta$ de datos de $C/T$ vs. $T^2$ | pendiente | — |
-| P.cal.2.5 | Corrección térmica de $\mu$ (Pavlov 6.57) | pendiente | — |
-| P.cal.2.6 | Reconstruir la estimación $C_e\approx2RT/T_F$ | pendiente | — |
-| P.cal.2.7 | Ancho 99 %→1 % de $f(E)$ | pendiente | — |
-| P.fermi3d.1.1 | Deducir $k_F$, $E_F$, $v_F$ contando estados | pendiente | — |
-| P.fermi3d.1.2 | $k_F$, $E_F$, $T_F$, $v_F$ de Na, Cu y Al | pendiente | — |
-| P.fermi3d.1.3 | Deducir $\langle v\rangle=\tfrac34v_F$ y $\langle E\rangle=\tfrac35E_F$ | pendiente | — |
-| P.fermi3d.1.4 | Paredes rígidas vs. periódicas y espaciado de $\mathbf k$ | pendiente | — |
-| P.fermi3d.2.1 | Deducir $D(\varepsilon)$ y $D(E_F)=3N/2E_F$ | pendiente | — |
-| P.fermi3d.2.2 | $D(E_F)$ del Cu y e⁻ en la franja $k_BT$ | pendiente | — |
-| P.fermi3d.2.3 | $E_0$, $P$ y $B$ del Cu | pendiente | — |
-| P.extra.3.1 | Enana blanca: $E_F$ no relativista, ultrarrelativista y exacta | pendiente | — |
-| P.extra.3.2 | Pulsar y límite ultrarrelativista | pendiente | — |
-| P.vib.6.1 | Distinguir $E_F$, $\tfrac35E_F$, $\mu$ y $\phi$ (y `P-2026-1S #11`) | pendiente | — |
-
-### Examen (20 ítems)
-
-| ID | Ítem | Estado | Nota |
-|---|---|---|---|
-| EX.E.1 | Magnesio: $n$, $k_F$, $E_F$, $T_F$, $v_F$ (`metal.1`, `fermi3d.1`) — 0.5 | pendiente | — |
-| EX.E.2 | Alambre de Al (`drude.1`, `drude.2`) — 0.8 | pendiente | — |
-| EX.E.3 | Matthiessen en Al (`drude.3`) — 0.6 | pendiente | — |
-| EX.E.4 | Potasio a baja $T$ (`cal.2`) — 0.8 | pendiente | — |
-| EX.E.5 | Litio: $D(E_F)$, $P$, $B$ (`fermi3d.2`) — 0.7 | pendiente | — |
-| EX.E.6 | Gas de e⁻ 2D (`fermi3d.1`, `fermi3d.2`) — 0.7 | pendiente | — |
-| EX.E.7 | Cadena de 8 e⁻ (`gas1d.1`) — 0.5 | pendiente | — |
-| EX.E.8 | Enana blanca (`extra.3`) — 0.4 | pendiente | — |
-| EX.T.1 | Metal y concentración (`metal.1`) — 0.4 | pendiente | — |
-| EX.T.2 | Transparencia del cristal (`metal.1`) — 0.4 | pendiente | — |
-| EX.T.3 | Gas 1D (`gas1d.1`) — 0.4 | pendiente | — |
-| EX.T.4 | Interacciones (`interac.1`) — 0.4 | pendiente | — |
-| EX.T.5 | Ley de Ohm microscópica (`drude.1`) — 0.4 | pendiente | — |
-| EX.T.6 | $\tau$, $\ell$, $\mu$ (`drude.2`) — 0.4 | pendiente | — |
-| EX.T.7 | Qué colisiones cuentan (`drude.3`) — 0.4 | pendiente | — |
-| EX.T.8 | Resistividad y Matthiessen (`drude.3`) — 0.5 | pendiente | — |
-| EX.T.9 | Calor específico (`cal.1`, `cal.2`) — 0.5 | pendiente | — |
-| EX.T.10 | Fermi-Dirac (`cal.2`) — 0.4 | pendiente | — |
-| EX.T.11 | Gas 3D (`fermi3d.1`) — 0.4 | pendiente | — |
-| EX.T.12 | $D(\varepsilon)$ y definición de $E_F$ (`fermi3d.2`, `vib.6`) — 0.5 | pendiente | — |
-
-### Exámenes viejos (25 ítems)
-
-| ID | Ítem | Estado | Nota |
-|---|---|---|---|
-| V.P2501.1 | #1 — $n$ del Li desde $E_F$ y verificación con $\rho$ | pendiente | — |
-| V.P2501.2 | #2 — Plata: $E_F$, $T_F$ y degeneración | pendiente | — |
-| V.P2501.3a | #3(a) — Energía media cuántica vs. clásica | pendiente | — |
-| V.P2501.3b | #3(b) — $E_F$ y $v_F$ con $n=4\times10^{28}$ m⁻³ | pendiente | — |
-| V.P2501.4b | #4(b) — Significado de $T_F$ y su efecto en $C_e$ | pendiente | — |
-| V.P2501.4c | #4(c) — Gas de Fermi vs. aire | pendiente | — |
-| V.P2501.4f | #4(f) — Por qué e⁻-e⁻ no cambia $v_d$ | pendiente | — |
-| V.P2501.4g | #4(g) — Origen de la cuantización de la energía | pendiente | — |
-| V.P252S.1 | #1 — Camino libre medio del Cu con $v_F$ | pendiente | — |
-| V.P252S.2 | #2 — Sol colapsado: $E_F$, $T_F$, $\langle v\rangle$ | pendiente | — |
-| V.P252S.3 | #3 — Fracción excitada $T/T_F$ en Cu y Na | pendiente | — |
-| V.P252S.4a | #4(a) — Gas de Fermi vs. aire | pendiente | — |
-| V.P261S.11 | #11 — Definición de $E_F$ a $T=0$ | pendiente | — |
-| V.T25II.1 | #1 — Ancho 90 %→10 % de $f(E)$ | pendiente | — |
-| V.T25II.2 | #2 — $\rho\propto T^{3/2}$ con $v$ térmica clásica | pendiente | — |
-| V.T25II.3 | #3 — Enana blanca, límite relativista y pulsar | pendiente | — |
-| V.T25II.5 | #5 — Módulo de rigidez $B=\tfrac23nE_F$ y tabla | pendiente | — |
-| V.T25II.6 | #6 — $v_d$ y $v_d/v_F$ en cable de Cu | pendiente | — |
-| V.T25II.7 | #7 — Presión $P=\tfrac25nE_F$ | pendiente | — |
-| V.T25II.8 | #8 — $C_{red}$ vs. $C_{el}$ y $T$ de cruce | pendiente | — |
-| V.TSS20.2 | #2 — $E_F$ y $v_F$ del Cu | pendiente | — |
-| V.TSS20.3 | #3 — He³ líquido: $E_F$ y $T_F$ | pendiente | — |
-| V.TSS20.4 | #4 — $T_F$ y $T/T_F$ de Cu, Na y Ag | pendiente | — |
-| V.TSS20.5 | #5 — Pérdida de potencia $=I^2R$ | pendiente | — |
-| V.TSS20.6 | #6 — $\Delta E_F/E_F=-2\alpha\Delta T$ | pendiente | — |
-
-<!-- CHECKLISTS:END -->
 
 ## Parciales y talleres (banco de examenes viejos)
 
@@ -208,6 +60,16 @@ Estados: teoría/práctica/viejos `pendiente | en progreso | hecho`; examen `pen
 | P-2026-1S | Parcial II (20 selección múltiple: 19 vibraciones de red + 1 metales) | no intentado | — | — |
 | T-2025-II | Taller (abierto, 8 problemas) | no intentado | — | — |
 | T-SS2020 | Taller (abierto, 6 problemas) | no intentado | — | — |
+
+<!-- PENDIENTES:START -->
+## Pendientes y por mejorar
+
+Lista viva de cosas abiertas: dudas sin resolver, temas por repasar, errores del material y mejoras. La leen `/duda`, `/evaluar` y `/dashboard` (pestaña "Pendientes"). Ver `COMO_USAR.md` en la raíz del repo.
+Tipos: `duda` | `repasar` | `error-material` | `mejora`. Estado: `abierto` | `resuelto`. No uses `|` dentro de la descripción.
+
+| # | Fecha | Subtema | Tipo | Descripción | Estado |
+|---|---|---|---|---|---|
+<!-- PENDIENTES:END -->
 
 ## Log de evaluaciones
 

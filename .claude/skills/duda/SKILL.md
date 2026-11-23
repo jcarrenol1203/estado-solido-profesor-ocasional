@@ -52,6 +52,10 @@ Argumento: la pregunta del usuario (texto libre), ej. `/duda por qué la rama
    marcó (o que no hubo cambios). Esa línea va después de la explicación,
    nunca en su lugar.
 
+## Pendientes (Parcial 2)
+
+Si la duda deja algo abierto (el usuario sigue sin entender, hay que repasar un prerrequisito, o detectas un error/vacío en las notas o la teoría), añade una fila en la sección "Pendientes y por mejorar" de `BASE/progreso/<persona>.md` (entre `PENDIENTES:START` y `PENDIENTES:END`): `| n | AAAA-MM-DD | subtema | duda/repasar/error-material/mejora | descripción concreta | abierto |`. Si una duda anterior queda resuelta, cambia su estado a `resuelto`. No anotes dudas ya resueltas del todo. Si el error está en el material, corrígelo también en `teoria/`, `practica/` o `notas/`.
+
 ## No hacer
 
 - No escribas la explicación antes de una llamada a herramienta ni la

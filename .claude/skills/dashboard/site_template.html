@@ -52,6 +52,7 @@ textarea{width:100%;min-height:86px;font:inherit;font-size:.92rem;background:var
 <script>
 var CFG=@@CFG@@;
 var EXAM=@@EXAM@@;
+var PEND=@@PEND@@;
 var STATES=['pendiente','en progreso','hecho'];
 var items={},order=[],docs={},grades={},answers={},db=null,local={},fb=false;
 var $=function(s,r){return (r||document).querySelector(s)};
@@ -105,11 +106,11 @@ function frac(t){
 }
 function pct(f){return f.n?Math.round(100*f.done/f.n):0}
 function updateNav(){
-  CFG.tabs.forEach(function(t){var f=frac(t);var el=$('#tab-'+t.k+' b');if(el)el.textContent=pct(f)+'%'});
+  CFG.tabs.forEach(function(t){var el=$('#tab-'+t.k+' b');if(!el)return;if(t.k==='pendientes'){el.textContent=PEND.filter(function(x){return x.est==='abierto'}).length;return}el.textContent=pct(frac(t))+'%'});
 }
 function summary(){
   var h='<div class="bars">';
-  CFG.tabs.forEach(function(t){var f=frac(t);
+  CFG.tabs.forEach(function(t){if(t.k==='pendientes')return;var f=frac(t);
     h+='<div class="k"><b>'+f.done+'/'+f.n+'</b><span>'+t.label+(t.k==='examen'?' calificados':' hechos')+(f.wip?' · '+f.wip+(t.k==='examen'?' respondidos sin calificar':' en progreso'):'')+'</span><div class="bar"><i style="width:'+(100*f.done/Math.max(1,f.n))+'%"></i><i class="w2" style="width:'+(100*f.wip/Math.max(1,f.n))+'%"></i></div></div>';});
   h+='</div>';
   var got=0,max=0;EXAM.forEach(function(q){q.lits.forEach(function(l){max+=l.pts;if(grades[l.id])got+=Number(grades[l.id].score)||0})});
@@ -121,6 +122,14 @@ function summary(){
   h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.1rem;margin:22px 0 8px">Avance por subtema (teoría + práctica)</h2><div class="rows">';
   Object.keys(sub).forEach(function(s){var x=sub[s];h+='<div><span>'+s+'</span><span class="bar"><i style="width:'+(100*x.d/x.n)+'%"></i><i class="w2" style="width:'+(100*x.w/x.n)+'%"></i></span><span>'+Math.round(100*x.d/x.n)+'%</span></div>'});
   h+='</div><div class="how" style="margin-top:16px"><b>Cómo avanzar.</b> En Teoría, Práctica y Exámenes viejos toca el botón de cada ítem: <i>pendiente → en progreso → hecho</i>. En Examen escribe tu respuesta en la caja de cada literal (se guarda sola); cuando termines, pídele a Claude que califique y verás la nota y la retroalimentación aquí mismo. Todo se guarda en este tablero.</div>';
+  return h;
+}
+function pendHtml(){
+  var ab=PEND.filter(function(x){return x.est==='abierto'}),rs=PEND.filter(function(x){return x.est!=='abierto'});
+  function card(x){return '<div class="item"><span class="st'+(x.est==='abierto'?' wip':' ok')+'" style="cursor:default">'+esc(x.tipo)+'</span><div class="t"><span class="id">#'+esc(x.n)+' · '+esc(x.fecha)+' · '+esc(x.sub)+'</span>'+inl(x.desc)+'</div></div>'}
+  var h='<div class="how">Lo que queda abierto de tus dudas, evaluaciones y revisiones del material. Se anota en <code>progreso/'+CFG.person+'.md</code> (sección «Pendientes y por mejorar»); cuando le preguntes algo a Claude con <code>/duda</code> o te evalúe con <code>/evaluar</code>, se agregan solos. Para ver cambios nuevos aquí hay que volver a publicar el tablero (<code>/dashboard '+CFG.person+'</code>).</div>';
+  h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.1rem;margin:20px 0 6px">Abiertos ('+ab.length+')</h2>'+(ab.length?ab.map(card).join(''):'<p class="sub">Nada abierto por ahora. Aparecerán aquí las dudas sin resolver, los temas por repasar y las mejoras al material.</p>');
+  if(rs.length)h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.1rem;margin:20px 0 6px">Resueltos ('+rs.length+')</h2>'+rs.map(card).join('');
   return h;
 }
 function exam(){
@@ -175,6 +184,7 @@ var rendered={};
 function renderTab(k){
   var t=CFG.tabs.filter(function(x){return x.k===k})[0],el=$('#main');
   if(k==='resumen'){el.innerHTML=summary();return}
+  if(k==='pendientes'){el.innerHTML=pendHtml();return}
   if(k==='examen'){el.innerHTML=exam();fillExam();return}
   /* items: se convierten con md inline tras generar el html */
   var h='';
@@ -210,8 +220,8 @@ function refresh(){updateNav();if(cur==='resumen')renderTab('resumen');else if(c
 function boot(){
   collect();
   var nav=$('#nav');
-  [{k:'resumen',label:'Resumen'}].concat(CFG.tabs).forEach(function(t){var b=document.createElement('button');b.id='tab-'+t.k;b.setAttribute('role','tab');b.innerHTML=t.label+(t.k==='resumen'?'':' <b>0%</b>');b.onclick=function(){show(t.k)};nav.appendChild(b)});
-  var h=(location.hash||'').slice(1);var start=['resumen','teoria','practica','examen','viejos'].indexOf(h)>=0?h:'resumen';
+  [{k:'resumen',label:'Resumen'}].concat(CFG.tabs).forEach(function(t){var b=document.createElement('button');b.id='tab-'+t.k;b.setAttribute('role','tab');b.innerHTML=t.label+(t.k==='resumen'?'':(t.k==='pendientes'?' <b>0</b>':' <b>0%</b>'));b.onclick=function(){show(t.k)};nav.appendChild(b)});
+  var h=(location.hash||'').slice(1);var start=['resumen','teoria','practica','examen','viejos','pendientes'].indexOf(h)>=0?h:'resumen';
   show(start);updateNav();
   claude.use('db').then(function(d){
     if(!d){fallback();return}

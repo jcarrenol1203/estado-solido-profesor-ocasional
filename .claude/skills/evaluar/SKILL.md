@@ -70,6 +70,10 @@ Argumento: el tema o alcance a evaluar, ej. `/evaluar cadena diatómica`,
 7. Cierra ofreciendo (sin ejecutarlo tú mismo salvo que el usuario diga que
    sí) actualizar el dashboard visual con `/dashboard <persona>`.
 
+## Pendientes (Parcial 2)
+
+Cada debilidad concreta detectada al evaluar se anota como fila `repasar` (o `duda` si el usuario lo dijo) en "Pendientes y por mejorar" de `BASE/progreso/<persona>.md`, con fecha, subtema y una descripción específica (qué falló y por qué). Cuando una evaluación posterior muestre que ya lo domina, cambia esa fila a `resuelto`. El tablero las muestra en su pestaña "Pendientes".
+
 ## No hacer
 
 - No marques `dominado` un subtema que no fue evaluado en esta sesión.

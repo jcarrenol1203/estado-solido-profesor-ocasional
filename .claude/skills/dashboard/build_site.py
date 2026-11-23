@@ -44,10 +44,21 @@ for m in re.finditer(r"^\*\*(EX\.E\.\d+) \(([\d.]+)\) — (.*?)\.?\*\* (.*)$", t
 n_lit = sum(len(q["lits"]) for q in exam)
 print("examen:", len(exam), "preguntas,", n_lit, "literales")
 tabs.insert(2, dict(k="examen", label="Examen", files=[]))
+tabs.append(dict(k="pendientes", label="Pendientes", files=[]))
+
+def pend(person):
+    md = open(f"{BASE}/progreso/{person}.md").read()
+    m = re.search(r"<!-- PENDIENTES:START -->(.*?)<!-- PENDIENTES:END -->", md, re.S)
+    rows = []
+    for l in (m.group(1) if m else "").split("\n"):
+        c = [x.strip() for x in l.strip().strip("|").split("|")]
+        if len(c) == 6 and c[0].isdigit(): rows.append(dict(n=c[0], fecha=c[1], sub=c[2], tipo=c[3], desc=c[4], est=c[5]))
+    return rows
+
 tpl = open(os.path.join(os.path.dirname(__file__), "site_template.html")).read()
 for person in ("juan", "isa"):
     cfg = dict(person=person, tabs=tabs)
-    h = tpl.replace("@@NAME@@", person.capitalize()).replace("@@CFG@@", json.dumps(cfg, ensure_ascii=False)).replace("@@EXAM@@", json.dumps(exam, ensure_ascii=False))
+    h = tpl.replace("@@NAME@@", person.capitalize()).replace("@@CFG@@", json.dumps(cfg, ensure_ascii=False)).replace("@@EXAM@@", json.dumps(exam, ensure_ascii=False)).replace("@@PEND@@", json.dumps(pend(person), ensure_ascii=False))
     open(os.path.join(out, f"dash_{person}.html"), "w").write(h)
 open(os.path.join(out, "_files.txt"), "w").write("\n".join(files))
 json.dump(exam, open(os.path.join(out, "_exam.json"), "w"), ensure_ascii=False, indent=1)

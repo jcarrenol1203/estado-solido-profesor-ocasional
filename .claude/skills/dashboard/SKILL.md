@@ -61,7 +61,7 @@ El tablero de `Parcial_2/` contiene TODO el contenido (teoría con imágenes, pr
 1. `python3 .claude/skills/dashboard/build_site.py <dir_scratchpad>/site` genera `dash_juan.html`, `dash_isa.html`, copia los `.md`/imágenes y `_files.txt`.
 2. Publica cada HTML con Artifact sobre la URL guardada (`root` = el dir, `files` = rutas de `_files.txt`, `capabilities: {db:{rules:[{path:"grades",read:"view",write:"admin"}]}}`). Título estable "Progreso P2 de <Nombre>".
 3. Calificar: leer `answers` (doc id = ID con `.`→`_`, campo `text`) y escribir en `grades` `{id, score, fb, ts}`; `score` ≤ puntos del literal (puntos de la pregunta / nº de literales).
-4. El avance sale de la `db` (no de `progreso/*.md`); para dejarlo en el repo, listar `items` y volcarlo al md si el usuario lo pide.
+4. La pestaña **Pendientes** sale de la sección `PENDIENTES:START/END` de `Parcial_2/progreso/<persona>.md` (la lee `build_site.py` al generar): tras cambiarla hay que regenerar y republicar. El avance sale de la `db` (no de `progreso/*.md`); para dejarlo en el repo, listar `items` y volcarlo al md si el usuario lo pide.
 
 ## Marcar avance desde el comando (`/dashboard <persona> ...`)
 
