@@ -4,23 +4,6 @@
 
 ---
 
-## P.drude.1.1 — Deducir $\sigma=Ne^2\tau/m^*$ (deducción)
-
-**Enunciado.** Parte de la ecuación de Drude y llega a la ley de Ohm microscópica (diap. 27-30; Pavlov §6.3, 6.92-6.96).
-
-**Solución.**
-
-1. Ecuación de movimiento (fuerza del campo + fricción de las colisiones): $m^*\dot{\mathbf v}=-e\mathbf E-m^*\mathbf v/\tau$.
-2. Estado estacionario, $\dot{\mathbf v}=0$: $-e\mathbf E=m^*\mathbf v/\tau\Rightarrow\mathbf v_d=-\dfrac{e\tau}{m^*}\mathbf E$.
-3. Densidad de corriente: en $dt$ cruzan un área $A\perp$ flujo los $N(Av_ddt)$ e⁻ del volumen $Av_ddt$, cada uno con carga $-e$ ⇒ $dI=-NeAv_d\Rightarrow\mathbf J=-Ne\mathbf v_d$.
-4. Sustituyendo: $\mathbf J=-Ne\left(-\dfrac{e\tau}{m^*}\mathbf E\right)=\dfrac{Ne^2\tau}{m^*}\mathbf E$.
-5. Comparando con $\mathbf J=\sigma\mathbf E$: $\boxed{\sigma=Ne^2\tau/m^*}$.
-6. Pavlov llega a lo mismo: $\langle v\rangle=(eE/m)\tau$ (6.93) ⇒ $j=ne^2\tau E/m$ (6.94) ⇒ $\sigma=ne^2\tau/m$ (6.96).
-
-**Resultado.** $\sigma=Ne^2\tau/m^*$ (signo de $e$ irrelevante: $e^2$). Es una relación **lineal**: ley de Ohm. Pavlov usa la distribución de Maxwell (6.92), pero el resultado solo depende de $\tau$ y $\langle v\rangle$, no de la forma de la distribución.
-
----
-
 ## P.drude.1.2 — $\tau$, $\ell$ y $\mu$ del cobre (numérico)
 
 **Enunciado.** Con los datos del Cu halla $\tau$, el camino libre medio $\ell=v_F\tau$ (¿cuántos parámetros de red?) y la movilidad.
@@ -51,18 +34,21 @@
 
 ---
 
-## P.drude.2.1 — Población de sobrevivientes (deducción)
+## P.drude.1.4 — Alambre de aluminio a partir de su celda (numérico)
 
-**Enunciado.** Demuestra $n(t)=n_0e^{-t/\tau}$ y que el tiempo medio sin colisión es $\tau$ (diap. 32-33).
+**Enunciado.** Alambre de Al (fcc, $a=4.05$ Å, $Z_v=3$, $m^*=m_e$, $\sigma=3.5\times10^7$ Ω⁻¹m⁻¹) de 2 m y 0.5 mm² con 3 A. Halla (a) $n$, (b) $R$ y $P$, (c) $E$ y $J$, (d) $v_d$, (e) $\tau$, (f) $v_F$ y $\ell$, (g) $\mu$ y $v_d/v_F$.
 
 **Solución.**
 
-1. Probabilidad de colisión de una partícula en $dt$: $dt/\tau$. Cambio de la población que sigue sin chocar: $dn=-\dfrac{n(t)}{\tau}dt$.
-2. $\dfrac{dn}{n}=-\dfrac{dt}{\tau}\Rightarrow\ln n=-t/\tau+c\Rightarrow n(t)=n_0e^{-t/\tau}$.
-3. Tiempo medio: $t_{av}=\dfrac{\int_0^\infty t\,e^{-t/\tau}dt}{\int_0^\infty e^{-t/\tau}dt}$. El denominador es $\tau$. El numerador (por partes): $\int_0^\infty te^{-t/\tau}dt=\tau^2$. ⇒ $t_{av}=\tau^2/\tau=\tau$.
-4. $\ell=v_rt_{av}=v_r\tau$ (diap. 34) y $1/\tau$ = colisiones por partícula y segundo ($\sim10^{14}$ s⁻¹).
+1. (a) $n=\dfrac{3\times4}{(4.05\times10^{-10})^3}=1.81\times10^{29}$ m⁻³.
+2. (b) $R=\dfrac{L}{\sigma A}=\dfrac{2}{3.5\times10^7\times0.5\times10^{-6}}=0.114$ Ω; $P=I^2R=9\times0.114=1.03$ W.
+3. (c) $V=IR=0.343$ V ⇒ $E=V/L=0.171$ V/m; $J=I/A=3/(0.5\times10^{-6})=6.0\times10^6$ A/m².
+4. (d) $v_d=\dfrac{J}{ne}=\dfrac{6.0\times10^6}{1.81\times10^{29}\times1.602\times10^{-19}}=2.07\times10^{-4}$ m/s.
+5. (e) $\tau=\dfrac{\sigma m^*}{ne^2}=\dfrac{3.5\times10^7\times9.109\times10^{-31}}{1.81\times10^{29}\times(1.602\times10^{-19})^2}=6.9\times10^{-15}$ s.
+6. (f) $k_F=(3\pi^2n)^{1/3}=1.75\times10^{10}$ m⁻¹ ⇒ $v_F=\hbar k_F/m=2.03\times10^6$ m/s; $\ell=v_F\tau=1.4\times10^{-8}$ m $=139$ Å $\approx34\,a$.
+7. (g) $\mu=e\tau/m^*=1.21\times10^{-3}$ m²/V·s; $v_d/v_F=2.07\times10^{-4}/2.03\times10^6=1.0\times10^{-10}$.
 
-**Resultado.** $n(t)=n_0e^{-t/\tau}$ y $t_{av}=\tau$. Interpretación: $\tau$ es a la vez la constante de decaimiento y el tiempo medio entre colisiones.
+**Resultado.** $n=1.81\times10^{29}$ m⁻³, $R=0.114$ Ω, $P=1.03$ W, $E=0.171$ V/m, $v_d=2.1\times10^{-4}$ m/s, $\tau=6.9\times10^{-15}$ s, $\ell\approx139$ Å, $\mu=1.2\times10^{-3}$ m²/V·s, $v_d/v_F=10^{-10}$.
 
 ---
 
@@ -126,31 +112,12 @@
 
 ---
 
-## P.drude.3.3 — Por qué $\rho_{ph}\propto T$ (deducción)
-
-**Enunciado.** Con las diap. 46-48 y Pavlov §7.13 (p. 287), justifica $\rho_{ph}\propto T$ a $T\gg\theta$ y distingue del caso clásico $\propto T^{3/2}$.
-
-**Solución.**
-
-1. Sección eficaz del ion que vibra: $\Omega_{ion}\approx\pi\langle x^2\rangle$ (diap. 47).
-2. Equipartición ($T\gg\theta_E$): $\tfrac12M\omega^2\langle x^2\rangle=k_BT\Rightarrow\langle x^2\rangle\propto T$ ⇒ $\Omega_{ion}\propto T$.
-3. $\ell_{ph}=1/(N_{ion}\Omega_{ion})\propto1/T$.
-4. $\tau_{ph}=\ell_{ph}/v$. En un metal degenerado la velocidad relevante es $v_F$, **independiente de $T$** ⇒ $\tau_{ph}\propto1/T$.
-5. $\rho_{ph}=m^*/(Ne^2\tau_{ph})\propto T$ ✔. Pavlov (§7.13, p. 287): $n$ ≈ cte (gas degenerado), $\mu\propto1/T$ por dispersión en fonones ⇒ $\rho\propto T$.
-6. Si el gas fuese **clásico** ($v\propto T^{1/2}$): $\rho\propto\Omega\,v\propto T\cdot T^{1/2}=T^{3/2}$ (`T-2025-II #2`, resuelto en `examenes_resueltos/`).
-
-**Resultado.** $\rho_{ph}\propto T$ con gas de Fermi; $T^{3/2}$ con gas clásico; el experimento (lineal) apoya el gas de Fermi.
-
----
-
 ## Checklist de práctica (P02)
 
-- [ ] P.drude.1.1 Deducir $\sigma=Ne^2\tau/m^*$ desde la ecuación de Drude
 - [ ] P.drude.1.2 $\tau$, $\ell$ y $\mu$ del Cu a partir de $\sigma$
 - [ ] P.drude.1.3 $v_d$ vs. $v_F$ en un alambre y en el Na
-- [ ] P.drude.2.1 Deducir $n(t)=n_0e^{-t/\tau}$ y $t_{av}=\tau$
+- [ ] P.drude.1.4 Alambre de Al desde su celda fcc: $n$, $R$, $P$, $v_d$, $\tau$, $\ell$, $\mu$
 - [ ] P.drude.2.2 Efecto Joule: $R$, $P=I^2R$ y verificación con $\sigma E^2$
 - [ ] P.drude.2.3 Estimar $\sigma_m/\sigma_{sc}$ con $N$ y $v_r$
 - [ ] P.drude.3.1 Paradoja del camino libre: choque clásico vs. experimento
 - [ ] P.drude.3.2 Regla de Matthiessen con números
-- [ ] P.drude.3.3 Deducir $\rho_{ph}\propto T$ (y $T^{3/2}$ clásico)

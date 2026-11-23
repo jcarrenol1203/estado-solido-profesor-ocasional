@@ -4,37 +4,20 @@
 
 ---
 
-## P.extra.3.1 — Una enana blanca tipo Sirio B: ¿relativista o no? (numérico)
+## P.extra.3.1 — El Sol colapsado: $N$, $n$, $E_F$ y $T_F$ (numérico)
 
-**Enunciado.** Estrella de $M=2.03\times10^{30}$ kg y $R=5.8\times10^6$ m, compuesta de núcleos con 2 nucleones por e⁻ ($N=M/2m_p$). Calcula $n$ y $E_F$ (a) no relativista, (b) ultrarrelativista y (c) con la relación relativista exacta. ¿Cuál vale?
-
-**Solución.**
-
-1. $N=\dfrac M{2m_p}=\dfrac{2.03\times10^{30}}{2\times1.6726\times10^{-27}}=6.07\times10^{56}$ e⁻.
-2. $V=\tfrac43\pi R^3=8.17\times10^{20}$ m³ ⇒ $n=7.43\times10^{35}$ m⁻³.
-3. $k_F=(3\pi^2n)^{1/3}=(2.20\times10^{37})^{1/3}=2.80\times10^{12}$ m⁻¹.
-4. (a) No relativista: $E_F=\dfrac{\hbar^2k_F^2}{2m}=299$ keV.
-5. (b) Ultrarrelativista: $E_F=\hbar ck_F=p_Fc=553$ keV.
-6. Criterio: $p_Fc=553$ keV $\sim mc^2=511$ keV ⇒ **régimen intermedio**; ninguna de las dos aproximaciones vale.
-7. (c) Exacta: $E_F^{cin}=\sqrt{(p_Fc)^2+(mc^2)^2}-mc^2=\sqrt{553^2+511^2}-511=753-511=242$ keV. Velocidad: $v_F/c=p_Fc/E=553/753=0.73$.
-
-**Resultado.** $E_F=242$ keV (exacta); el límite no relativista sobreestima (299 keV, +24 %) y el ultrarrelativista también (553 keV, +130 %). Como $E_F/mc^2\approx0.5$ hay que usar la relación relativista. $T_F=E_F/k_B\approx2.8\times10^9$ K ≫ la temperatura de la estrella: el gas está **totalmente degenerado**.
-
----
-
-## P.extra.3.2 — Pulsar y el límite ultrarrelativista (numérico + deducción)
-
-**Enunciado.** (a) Deduce $E_F\approx\hbar c(3\pi^2n)^{1/3}$ para e⁻ ultrarrelativistas. (b) Aplícalo a un pulsar ($N=1.2\times10^{57}$, $R=10$ km) y comprueba que el límite no relativista falla.
+**Enunciado.** El Sol ($M=2\times10^{30}$ kg) colapsa a $R=7\times10^{8}$ m. Con un e⁻ por protón ($N=M/m_p$, $m_p=1.6726\times10^{-27}$ kg), halla $n$, $E_F$, $T_F$ y $v_F$ (no relativista). (Enunciado tipo `P-2025-2S #2`.)
 
 **Solución.**
 
-1. (a) El conteo de estados es el mismo ($k_F=(3\pi^2n)^{1/3}$, no depende de $E(k)$). Para $E\gg mc^2$: $E=pc=\hbar kc$ ⇒ $E_F=\hbar ck_F=\hbar c(3\pi^2n)^{1/3}$.
-2. (b) $V=\tfrac43\pi(10^4)^3=4.19\times10^{12}$ m³ ⇒ $n=2.86\times10^{44}$ m⁻³ ⇒ $k_F=(3\pi^2n)^{1/3}=2.04\times10^{15}$ m⁻¹.
-3. $E_F=\hbar ck_F=1.0546\times10^{-34}\times2.998\times10^8\times2.04\times10^{15}=6.4\times10^{-11}$ J $=4.0\times10^8$ eV.
-4. Comprobación: $E_F/mc^2=4.0\times10^8/5.11\times10^5=790\gg1$ ⇒ ultrarrelativista ✔.
-5. Con la fórmula no relativista saldría $1.6\times10^{11}$ eV (absurdo: $\gg mc^2$ ⇒ velocidad $\gg c$).
+1. $N=M/m_p=1.20\times10^{57}$.
+2. $V=\tfrac43\pi R^3=1.437\times10^{27}$ m³ ⇒ $n=N/V=8.32\times10^{29}$ m⁻³.
+3. $k_F=(3\pi^2n)^{1/3}=2.91\times10^{10}$ m⁻¹.
+4. $E_F=\hbar^2k_F^2/2m=5.17\times10^{-18}$ J $=32.3$ eV.
+5. $T_F=E_F/k_B=3.74\times10^5$ K; $v_F=\hbar k_F/m=3.37\times10^6$ m/s.
+6. Comprobación del régimen: $E_F/mc^2=6\times10^{-5}\ll1$ ⇒ la fórmula no relativista es válida.
 
-**Resultado.** $E_F\approx4\times10^8$ eV $\sim10^8$ eV (`T-2025-II #3c`), $E_F\propto n^{1/3}$ en vez de $n^{2/3}$.
+**Resultado.** $n=8.3\times10^{29}$ m⁻³, $E_F=32$ eV, $T_F=3.7\times10^5$ K, $v_F=3.4\times10^6$ m/s. Si fuese $N=M/2m_p$: $n$ a la mitad ⇒ $E_F=2^{-2/3}\times32.3=20.3$ eV.
 
 ---
 
@@ -56,6 +39,5 @@
 
 ## Checklist de práctica (P05)
 
-- [ ] P.extra.3.1 Enana blanca: $E_F$ no relativista, ultrarrelativista y exacta
-- [ ] P.extra.3.2 Pulsar y límite ultrarrelativista
+- [ ] P.extra.3.1 Sol colapsado: $n$, $E_F$, $T_F$ y $v_F$
 - [ ] P.vib.6.1 Distinguir $E_F$, $\tfrac35E_F$, $\mu$ y $\phi$ (y `P-2026-1S #11`)

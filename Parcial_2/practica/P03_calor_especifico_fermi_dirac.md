@@ -62,20 +62,6 @@
 
 ---
 
-## P.cal.2.3 — Coeficiente $\gamma$ de Sommerfeld (numérico)
-
-**Enunciado.** Halla $\gamma=\pi^2R/(2T_F)$ del Cu y compáralo con un valor medido.
-
-**Solución.**
-
-1. $\gamma=\dfrac{\pi^2R}{2T_F}=\dfrac{4.935\times8.314}{8.15\times10^4}=5.04\times10^{-4}$ J/mol·K² $=0.504$ mJ/mol·K².
-2. Medido (dato externo, Kittel; **no está en el PDF**): $\gamma_{exp}\approx0.695$ mJ/mol·K².
-3. $\gamma_{exp}/\gamma_{teo}=1.38$ ⇒ masa térmica efectiva $m^*_{th}/m\approx1.4$ (los e⁻ "pesan" más por la interacción con la red y entre ellos).
-
-**Resultado.** $\gamma_{teo}=0.50$ mJ/mol·K², 28 % por debajo del medido: el modelo del e⁻ libre acierta **el orden y la dependencia lineal** en $T$.
-
----
-
 ## P.cal.2.4 — Separar $\gamma$ y $\beta$ de datos de $C(T)$ (numérico)
 
 **Enunciado.** Datos (ejemplo): $C=0.75,\ 1.80,\ 3.45,\ 6.00$ mJ/mol·K a $T=1,2,3,4$ K. Usa $C/T=\gamma+\beta T^2$ y halla $\gamma$, $\beta$ y la $T$ donde $\gamma T=\beta T^3$.
@@ -88,38 +74,6 @@
 4. Cruce: $\gamma T=\beta T^3\Rightarrow T=\sqrt{\gamma/\beta}=\sqrt{14}=3.74$ K. Por debajo domina el término electrónico (diap. 59; Pavlov $T_c\approx\Theta_D/10$, 6.67).
 
 **Resultado.** $\gamma=0.70$ mJ/mol·K², $\beta=0.050$ mJ/mol·K⁴, $T_{cruce}=3.7$ K. En la gráfica $C/T$ vs. $T^2$ (diap. 59) $\gamma$ es la ordenada al origen y $\beta$ la pendiente.
-
----
-
-## P.cal.2.5 — Cuánto se mueve $\mu$ con $T$ (numérico, Pavlov 6.57)
-
-**Enunciado.** Cu a 300 K: ¿cuánto vale $E_F(T)-E_F(0)$?
-
-**Solución.** $E_F(T)=E_F(0)\left\{1-\dfrac{\pi^2}{12}\left[\dfrac{k_BT}{E_F(0)}\right]^2\right\}$.
-
-1. $k_BT/E_F=0.02586/7.02=3.68\times10^{-3}$; al cuadrado: $1.36\times10^{-5}$.
-2. $\dfrac{\pi^2}{12}=0.822$ ⇒ corrección relativa $-1.1\times10^{-5}$.
-3. $\Delta E_F=-1.1\times10^{-5}\times7.02=-7.8\times10^{-5}$ eV.
-
-**Resultado.** $\mu(300)-E_F(0)=-0.08$ meV, es decir $\mu\approx E_F$: por eso la diap. 61 identifica $\mu(T{=}0)=E_F$ y a $T$ ambiente casi no cambia.
-
----
-
-## P.cal.2.6 — Reconstruir la estimación $C_e\approx2RT/T_F$ (deducción)
-
-**Enunciado.** Reconstruye paso a paso la estimación de las diap. 57-58.
-
-**Solución.**
-
-1. Solo los e⁻ a menos de $\sim k_BT$ de $E_F$ pueden cambiar de estado (los de más abajo tienen todo ocupado por encima: Pauli).
-2. Su fracción: $\sim k_BT/E_F$ (anchura de la zona activa entre el ancho de la distribución).
-3. Número por mol: $N_A\,k_BT/E_F$.
-4. Cada uno gana $\sim k_BT$ ⇒ energía térmica molar $\bar E\approx N_A\dfrac{(k_BT)^2}{E_F}=R\dfrac{T^2}{T_F}$ (con $N_Ak_B=R$, $E_F=k_BT_F$).
-5. $C_e=\dfrac{\partial\bar E}{\partial T}\approx2R\dfrac T{T_F}$.
-6. El cálculo exacto (integrando $D(E)$ con $\partial f/\partial E$, Pavlov 6.58-6.64) cambia el 2 por $\pi^2/2=4.93$.
-7. Reducción respecto al clásico: $C_e/\tfrac32R\approx\tfrac43T/T_F\approx7\times10^{-3}$ para $E_F=5$ eV a 300 K ($T_F=5.8\times10^4$ K); la diapositiva cita el factor $k_BT/E_F\approx5\times10^{-3}$ (mismo orden).
-
-**Resultado.** $C_e\approx2RT/T_F$ (exacto $\tfrac{\pi^2}{2}RT/T_F$): lineal en $T$ y mucho menor que $\tfrac32R$ salvo a $T\sim T_F$ (diap. 58).
 
 ---
 
@@ -136,13 +90,34 @@
 
 ---
 
+## P.cal.2.8 — Potasio y litio desde la celda: $E_F$, $T_F$, $C_e$, $\gamma$ (numérico)
+
+**Enunciado.** K (bcc, $a=5.225$ Å) y Li (bcc, $a=3.51$ Å), 1 e⁻/átomo, $m^*=m_e$. Halla $n$, $E_F$, $T_F$, $C_e$ a 300 K ($C_e=\tfrac{\pi^2}{2}R\,T/T_F$), $C_e/(\tfrac32R)$ y $\gamma=C_e/T$.
+
+**Solución.** $n=2/a^3$ (bcc), $E_F=\dfrac{\hbar^2}{2m}(3\pi^2n)^{2/3}$, $T_F=E_F/k_B$.
+
+1. K: $n=1.40\times10^{28}$ m⁻³ ⇒ $E_F=2.12$ eV ⇒ $T_F=2.46\times10^4$ K ⇒ $T/T_F=0.0122$.
+   - $C_e=4.935\times8.314\times0.0122=0.500$ J/mol·K; $C_e/(\tfrac32R)=0.500/12.47=0.040$.
+   - $\gamma=\pi^2R/(2T_F)=4.935\times8.314/2.46\times10^4=1.67\times10^{-3}$ J/mol·K² $=1.67$ mJ/mol·K².
+2. Li: $n=4.63\times10^{28}$ m⁻³ ⇒ $E_F=4.70$ eV ⇒ $T_F=5.45\times10^4$ K ⇒ $T/T_F=0.0055$.
+   - $C_e=4.935\times8.314\times0.0055=0.226$ J/mol·K; $C_e/(\tfrac32R)=0.018$; $\gamma=0.75$ mJ/mol·K².
+
+**Resultado.**
+
+| Metal | $n$ (m⁻³) | $E_F$ (eV) | $T_F$ (K) | $C_e$(300 K) (J/mol·K) | $C_e/\tfrac32R$ | $\gamma$ (mJ/mol·K²) |
+|---|---|---|---|---|---|---|
+| K | $1.40\times10^{28}$ | 2.12 | $2.46\times10^4$ | 0.50 | 4.0 % | 1.67 |
+| Li | $4.63\times10^{28}$ | 4.70 | $5.45\times10^4$ | 0.23 | 1.8 % | 0.75 |
+
+Menor $n$ ⇒ menor $E_F$ ⇒ menor $T_F$ ⇒ mayor $C_e$ (efecto $\propto1/T_F$).
+
+---
+
 ## Checklist de práctica (P03)
 
 - [ ] P.cal.1.1 $C_e$ y $C_{total}$ clásicos vs. experimento
 - [ ] P.cal.2.1 Tabla de $f(E)$ y límite de MB; $f$ a $E_F\pm0.1$ eV
 - [ ] P.cal.2.2 $T_F$, $T/T_F$ y $C_e$ de Cu y Na a 300 K
-- [ ] P.cal.2.3 Coeficiente $\gamma$ de Sommerfeld del Cu
 - [ ] P.cal.2.4 Separar $\gamma$ y $\beta$ de datos de $C/T$ vs. $T^2$
-- [ ] P.cal.2.5 Corrección térmica de $\mu$ (Pavlov 6.57)
-- [ ] P.cal.2.6 Reconstruir la estimación $C_e\approx2RT/T_F$
 - [ ] P.cal.2.7 Ancho 99 %→1 % de $f(E)$
+- [ ] P.cal.2.8 K y Li desde la celda bcc: $E_F$, $T_F$, $C_e$ y $\gamma$

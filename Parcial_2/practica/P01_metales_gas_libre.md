@@ -33,35 +33,32 @@
 
 ---
 
-## P.metal.1.3 — Equilibrio del modelo iónico (deducción, Pavlov §2.6)
+## P.metal.1.4 — $n$ desde la estructura cristalina y el parámetro de red (numérico)
 
-**Enunciado.** Pavlov (Cap. 2, §2.6, pp. 93-94) da, en eV/átomo, para un alcalino bcc: $U_a=-24.35/x$, $U_c=\tfrac35E_F=30.1/x^2$, $U_e=-12.5/x$, con $x=r_s/a_0$. Halla $x$ de equilibrio y compáralo con el valor del Na.
+**Enunciado.** Calcula la concentración de e⁻ de conducción $n=N/V$ de Na (bcc, $a=4.225$ Å, $Z_v=1$), K (bcc, 5.225 Å, 1), Li (bcc, 3.51 Å, 1), Cu (fcc, 3.61 Å, 1), Ag (fcc, 4.09 Å, 1) y Al (fcc, 4.05 Å, 3).
 
-**Solución.**
+**Solución.** Átomos por celda cúbica: **bcc → 2**, **fcc → 4** (diap. 7-10: alcalinos bcc, nobles fcc). Volumen de la celda $a^3$.
 
-1. $U(x)=\dfrac{30.1}{x^2}-\dfrac{24.35+12.5}{x}=\dfrac{30.1}{x^2}-\dfrac{36.85}{x}$ (el libro escribe 36.8).
-2. $\dfrac{dU}{dx}=-\dfrac{60.2}{x^3}+\dfrac{36.8}{x^2}=0\Rightarrow x=\dfrac{60.2}{36.8}=1.64$ ✔ (el libro: 1.6).
-3. Na real: $n=2/(4.225\text{ Å})^3=2.65\times10^{28}$ m⁻³ ⇒ $r_s=(3/4\pi n)^{1/3}=2.08$ Å ⇒ $x=2.08/0.529=3.93$.
-4. Chequeo de $U_c$: $U_c=30.1/3.93^2=1.95$ eV $=\tfrac35E_F$ con $E_F=3.24$ eV ✔ (ver P04).
+1. $n=\dfrac{Z_v\times(\text{átomos/celda})}{a^3}$.
+2. Na: $\dfrac{2}{(4.225\times10^{-10})^3}=\dfrac{2}{7.542\times10^{-29}}=2.65\times10^{28}$ m⁻³.
+3. K: $\dfrac{2}{(5.225\times10^{-10})^3}=1.40\times10^{28}$ m⁻³.
+4. Li: $\dfrac{2}{(3.51\times10^{-10})^3}=4.63\times10^{28}$ m⁻³.
+5. Cu: $\dfrac{4}{(3.61\times10^{-10})^3}=8.50\times10^{28}$ m⁻³.
+6. Ag: $\dfrac{4}{(4.09\times10^{-10})^3}=5.85\times10^{28}$ m⁻³.
+7. Al: $\dfrac{3\times4}{(4.05\times10^{-10})^3}=1.81\times10^{29}$ m⁻³ (trivalente: ×3).
 
-**Resultado.** Equilibrio del modelo: $x\approx1.6$; Na real: 3.9 (el rango experimental de alcalinos es 2-6). El libro lo explica: el modelo iónico es "demasiado burdo", pero la imagen *iones dentro de un gas de e⁻* es correcta. Lo importante: $U_c=\tfrac35E_F$ (energía cinética) **equilibra** la atracción coulombiana.
+**Resultado.**
 
----
+| Metal | estructura | $a$ (Å) | $Z_v$ | $n$ (m⁻³) |
+|---|---|---|---|---|
+| Na | bcc | 4.225 | 1 | $2.65\times10^{28}$ |
+| K | bcc | 5.225 | 1 | $1.40\times10^{28}$ |
+| Li | bcc | 3.51 | 1 | $4.63\times10^{28}$ |
+| Cu | fcc | 3.61 | 1 | $8.50\times10^{28}$ |
+| Ag | fcc | 4.09 | 1 | $5.85\times10^{28}$ |
+| Al | fcc | 4.05 | 3 | $1.81\times10^{29}$ |
 
-## P.gas1d.1.1 — Deducir la cuantización (deducción)
-
-**Enunciado.** Demuestra que $\varepsilon_n=\hbar^2\pi^2n^2/2mL^2$ y que la cuantización viene de las condiciones de frontera, no de un postulado.
-
-**Solución.**
-
-1. Dentro de la caja $U=0$: $-\dfrac{\hbar^2}{2m}\psi''=\varepsilon\psi$. Solución general: $\psi=A\sin kx+B\cos kx$, con $k=\sqrt{2m\varepsilon}/\hbar$.
-2. $\psi(0)=0\Rightarrow B=0$.
-3. $\psi(L)=0\Rightarrow A\sin kL=0\Rightarrow kL=n\pi$, $n=1,2,3,\ldots$ ($n=0$ da $\psi\equiv0$).
-4. Por tanto $k_n=n\pi/L$, $\lambda_n=2\pi/k_n=2L/n$ (media longitud de onda $\times n$ = $L$, diap. 15), y
-$$\varepsilon_n=\frac{\hbar^2k_n^2}{2m}=\frac{\hbar^2\pi^2}{2mL^2}n^2$$
-5. La **cuantización aparece porque se exigen dos condiciones** ($\psi(0)=0$ y $\psi(L)=0$) a una solución que de otro modo valdría para cualquier $\varepsilon$: confinamiento ⇒ niveles discretos (`P-2025-01 #4g`).
-
-**Resultado.** $\varepsilon_n\propto n^2$ (1 : 4 : 9 …), $\varepsilon_n=\dfrac{h^2}{8mL^2}n^2$.
+Con la densidad (diap. 10) sale lo mismo: Na $2.54\times10^{22}$ cm⁻³ (real, a 300 K con $\rho=0.971$) vs. $2.65\times10^{22}$ de la celda a baja $T$.
 
 ---
 
@@ -102,7 +99,7 @@ $$\varepsilon_n=\frac{\hbar^2k_n^2}{2m}=\frac{\hbar^2\pi^2}{2mL^2}n^2$$
 
 **Solución.**
 
-1. $r_s=2.08$ Å (P.metal.1.3).
+1. $r_s=(3/4\pi n)^{1/3}=2.08$ Å, con $n=2/a^3$ del Na (P.metal.1.4).
 2. $\dfrac{e^2}{4\pi\varepsilon_0r_s}=\dfrac{1.440\ \text{eV·nm}}{0.208\ \text{nm}}=6.9$ eV.
 3. $E_F(\text{Na})=3.24$ eV ⇒ el Coulomb **desnudo** es $\approx2\times E_F$: **no** es pequeño.
 4. Por eso la diapositiva no dice "los e⁻ están lejos"; dice que la interacción **efectiva** es débil por: (i) **Pauli** (hueco de Fermi, $r\sim1$ Å: dos e⁻ del mismo espín no se acercan), (ii) **energía mínima** (se separan) y (iii) el **apantallamiento**: cada e⁻ viaja con su hueco positivo (diap. 22), neutro a distancia ⇒ interacción entre "e⁻ + hueco" ≪.
@@ -132,8 +129,7 @@ $$\varepsilon_n=\frac{\hbar^2k_n^2}{2m}=\frac{\hbar^2\pi^2}{2mL^2}n^2$$
 
 - [ ] P.metal.1.1 Concentración $N=Z_vN_A\rho/M$ de Cu, Al, Mg, Na
 - [ ] P.metal.1.2 Fracción de volumen de los iones en Na (y la inconsistencia de la diap. 7)
-- [ ] P.metal.1.3 Equilibrio del modelo iónico de Pavlov, $r_s/a_0=1.6$
-- [ ] P.gas1d.1.1 Deducir $\varepsilon_n$ desde las condiciones de frontera
+- [ ] P.metal.1.4 $n=N/V$ desde la estructura (bcc/fcc) y $a$ de Na, K, Li, Cu, Ag, Al
 - [ ] P.gas1d.1.2 $N=6$ e⁻ en 1 nm: $\varepsilon_F$ y excitación mínima
 - [ ] P.gas1d.1.3 $N=10$ e⁻ en 2 nm, degeneración y caso $N$ impar
 - [ ] P.interac.1.1 Coulomb desnudo vs. $E_F$ y por qué el modelo funciona

@@ -51,7 +51,6 @@ $$U=U_a+U_c+U_e=\frac{30.1}{(r_s/a_0)^2}-\frac{36.8}{r_s/a_0}\ \Rightarrow\ \lef
   El experimento da $r_s/a_0=2$-$6$; el propio libro dice que el modelo iónico es "demasiado burdo" pero que la imagen *iones en un gas de e⁻* es correcta (p. 94). ![Pavlov p. 94](img/pavlov_p094.jpg)
 *Pavlov, Cap. 2, §2.6, p. 94: $E_F$, energía de intercambio (2.56) y energía total (2.57) con equilibrio en $r_s/a_0=1.6$.*
 
-  *(El equilibrio se deduce en `practica/P01`, ejercicio P01-3.)*
 - **§6.1, p. 200:** metal = iones que vibran + gas de e⁻; con Maxwell-Boltzmann los e⁻ darían $C$ 1.5 veces mayor que Dulong-Petit (se retoma en T03).
 
 ![Pavlov p. 200](img/pavlov_p200.jpg)
