@@ -1,0 +1,206 @@
+<title>Progreso P2 de @@NAME@@</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap">
+<style>
+/* Layout: barra fija de pestañas arriba; contenido en una columna de lectura; widgets de estado dentro del texto */
+:root{--bg:#f5f7fb;--panel:#fff;--fg:#14213d;--mut:#5b6785;--line:#dbe1ee;--acc:#1f4fd8;--accbg:#e6edff;--ok:#1b7a3d;--okbg:#e2f4e8;--wip:#a15c00;--wipbg:#fff0d6;--off:#7a8399;--offbg:#eceff5;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1524;--panel:#171f33;--fg:#e8ecf7;--mut:#9aa6c4;--line:#2a3554;--acc:#7da2ff;--accbg:#1e2b52;--ok:#5fd187;--okbg:#17321f;--wip:#ffbe55;--wipbg:#3a2a0c;--off:#8e98b3;--offbg:#222b44;--bad:#ff8a80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1524;--panel:#171f33;--fg:#e8ecf7;--mut:#9aa6c4;--line:#2a3554;--acc:#7da2ff;--accbg:#1e2b52;--ok:#5fd187;--okbg:#17321f;--wip:#ffbe55;--wipbg:#3a2a0c;--off:#8e98b3;--offbg:#222b44;--bad:#ff8a80;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;line-height:1.55;padding-block:0 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.w{max-width:940px;margin:0 auto}
+header{padding-top:18px}h1{font-family:'Space Grotesk',Inter,sans-serif;font-size:1.6rem;margin:0;text-wrap:balance}.sub{color:var(--mut);margin:2px 0 0;font-size:.9rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);margin-top:10px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav button{font:inherit;font-size:.9rem;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 11px;cursor:pointer;display:flex;gap:8px;align-items:center}
+nav button[aria-selected="true"]{background:var(--acc);color:var(--bg);border-color:var(--acc)}nav button b{font-variant-numeric:tabular-nums;font-weight:600;font-size:.8rem;opacity:.85}
+button:focus-visible,a:focus-visible,textarea:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.banner{background:var(--wipbg);color:var(--wip);border-radius:6px;padding:8px 12px;margin:12px 0;font-size:.88rem}
+.doc{padding-top:6px}.doc h1{font-size:1.45rem;margin:22px 0 8px}.doc h2{font-family:'Space Grotesk',Inter,sans-serif;font-size:1.15rem;margin:30px 0 8px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.doc h3{font-size:1rem;margin:18px 0 6px}
+.doc blockquote{margin:10px 0;padding:6px 14px;border-left:3px solid var(--line);color:var(--mut)}.doc p,.doc li{overflow-wrap:anywhere}
+.doc img{display:block;max-width:100%;height:auto;margin:12px 0 2px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.doc table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}.doc td,.doc th{border:1px solid var(--line);padding:5px 9px;text-align:left}
+.doc code{font-size:.85em;background:var(--offbg);padding:1px 4px;border-radius:4px}.doc hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.doc mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}
+.item{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0}
+.item .t{min-width:0;overflow-wrap:anywhere}.item .id{display:block;font:.72rem ui-monospace,monospace;color:var(--mut)}
+.st{font:inherit;font-size:.78rem;border-radius:99px;border:1px solid var(--line);padding:3px 11px;cursor:pointer;background:var(--offbg);color:var(--off);white-space:nowrap}
+.st.wip{background:var(--wipbg);color:var(--wip);border-color:transparent}.st.ok{background:var(--okbg);color:var(--ok);border-color:transparent}
+h2 .st{font-size:.72rem}
+.bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;min-width:0}.k b{display:block;font-size:1.5rem;font-variant-numeric:tabular-nums}.k span{color:var(--mut);font-size:.82rem}
+.bar{height:8px;background:var(--offbg);border-radius:4px;margin-top:8px;overflow:hidden;display:flex}.bar i{display:block;height:100%;background:var(--ok)}.bar i.w2{background:var(--wip)}
+.rows{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}.rows div{display:grid;grid-template-columns:minmax(0,1fr) 80px 56px;gap:10px;align-items:center;padding:7px 12px;border-top:1px solid var(--line);font-size:.9rem}.rows div:first-child{border-top:0}
+.rows .bar{margin:0}
+.q{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;margin:14px 0}.q h3{margin:0 0 6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.lit{border-top:1px dashed var(--line);padding-top:10px;margin-top:10px}.lit .hd{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.lit .hd .id{font:.72rem ui-monospace,monospace;color:var(--mut)}
+textarea{width:100%;min-height:86px;font:inherit;font-size:.92rem;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:8px;margin-top:6px;resize:vertical}
+.meta{font-size:.78rem;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.grade{margin-top:8px;padding:8px 10px;border-radius:6px;background:var(--okbg);color:var(--fg);border-left:3px solid var(--ok);font-size:.9rem}.grade b{color:var(--ok)}
+.how{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.92rem}
+</style>
+<div class="w">
+<header><h1>Progreso P2 de @@NAME@@</h1><p class="sub">Estado Sólido · metales y electrón libre · alcance: diapositivas 1-70 + Pavlov</p></header>
+<nav id="nav" role="tablist"></nav>
+<div id="banner"></div>
+<main id="main"></main>
+</div>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'},startup:{typeset:false}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script>
+var CFG=@@CFG@@;
+var EXAM=@@EXAM@@;
+var STATES=['pendiente','en progreso','hecho'];
+var items={},order=[],docs={},grades={},answers={},db=null,local={},fb=false;
+var $=function(s,r){return (r||document).querySelector(s)};
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function key(id){return id.replace(/\./g,'_')}
+function md(src,base){
+  var maths=[];
+  src=src.replace(/\$\$[\s\S]+?\$\$|\$[^$\n]+?\$/g,function(m){maths.push(m);return '@@M'+(maths.length-1)+'@@'});
+  if(base){src=src.replace(/\]\(img\//g,'](' +base+ 'img/')}
+  var h=marked.parse(src,{mangle:false,headerIds:false});
+  return h.replace(/@@M(\d+)@@/g,function(_,i){return esc(maths[+i])});
+}
+function inl(src){
+  var maths=[];src=src.replace(/\$[^$\n]+?\$/g,function(m){maths.push(m);return '@@M'+(maths.length-1)+'@@'});
+  return marked.parseInline(src).replace(/@@M(\d+)@@/g,function(_,i){return esc(maths[+i])});
+}
+function stateOf(id){var d=items[id]&&items[id].s;return STATES.indexOf(d)>=0?d:'pendiente'}
+function cls(s){return s==='hecho'?'ok':s==='en progreso'?'wip':''}
+function statusBtn(id){var s=stateOf(id);return '<button class="st '+cls(s)+'" data-st="'+id+'" aria-label="Estado de '+id+': '+s+'">'+s+'</button>'}
+function setState(id,s){
+  items[id]=Object.assign({},items[id],{s:s});refresh();
+  if(db){db.collection('items').doc(key(id)).set({id:id,s:s,ts:Date.now()}).catch(function(){});}
+  else{try{localStorage.setItem('p2-'+CFG.person,JSON.stringify(items))}catch(e){}}
+}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-st]');if(!b)return;
+  var id=b.getAttribute('data-st');var n=(STATES.indexOf(stateOf(id))+1)%3;setState(id,STATES[n]);
+});
+/* ---------- carga de contenido ---------- */
+var content={};
+function load(){
+  var jobs=[];
+  CFG.tabs.forEach(function(t){(t.files||[]).forEach(function(f){
+    jobs.push(fetch(f.path).then(function(r){return r.text()}).then(function(x){content[f.path]=x}).catch(function(){content[f.path]='*(No se pudo cargar '+f.path+')*'}));
+  })});
+  return Promise.all(jobs);
+}
+var ITEMRE=/^- \[ \] (\S+) (.*)$/gm;
+function collect(){
+  CFG.tabs.forEach(function(t){t.ids=[];
+    (t.files||[]).forEach(function(f){var m,txt=content[f.path]||'';ITEMRE.lastIndex=0;
+      while((m=ITEMRE.exec(txt))){t.ids.push(m[1]);order.push(m[1]);}});
+    if(t.k==='examen'){EXAM.forEach(function(q){q.lits.forEach(function(l){t.ids.push(l.id)})});}
+  });
+}
+/* ---------- progreso ---------- */
+function frac(t){
+  if(t.k==='examen'){var n=t.ids.length,g=t.ids.filter(function(i){return grades[i]}).length,a=t.ids.filter(function(i){return answers[i]&&answers[i].text&&answers[i].text.trim()}).length;return {n:n,done:g,wip:Math.max(0,a-g)}}
+  var d=t.ids.filter(function(i){return stateOf(i)==='hecho'}).length,w=t.ids.filter(function(i){return stateOf(i)==='en progreso'}).length;return {n:t.ids.length,done:d,wip:w}
+}
+function pct(f){return f.n?Math.round(100*f.done/f.n):0}
+function updateNav(){
+  CFG.tabs.forEach(function(t){var f=frac(t);var el=$('#tab-'+t.k+' b');if(el)el.textContent=pct(f)+'%'});
+}
+function summary(){
+  var h='<div class="bars">';
+  CFG.tabs.forEach(function(t){var f=frac(t);
+    h+='<div class="k"><b>'+f.done+'/'+f.n+'</b><span>'+t.label+(t.k==='examen'?' calificados':' hechos')+(f.wip?' · '+f.wip+(t.k==='examen'?' respondidos sin calificar':' en progreso'):'')+'</span><div class="bar"><i style="width:'+(100*f.done/Math.max(1,f.n))+'%"></i><i class="w2" style="width:'+(100*f.wip/Math.max(1,f.n))+'%"></i></div></div>';});
+  h+='</div>';
+  var got=0,max=0;EXAM.forEach(function(q){q.lits.forEach(function(l){max+=l.pts;if(grades[l.id])got+=Number(grades[l.id].score)||0})});
+  var gm=0;EXAM.forEach(function(q){q.lits.forEach(function(l){if(grades[l.id])gm+=l.pts})});
+  h+='<p class="sub">Nota del examen propuesto: <b>'+got.toFixed(2)+'</b> de '+gm.toFixed(2)+' puntos ya calificados (total posible '+max.toFixed(1)+').</p>';
+  var sub={};
+  ['teoria','practica'].forEach(function(k){var t=CFG.tabs.filter(function(x){return x.k===k})[0];
+    t.ids.forEach(function(id){var p=id.split('.');var s=p[1]+'.'+p[2];(sub[s]=sub[s]||{n:0,d:0,w:0});sub[s].n++;var st=stateOf(id);if(st==='hecho')sub[s].d++;else if(st==='en progreso')sub[s].w++;});});
+  h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.1rem;margin:22px 0 8px">Avance por subtema (teoría + práctica)</h2><div class="rows">';
+  Object.keys(sub).forEach(function(s){var x=sub[s];h+='<div><span>'+s+'</span><span class="bar"><i style="width:'+(100*x.d/x.n)+'%"></i><i class="w2" style="width:'+(100*x.w/x.n)+'%"></i></span><span>'+Math.round(100*x.d/x.n)+'%</span></div>'});
+  h+='</div><div class="how" style="margin-top:16px"><b>Cómo avanzar.</b> En Teoría, Práctica y Exámenes viejos toca el botón de cada ítem: <i>pendiente → en progreso → hecho</i>. En Examen escribe tu respuesta en la caja de cada literal (se guarda sola); cuando termines, pídele a Claude que califique y verás la nota y la retroalimentación aquí mismo. Todo se guarda en este tablero.</div>';
+  return h;
+}
+function exam(){
+  var h='<div class="how"><b>Examen sin ayuda.</b> Responde cada literal en su caja. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Se guarda automáticamente. Cuando termines escríbele a Claude: <i>«califica examen»</i>. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
+  var part='';
+  EXAM.forEach(function(q){
+    if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+(part==='T'?'Parte 1 · Teoría (5.0)':'Parte 2 · Ejercicios (5.0)')+'</h2>'}
+    h+='<div class="q"><h3><span>'+q.id+' · '+inl(q.title)+'</span><span class="sub">'+q.pts+' pts</span></h3><div>'+inl(q.intro)+'</div>';
+    q.lits.forEach(function(l){
+      h+='<div class="lit"><div class="hd"><b>'+(l.lab?'('+l.lab+')':'')+'</b><span>'+inl(l.text)+'</span><span class="id">'+l.id+' · '+l.pts.toFixed(2)+' pts</span></div>'+
+        '<textarea data-ans="'+l.id+'" id="a-'+key(l.id)+'" aria-label="Respuesta '+l.id+'" placeholder="Tu respuesta (puedes escribir fórmulas como texto o LaTeX)"></textarea><div class="meta" id="m-'+key(l.id)+'"></div><div id="g-'+key(l.id)+'"></div></div>';
+    });
+    h+='</div>';
+  });
+  return h;
+}
+function fillExam(){
+  EXAM.forEach(function(q){q.lits.forEach(function(l){
+    var ta=document.getElementById('a-'+key(l.id));if(ta&&document.activeElement!==ta){var v=(answers[l.id]&&answers[l.id].text)||'';if(ta.value!==v)ta.value=v}
+    var m=document.getElementById('m-'+key(l.id));if(m){m.textContent=(answers[l.id]&&answers[l.id].text&&answers[l.id].text.trim())?'Guardado'+(grades[l.id]?'':' · pendiente de calificar'):'Sin responder'}
+    var g=document.getElementById('g-'+key(l.id));if(g){var r=grades[l.id];g.innerHTML=r?'<div class="grade"><b>'+Number(r.score).toFixed(2)+' / '+l.pts.toFixed(2)+'</b>'+(r.fb?' · '+inl(String(r.fb)):'')+'</div>':''}
+  })});
+  if(window.MathJax&&MathJax.typesetPromise){var main=$('#main');MathJax.typesetPromise([main]).catch(function(){})}
+}
+var timers={};
+document.addEventListener('input',function(e){
+  var id=e.target.getAttribute&&e.target.getAttribute('data-ans');if(!id)return;
+  clearTimeout(timers[id]);var v=e.target.value;
+  timers[id]=setTimeout(function(){
+    answers[id]={id:id,text:v,ts:Date.now()};
+    if(db)db.collection('answers').doc(key(id)).set({id:id,text:v,ts:Date.now()}).catch(function(){});
+    else try{localStorage.setItem('p2a-'+CFG.person,JSON.stringify(answers))}catch(x){}
+    fillExam();updateNav();
+  },900);
+});
+/* ---------- render de pestañas ---------- */
+var rendered={};
+function renderTab(k){
+  var t=CFG.tabs.filter(function(x){return x.k===k})[0],el=$('#main');
+  if(k==='resumen'){el.innerHTML=summary();return}
+  if(k==='examen'){el.innerHTML=exam();fillExam();return}
+  /* items: se convierten con md inline tras generar el html */
+  var h='';
+  t.files.forEach(function(f){
+    var src=content[f.path]||'';
+    src=src.replace(ITEMRE,function(_,id,tx){return '\n<div class="item" data-item="'+id+'"></div>\n<!--TX '+id+'='+encodeURIComponent(tx)+'-->\n'});
+    h+='<section class="doc">'+md(src,f.base)+'</section>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll('.item').forEach(function(d){
+    var id=d.getAttribute('data-item');var nx=d.nextSibling;var txt='';
+    while(nx&&!(nx.nodeType===8&&nx.nodeValue.indexOf('TX '+id+'=')===0))nx=nx.nextSibling;
+    if(nx)txt=decodeURIComponent(nx.nodeValue.split('=').slice(1).join('='));
+    d.innerHTML='<span data-slot="'+id+'"></span><div class="t"><span class="id">'+id+'</span>'+inl(txt)+'</div>';
+  });
+  el.querySelectorAll('h2').forEach(function(h2){var m=h2.textContent.match(/^(P\.[\w.]+) —/);if(m&&t.ids.indexOf(m[1])>=0){var s=document.createElement('span');s.setAttribute('data-slot',m[1]);h2.appendChild(s)}});
+  paintSlots();
+  if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([el]).catch(function(){});
+}
+function paintSlots(){document.querySelectorAll('[data-slot]').forEach(function(s){s.innerHTML=statusBtn(s.getAttribute('data-slot'))})}
+var cur='resumen';
+function show(k){cur=k;document.querySelectorAll('nav button').forEach(function(b){b.setAttribute('aria-selected',b.id==='tab-'+k?'true':'false')});renderTab(k);window.scrollTo(0,0);try{history.replaceState(null,'','#'+k)}catch(e){}}
+function refresh(){updateNav();if(cur==='resumen')renderTab('resumen');else if(cur==='examen')fillExam();else paintSlots()}
+function boot(){
+  collect();
+  var nav=$('#nav');
+  [{k:'resumen',label:'Resumen'}].concat(CFG.tabs).forEach(function(t){var b=document.createElement('button');b.id='tab-'+t.k;b.setAttribute('role','tab');b.innerHTML=t.label+(t.k==='resumen'?'':' <b>0%</b>');b.onclick=function(){show(t.k)};nav.appendChild(b)});
+  var h=(location.hash||'').slice(1);var start=['resumen','teoria','practica','examen','viejos'].indexOf(h)>=0?h:'resumen';
+  show(start);updateNav();
+  claude.use('db').then(function(d){
+    if(!d){fallback();return}
+    db=d;var t0=setTimeout(function(){},10000);
+    db.collection('items').onSnapshot(function(s){clearTimeout(t0);items={};s.docs.forEach(function(x){var v=x.data();if(v&&v.id)items[v.id]=v});refresh()},function(){});
+    db.collection('answers').onSnapshot(function(s){answers={};s.docs.forEach(function(x){var v=x.data();if(v&&v.id)answers[v.id]=v});refresh()},function(){});
+    db.collection('grades').onSnapshot(function(s){grades={};s.docs.forEach(function(x){var v=x.data();if(v&&v.id)grades[v.id]=v});refresh()},function(){});
+  }).catch(fallback);
+}
+function fallback(){
+  $('#banner').innerHTML='<div class="banner">No hay almacenamiento compartido en esta vista: tu avance se guarda solo en este navegador.</div>';
+  try{items=JSON.parse(localStorage.getItem('p2-'+CFG.person)||'{}');answers=JSON.parse(localStorage.getItem('p2a-'+CFG.person)||'{}')}catch(e){}
+  refresh();
+}
+function start(){load().then(boot)}
+start();
+</script>

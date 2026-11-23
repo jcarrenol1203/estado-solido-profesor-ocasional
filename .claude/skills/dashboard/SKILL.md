@@ -54,11 +54,11 @@ Argumentos opcionales: el perfil y el parcial (`/dashboard juan p2`,
 En `Parcial_2/` el % global = dominados / subtemas **en alcance** (12). Los `fuera de alcance` se muestran aparte, en gris atenuado con etiqueta "fuera del parcial (p. >70)", y no cuentan en el %. Indica en el título/subtítulo "Alcance: diapositivas 1-70".
 
 
-## Parcial 2: 4 checklists (teoría, práctica, examen, exámenes viejos)
+## Parcial 2: tablero interactivo (desde 2026-11-22)
 
-Desde 2026-11-22 el tablero de `Parcial_2/` tiene cuatro checklists. El contenido vive en `Parcial_2/{teoria,practica,examen,examenes_resueltos}/*.md` (ítems `- [ ] ID texto`) y el estado de cada persona en la sección `Seguimiento de checklists` de `progreso/<persona>.md`.
+El tablero de `Parcial_2/` contiene TODO el contenido (teoría con imágenes, práctica, examen con cajas de respuesta, exámenes viejos) y guarda el avance en la `db` del propio artifact (colecciones `items`, `answers`, `grades`; `grades` solo la escribe un Editor/owner, o sea Claude vía ArtifactData).
 
-1. `python3 .claude/skills/dashboard/tools.py sync <persona>`: refresca las tablas del progreso (conserva estados).
-2. Lee `progreso/<persona>.md` y `python3 .claude/skills/dashboard/tools.py html <persona> <ruta.html>`: genera el HTML (pestañas Teoría / Práctica / Examen / Exámenes viejos / Subtemas y parciales, % por sección, nota acumulada del examen).
-3. Publica con Artifact sobre la URL guardada en `progreso/<persona>.md` (primero `action: "read"`), con `title` estable "Progreso P2 de <Nombre>".
-4. Cuando el usuario avance un ítem (hecho, entregado, calificado + nota `obtenido/máximo`), edita solo las columnas Estado/Nota de esa fila.
+1. `python3 .claude/skills/dashboard/build_site.py <dir_scratchpad>/site` genera `dash_juan.html`, `dash_isa.html`, copia los `.md`/imágenes y `_files.txt`.
+2. Publica cada HTML con Artifact sobre la URL guardada (`root` = el dir, `files` = rutas de `_files.txt`, `capabilities: {db:{rules:[{path:"grades",read:"view",write:"admin"}]}}`). Título estable "Progreso P2 de <Nombre>".
+3. Calificar: leer `answers` (doc id = ID con `.`→`_`, campo `text`) y escribir en `grades` `{id, score, fb, ts}`; `score` ≤ puntos del literal (puntos de la pregunta / nº de literales).
+4. El avance sale de la `db` (no de `progreso/*.md`); para dejarlo en el repo, listar `items` y volcarlo al md si el usuario lo pide.
