@@ -133,10 +133,10 @@ function pendHtml(){
   return h;
 }
 function exam(){
-  var h='<div class="how"><b>Examen sin ayuda.</b> Parte 1: elige una opción (a-e) por pregunta. Parte 2: escribe tu desarrollo en la caja de cada literal. Se guarda solo. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Cuando termines escríbele a Claude: <i>«califica examen»</i> y verás aquí la nota y la retroalimentación. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
+  var h='<div class="how"><b>Examen sin ayuda.</b> Elige una opción (a-e) por pregunta; hay 50 preguntas de 0.1 puntos, teóricas y numéricas (usa calculadora). Se guarda solo. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Cuando termines escríbele a Claude: <i>«califica examen»</i> y verás aquí la nota y la retroalimentación. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
   var part='';
   EXAM.forEach(function(q){
-    if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+(part==='M'?'Parte 1 · Opción múltiple (5.0)':'Parte 2 · Problemas de desarrollo (5.0)')+'</h2>'}
+    if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+'Opción múltiple (50 preguntas · 5.0)'+'</h2>'}
     if(q.type==='mc'){
       h+='<div class="q"><h3><span>'+q.id.replace('EX.M.','')+'. '+inl(q.title)+'</span><span class="sub" id="mcs-'+key(q.id)+'"></span></h3><div>'+inl(q.intro)+'</div><div class="opts">';
       q.opts.forEach(function(o,i){var L='abcde'[i];h+='<label class="opt"><input type="radio" name="mc-'+key(q.id)+'" value="'+L+'" data-mc="'+q.id+'"><span><b>'+L+'.</b> '+inl(o)+'</span></label>'});

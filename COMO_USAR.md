@@ -38,7 +38,7 @@ Pestañas: **Resumen · Teoría · Práctica · Examen · Exámenes viejos · Pe
   - `/dashboard juan marcar T.cal hecho` (por prefijo: `T.` teoría, `P.` práctica, `V.` exámenes viejos)
   - `/dashboard juan marcar teoria "en progreso"` (sección completa)
   - `/dashboard juan reiniciar practica`
-- **Examen:** Parte 1 opción múltiple (elige a-e), Parte 2 desarrollo (caja por literal). Se guarda solo. Cuando termines: `/dashboard juan calificar examen` (o "califica examen"). Verás la nota y la retroalimentación en el tablero.
+- **Examen:** 50 preguntas de opción múltiple (elige a-e). Se guarda solo. Cuando termines: `/dashboard juan calificar examen` (o "califica examen"). Verás la nota y la retroalimentación en el tablero.
 - **Pendientes:** salen del archivo `progreso/<persona>.md` (sección "Pendientes y por mejorar"). El tablero los **lee al publicarse**: tras anotar pendientes nuevos, corre `/dashboard <persona>` para verlos.
 
 El avance de checklists vive en la base de datos del tablero; los pendientes y el log, en el `.md`.
@@ -76,7 +76,7 @@ Hay **dos cosas** que compartir:
 
 - **No veo mis pendientes nuevos en el tablero.** Se leen al publicar: `/dashboard <persona>`.
 - **Marqué un ítem y no cambió.** Revisa el banner amarillo ("modo local"): sin permiso de Contributor se guarda solo en tu navegador.
-- **¿Dónde está la clave del examen?** No está en el repo ni en el tablero visible; Claude la guarda con acceso de admin y la usa al calificar.
+- **¿Dónde está la clave del examen?** No está en el repo ni en el tablero visible; Claude la guarda solo en el tablero del dueño (acceso de admin) y la usa al calificar a cualquiera. Comparte el tablero de otra persona como **Contributor**, no como Editor: un Editor podría leer la clave y cambiar notas.
 - **¿Puedo preguntar cosas fuera de alcance?** Sí; Claude responde y avisa que está fuera del parcial (no toca tu estado).
 - **Claude no conoce algo de esta guía.** Dile "actualiza COMO_USAR.md con esto" y lo agrega.
 

@@ -1,6 +1,6 @@
 # Examen propuesto (sin ayuda) — Parcial 2, diapositivas 1-70
 
-Dos partes, cada una sobre **5.0**: `examen_opcion_multiple.md` (30 preguntas, opciones a-e, una correcta) y `examen_ejercicios.md` (8 problemas con literales). Cubren los 12 subtemas en alcance con datos **nuevos** (no son copia de los exámenes viejos).
+Un solo examen de **50 preguntas de opción múltiple** (opciones a-e, una correcta, 0.1 puntos c/u, total **5.0**): `examen_opcion_multiple.md`. Mezcla teoría y cálculo con datos nuevos.
 
 **Cómo usarlo**
 1. Resuélvelo **sin mirar** `teoria/`, `practica/` ni `examenes_resueltos/` (cronométrate: 90 min por parte es un buen ritmo).
@@ -12,6 +12,6 @@ Constantes: $\hbar=1.0546\times10^{-34}$ J·s, $m_e=9.109\times10^{-31}$ kg, $k_
 
 ## Seguimiento
 
-Los ítems `EX.M.1…30` y `EX.E.q.l` están al final de cada archivo; el dashboard los muestra como `pendiente → entregado → calificado (nota)`.
+Los ítems `EX.M.1…50` están al final de cada archivo; el dashboard los muestra como `pendiente → entregado → calificado (nota)`.
 
 *(La clave y la rúbrica no están en el repositorio: las genero al calificar, para que no puedas verlas por accidente.)*

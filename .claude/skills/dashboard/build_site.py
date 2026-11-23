@@ -31,16 +31,6 @@ for m in re.finditer(r"^\*\*(EX\.M\.\d+) \(([\d.]+)\) — (.*?)\.\*\* \((.*?)\) 
     opts = [o[3:].strip() for o in ops.strip().split("\n")]
     exam.append(dict(id=qid, part="M", type="mc", pts=float(pts), title=title, intro=stem.strip(), opts=opts,
                      lits=[dict(id=qid, lab="", text="", pts=float(pts))]))
-txt = open(f"{BASE}/examen/examen_ejercicios.md").read()
-for m in re.finditer(r"^\*\*(EX\.E\.\d+) \(([\d.]+)\) — (.*?)\.?\*\* (.*)$", txt, re.M):
-    qid, pts, title, body = m.group(1), float(m.group(2)), m.group(3), m.group(4)
-    parts = re.split(r"(?:(?<=\s)|^)\(([a-h])\)\s", body)
-    if len(parts) == 1:
-        lits = [dict(id=qid + ".a", lab="", text=body, pts=pts)]; intro = ""
-    else:
-        intro = parts[0].strip(); labs = parts[1::2]; txs = parts[2::2]
-        lits = [dict(id=f"{qid}.{l}", lab=l, text=t.strip(), pts=round(pts / len(labs), 4)) for l, t in zip(labs, txs)]
-    exam.append(dict(id=qid, part="E", type="open", pts=pts, title=title, intro=intro, lits=lits))
 n_lit = sum(len(q["lits"]) for q in exam)
 print("examen:", len(exam), "preguntas,", n_lit, "literales")
 tabs.insert(2, dict(k="examen", label="Examen", files=[]))
