@@ -62,3 +62,18 @@ El tablero de `Parcial_2/` contiene TODO el contenido (teoría con imágenes, pr
 2. Publica cada HTML con Artifact sobre la URL guardada (`root` = el dir, `files` = rutas de `_files.txt`, `capabilities: {db:{rules:[{path:"grades",read:"view",write:"admin"}]}}`). Título estable "Progreso P2 de <Nombre>".
 3. Calificar: leer `answers` (doc id = ID con `.`→`_`, campo `text`) y escribir en `grades` `{id, score, fb, ts}`; `score` ≤ puntos del literal (puntos de la pregunta / nº de literales).
 4. El avance sale de la `db` (no de `progreso/*.md`); para dejarlo en el repo, listar `items` y volcarlo al md si el usuario lo pide.
+
+## Marcar avance desde el comando (`/dashboard <persona> ...`)
+
+Además del clic en el tablero, el avance se puede mover con el comando. Formas (el perfil es obligatorio; si falta, preguntar "¿Isa o Juan?"):
+
+- `/dashboard juan marcar T.drude.1.1 hecho`: un ítem.
+- `/dashboard juan marcar T.drude hecho`: todo ítem cuyo ID empiece por ese prefijo (`T.` teoría, `P.` práctica, `V.` exámenes viejos; ej. `T.cal`, `P.fermi3d.1`, `V.P2501`).
+- `/dashboard juan marcar teoria en progreso`: toda la sección (`teoria`, `practica`, `viejos`).
+- `/dashboard juan reiniciar practica`: vuelve a `pendiente`.
+- `/dashboard juan calificar examen`: lee `answers`, califica y escribe `grades` (ver abajo).
+
+Cómo se ejecuta: (1) listar los IDs con `grep -hoE '^- \[ \] \S+' Parcial_2/{teoria,practica,examenes_resueltos}/*.md`, filtrando por prefijo; (2) con `ArtifactData` `batch` (máx. 50 por llamada) escribir en la colección `items` un doc por ID: `doc_id` = ID con `.`→`_`, `data` = `{"id": "<ID>", "s": "<pendiente|en progreso|hecho>", "ts": <ms>}` (`set`; si existe, `update` con `if_version`); (3) confirmar al usuario cuántos ítems cambió. Nunca tocar el artifact de la otra persona.
+
+### Calificar el examen
+Parte 1 (opción múltiple, 30 preguntas, 5.0/30 c/u): leer `answers` (campo `text` = letra) y la clave en `key/mc` (cadena `n:letra,...`, solo admin); escribir en `grades` (doc_id `EX_M_n`) `{"id":"EX.M.n","score":0.1667 o 0,"fb":"clave: c — por qué"}`. Parte 2 (8 problemas, literales `EX.E.q.l`): leer `answers`, recalcular con las constantes de `examen/README.md`, y escribir `{"id","score"<=pts del literal,"fb"}` explicando dónde se pierden puntos. Al final, resumir la nota por parte.

@@ -37,6 +37,7 @@ h2 .st{font-size:.72rem}
 textarea{width:100%;min-height:86px;font:inherit;font-size:.92rem;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:8px;margin-top:6px;resize:vertical}
 .meta{font-size:.78rem;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
 .grade{margin-top:8px;padding:8px 10px;border-radius:6px;background:var(--okbg);color:var(--fg);border-left:3px solid var(--ok);font-size:.9rem}.grade b{color:var(--ok)}
+.opts{display:grid;gap:6px;margin-top:8px}.opt{display:flex;gap:8px;align-items:flex-start;padding:6px 8px;border:1px solid var(--line);border-radius:6px;cursor:pointer;min-width:0}.opt span{min-width:0;overflow-wrap:anywhere}.opt:has(input:checked){background:var(--accbg);border-color:var(--acc)}.blk{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0}.blk button{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:6px;padding:3px 9px;cursor:pointer}
 .how{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.92rem}
 </style>
 <div class="w">
@@ -76,6 +77,7 @@ function setState(id,s){
   else{try{localStorage.setItem('p2-'+CFG.person,JSON.stringify(items))}catch(e){}}
 }
 document.addEventListener('click',function(e){
+  var ba=e.target.closest('[data-all]');if(ba){var ids=ba.parentNode.getAttribute('data-ids').split(',');ids.forEach(function(i){if(stateOf(i)!==ba.getAttribute('data-all'))setState(i,ba.getAttribute('data-all'))});return}
   var b=e.target.closest('[data-st]');if(!b)return;
   var id=b.getAttribute('data-st');var n=(STATES.indexOf(stateOf(id))+1)%3;setState(id,STATES[n]);
 });
@@ -122,21 +124,28 @@ function summary(){
   return h;
 }
 function exam(){
-  var h='<div class="how"><b>Examen sin ayuda.</b> Responde cada literal en su caja. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Se guarda automáticamente. Cuando termines escríbele a Claude: <i>«califica examen»</i>. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
+  var h='<div class="how"><b>Examen sin ayuda.</b> Parte 1: elige una opción (a-e) por pregunta. Parte 2: escribe tu desarrollo en la caja de cada literal. Se guarda solo. No abras Teoría, Práctica ni Exámenes viejos hasta entregar. Cuando termines escríbele a Claude: <i>«califica examen»</i> y verás aquí la nota y la retroalimentación. Constantes: ħ=1.0546×10⁻³⁴ J·s, mₑ=9.109×10⁻³¹ kg, k_B=1.381×10⁻²³ J/K, e=1.602×10⁻¹⁹ C, N_A=6.022×10²³, R=8.314 J/mol·K, c=2.998×10⁸ m/s, mₚ=1.6726×10⁻²⁷ kg, 1 eV=1.602×10⁻¹⁹ J.</div>';
   var part='';
   EXAM.forEach(function(q){
-    if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+(part==='T'?'Parte 1 · Teoría (5.0)':'Parte 2 · Ejercicios (5.0)')+'</h2>'}
+    if(q.part!==part){part=q.part;h+='<h2 style="font-family:\'Space Grotesk\',sans-serif;font-size:1.2rem;margin:26px 0 4px">'+(part==='M'?'Parte 1 · Opción múltiple (5.0)':'Parte 2 · Problemas de desarrollo (5.0)')+'</h2>'}
+    if(q.type==='mc'){
+      h+='<div class="q"><h3><span>'+q.id.replace('EX.M.','')+'. '+inl(q.title)+'</span><span class="sub" id="mcs-'+key(q.id)+'"></span></h3><div>'+inl(q.intro)+'</div><div class="opts">';
+      q.opts.forEach(function(o,i){var L='abcde'[i];h+='<label class="opt"><input type="radio" name="mc-'+key(q.id)+'" value="'+L+'" data-mc="'+q.id+'"><span><b>'+L+'.</b> '+inl(o)+'</span></label>'});
+      h+='</div><div id="g-'+key(q.id)+'"></div></div>';
+      return;
+    }
     h+='<div class="q"><h3><span>'+q.id+' · '+inl(q.title)+'</span><span class="sub">'+q.pts+' pts</span></h3><div>'+inl(q.intro)+'</div>';
     q.lits.forEach(function(l){
       h+='<div class="lit"><div class="hd"><b>'+(l.lab?'('+l.lab+')':'')+'</b><span>'+inl(l.text)+'</span><span class="id">'+l.id+' · '+l.pts.toFixed(2)+' pts</span></div>'+
-        '<textarea data-ans="'+l.id+'" id="a-'+key(l.id)+'" aria-label="Respuesta '+l.id+'" placeholder="Tu respuesta (puedes escribir fórmulas como texto o LaTeX)"></textarea><div class="meta" id="m-'+key(l.id)+'"></div><div id="g-'+key(l.id)+'"></div></div>';
+        '<textarea data-ans="'+l.id+'" id="a-'+key(l.id)+'" aria-label="Respuesta '+l.id+'" placeholder="Tu desarrollo (fórmulas como texto o LaTeX)"></textarea><div class="meta" id="m-'+key(l.id)+'"></div><div id="g-'+key(l.id)+'"></div></div>';
     });
     h+='</div>';
   });
   return h;
 }
 function fillExam(){
-  EXAM.forEach(function(q){q.lits.forEach(function(l){
+  EXAM.forEach(function(q){if(q.type==='mc'){var an=answers[q.id]&&answers[q.id].text;document.querySelectorAll('input[data-mc="'+q.id+'"]').forEach(function(r){r.checked=(r.value===an)});var ms=document.getElementById('mcs-'+key(q.id));if(ms)ms.textContent=an?'Respondida: '+an:'Sin responder';var gr=document.getElementById('g-'+key(q.id)),rr=grades[q.id];if(gr)gr.innerHTML=rr?'<div class="grade"><b>'+(Number(rr.score)>0?'Correcta':'Incorrecta')+'</b> · '+Number(rr.score).toFixed(2)+' / '+q.pts.toFixed(2)+(rr.fb?' · '+inl(String(rr.fb)):'')+'</div>':'';return}
+    q.lits.forEach(function(l){
     var ta=document.getElementById('a-'+key(l.id));if(ta&&document.activeElement!==ta){var v=(answers[l.id]&&answers[l.id].text)||'';if(ta.value!==v)ta.value=v}
     var m=document.getElementById('m-'+key(l.id));if(m){m.textContent=(answers[l.id]&&answers[l.id].text&&answers[l.id].text.trim())?'Guardado'+(grades[l.id]?'':' · pendiente de calificar'):'Sin responder'}
     var g=document.getElementById('g-'+key(l.id));if(g){var r=grades[l.id];g.innerHTML=r?'<div class="grade"><b>'+Number(r.score).toFixed(2)+' / '+l.pts.toFixed(2)+'</b>'+(r.fb?' · '+inl(String(r.fb)):'')+'</div>':''}
@@ -153,6 +162,13 @@ document.addEventListener('input',function(e){
     else try{localStorage.setItem('p2a-'+CFG.person,JSON.stringify(answers))}catch(x){}
     fillExam();updateNav();
   },900);
+});
+document.addEventListener('change',function(e){
+  var id=e.target.getAttribute&&e.target.getAttribute('data-mc');if(!id)return;var v=e.target.value;
+  answers[id]={id:id,text:v,ts:Date.now()};
+  if(db)db.collection('answers').doc(key(id)).set({id:id,text:v,ts:Date.now()}).catch(function(){});
+  else try{localStorage.setItem('p2a-'+CFG.person,JSON.stringify(answers))}catch(x){}
+  fillExam();updateNav();
 });
 /* ---------- render de pestañas ---------- */
 var rendered={};
@@ -175,6 +191,15 @@ function renderTab(k){
     d.innerHTML='<span data-slot="'+id+'"></span><div class="t"><span class="id">'+id+'</span>'+inl(txt)+'</div>';
   });
   el.querySelectorAll('h2').forEach(function(h2){var m=h2.textContent.match(/^(P\.[\w.]+) —/);if(m&&t.ids.indexOf(m[1])>=0){var s=document.createElement('span');s.setAttribute('data-slot',m[1]);h2.appendChild(s)}});
+  el.querySelectorAll('section.doc').forEach(function(sec){
+    var hs=sec.querySelectorAll('h2');var chk=null;hs.forEach(function(x){if(/^Checklist/.test(x.textContent))chk=x});
+    if(!chk)return;var grp=document.createElement('div');grp.className='chk';grp.appendChild(chk.cloneNode(true));
+    var n=chk.nextElementSibling,ids=[];while(n&&n.tagName!=='H2'&&n.tagName!=='HR'){var nx=n.nextElementSibling;if(n.classList.contains('item')){ids.push(n.getAttribute('data-item'));grp.appendChild(n)}else if(n.tagName==='H2'){break}else if(n.nodeType===1&&n.tagName!=='DIV'&&n.tagName!=='P'){}n=nx}
+    var bar=document.createElement('div');bar.className='blk';bar.innerHTML='<button type="button" data-all="hecho">Marcar todo hecho</button><button type="button" data-all="pendiente">Reiniciar bloque</button><span class="sub">'+ids.length+' ítems</span>';bar.setAttribute('data-ids',ids.join(','));
+    grp.insertBefore(bar,grp.children[1]);
+    var first=sec.querySelector('h2');first.parentNode.insertBefore(grp,first);
+    chk.remove();
+  });
   paintSlots();
   if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([el]).catch(function(){});
 }
