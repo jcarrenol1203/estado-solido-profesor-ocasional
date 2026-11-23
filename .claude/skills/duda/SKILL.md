@@ -38,19 +38,11 @@ Argumento: la pregunta del usuario (texto libre), ej. `/duda por qué la rama
    herramientas.** La interfaz del usuario colapsa en una línea resumen el
    texto que se escribe antes de una llamada a herramienta, así que una
    explicación puesta ahí no se ve. Orden obligatorio: (a) leer notas,
-   (b) actualizar el progreso si corresponde (paso 7), (c) escribir como
+   (b) anotar un pendiente si corresponde (paso 7), (c) escribir como
    último mensaje, sin herramientas después, la explicación completa de los
    pasos 3-4. Nunca escribas la explicación antes de una herramienta.
-7. Actualiza el progreso **antes** del mensaje final. Si no sabes ya en esta
-   sesión qué perfil está activo (Isa o Juan), no lo adivines: termina el
-   mensaje final con la explicación completa y la pregunta "¿Isa o Juan?", y
-   actualiza el progreso en el turno siguiente. Actualiza
-   `BASE/progreso/<persona>.md`: si el subtema tocado está marcado `no visto`,
-   cámbialo a `en progreso` (no toques el estado si ya está `en progreso` o
-   `dominado` — una duda puntual no rebaja un tema dominado).
-8. El mensaje final termina con una sola línea que diga qué subtema se
-   marcó (o que no hubo cambios). Esa línea va después de la explicación,
-   nunca en su lugar.
+7. **No modifiques estados de progreso.** `/duda` no cambia ningún estado de subtema ni de checklist: el avance lo marca el usuario en el tablero (clic) o con `/dashboard <persona> marcar ...`. Lo único que `/duda` puede escribir en `BASE/progreso/<persona>.md` es una fila en "Pendientes y por mejorar" (ver abajo), y solo si la duda deja algo abierto; para eso, si no sabes el perfil, pregunta "¿Isa o Juan?".
+8. El mensaje final termina, solo si escribiste un pendiente, con una línea que lo diga (o "sin cambios en el progreso").
 
 ## Pendientes (Parcial 2)
 

@@ -23,8 +23,8 @@ COMO_USAR.md       esta guía
 
 | Comando | Para qué | Qué escribe |
 |---|---|---|
-| `/duda <pregunta>` | Resolver una duda puntual, con página fuente | Marca el subtema "en progreso" y, si queda algo abierto, una fila en **Pendientes** |
-| `/evaluar <tema>` | Checklist de preguntas sobre lo que dices dominar; corrige | Estado del subtema, debilidades en **Pendientes**, log |
+| `/duda <pregunta>` | Resolver una duda puntual, con página fuente | No cambia tu progreso; solo, si queda algo abierto, una fila en **Pendientes** |
+| `/evaluar <tema>` | Checklist de preguntas sobre lo que dices dominar; corrige | Debilidades en **Pendientes** y log (el avance lo marcas tú en el tablero) |
 | `/dashboard <persona>` | Publicar/actualizar tu tablero | Nada (lo lee todo) |
 
 Siempre dile quién eres ("Juan" o "Isa"): Claude no mezcla los perfiles.
